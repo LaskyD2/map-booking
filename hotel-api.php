@@ -22,30 +22,34 @@ function requestHotel($url) {
     return $hostGet;
 }
 
-function getRoom($roomDate, $lang) {
-    $room = [];
+function getRoom($roomDate, $lang, $value) {
+//  $room = [];
 
-//    $room['room'][$lang] = $roomDate['name'];
-    $room['room'] = $roomDate['name'];
+
+
+    echo $value;
+
+    $room['room'][$lang] = $roomDate['name'];
+//  $room['room'] = $roomDate['name'];
     $room['id'] = $roomDate['code'];
-    //$room['city'] = $roomDate['contact_info']['addresses'][0]['city_name'];
-//    $room['address'][$lang] = $roomDate['contact_info']['addresses'][0]['city_name'] . ', ' .  $roomDate['contact_info']['addresses'][0]['address_line'][0];
-    $room['address'] = $roomDate['contact_info']['addresses'][0]['city_name'] . ', ' .  $roomDate['contact_info']['addresses'][0]['address_line'][0];
+//  $room['city'] = $roomDate['contact_info']['addresses'][0]['city_name'];
+    $room['address'][$lang] = $roomDate['contact_info']['addresses'][0]['city_name'] . ', ' .  $roomDate['contact_info']['addresses'][0]['address_line'][0];
+//  $room['address'] = $roomDate['contact_info']['addresses'][0]['city_name'] . ', ' .  $roomDate['contact_info']['addresses'][0]['address_line'][0];
     $room['price'] = null;
 
-  $coordinates = requestAddress($room['address']);
+   /* $coordinates = requestAddress($room['address']);
     $room['longitude'] = $coordinates[0];
-    $room['latitude'] = $coordinates[1];
+    $room['latitude'] = $coordinates[1];*/
 
     return $room;
 }
 
-function getRoomList($responseMas, $lang) {
+function getRoomList($responseMas, $lang, $value) {
    $rooms = [];
 
     $roomsInfo = $responseMas['hotels']['0']['room_types'];
     foreach ($roomsInfo as $currRoomData) {
-        $rooms[] = getRoom($currRoomData, $lang);
+        $rooms[] = getRoom($currRoomData, $lang, $value);
     }
 
     return $rooms;
@@ -87,16 +91,15 @@ function requestAddress($address) {
 $host = 'https://ibe.tlintegration.com/ibe/RegionMap/host?hotel_code=' . $hotelCode;
 $hostUrl = json_decode(requestHotel($host));
 
-//foreach ($languages as $language) {
-
-//    $longLanguages = correctLanguages($language)[0];
-//    $url = "https://" . $hostUrl->host . "/ChannelDistributionApi/BookingForm/hotel_info?language=" . $longLanguages . "&hotels[0].code=" . $hotelCode;
-    $url = "https://" . $hostUrl->host . "/ChannelDistributionApi/BookingForm/hotel_info?language=ru-ru&hotels[0].code=" . $hotelCode;
+foreach ($languages as $value => $language ) {
+    $longLanguages = correctLanguages($language)[0];
+    $url = "https://" . $hostUrl->host . "/ChannelDistributionApi/BookingForm/hotel_info?language=" . $longLanguages . "&hotels[0].code=" . $hotelCode;
+//    $url = "https://" . $hostUrl->host . "/ChannelDistributionApi/BookingForm/hotel_info?language=ru-ru&hotels[0].code=" . $hotelCode;
     $response = requestHotel($url);
     $responseMas = json_decode($response, true);
-//    $roomsList = getRoomList($responseMas, $language);
-    $roomsList = getRoomList($responseMas, 'ru');
-//}
+    $roomsList = getRoomList($responseMas, $language, $value);
+//  $roomsList = getRoomList($responseMas, 'ru');
+}
 
 $fileCache = __DIR__ . '/cache/room_list.json';
 file_put_contents($fileCache, json_encode($roomsList));
