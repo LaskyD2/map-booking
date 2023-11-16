@@ -1,1 +1,1 @@
-# map-booking 1.1
+# map-booking 1.2
