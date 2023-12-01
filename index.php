@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -28,7 +28,7 @@
             <li id="hotel-7" class="hidden" data-id="spb_pet" data-city="spb">Проживание с питомцами</li>
             <li id="hotel-8" class="hidden" data-id="spb_parking" data-city="spb">Есть парковка</li>
             <li id="hotel-9" class="hidden" data-id="spb_conditioner" data-city="spb">Кондиционер</li>
-            <li id="hotel-10" class="hidden" data-id="spb_price-list" data-city="spb">Календарь доступности</li>
+            <li id="hotel-10" class="hidden" data-id="spb_elevator" data-city="spb">Лифт</li>
             <li id="hotel-11" class="hidden" data-id="msk" data-city="msk">Москва</li>
         </ul>
 

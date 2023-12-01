@@ -56,8 +56,7 @@ export function tabsBookingForm() {
         if (document.getElementById(el).getAttribute('data-id') === prov) {
             document.getElementById(el).classList.add('active');
             citySelector.value = document.getElementById(el).getAttribute('data-city');
-            prov.includes("price-list") ? bookingForm(scenariosListHotel[prov], true) : bookingForm(scenariosListHotel[prov]);
-            // bookingForm(scenariosListHotel[prov]) ;
+            bookingForm(scenariosListHotel[prov]) ;
         } else {
             document.getElementById(el).classList.remove('active');
         }
@@ -83,8 +82,7 @@ export function tabsBookingForm() {
             document.getElementById(elem.getAttribute('id')).classList.add('active');
 
             changeURL(data_id);
-            data_id.includes("price-list") ? bookingForm(scenariosListHotel[data_id], true) : bookingForm(scenariosListHotel[data_id]);
-            //bookingForm(scenariosListHotel[data_id]);
+            bookingForm(scenariosListHotel[data_id]);
 
             fillPoint(placemarks());
             map.setCenter(coordinatesCity[citySelector.value], 12, {duration: 300});
@@ -120,11 +118,11 @@ function noAvailableRooms(data) {
 }
 
 
-export function bookingForm(roomTypes, priceList) {
+export function bookingForm(roomTypes) {
 
     (function (w) {
         var q = [
-            ['setContext', 'TL-INT-letyourflat_2023-02-28', MAP_BOOKING_LANG],
+            ['setContext', 'TL-INT-letyourflat_2023-02-28', `${MAP_BOOKING_LANG}`],
             ['embed', 'booking-form', {
                 container: 'tl-booking-form',
                 roomType: roomTypes,
@@ -133,21 +131,6 @@ export function bookingForm(roomTypes, priceList) {
                 onNoAvailableRooms: noAvailableRooms
             }]
         ];
-        if (priceList) {
-            q = [
-                ['setContext', 'TL-INT-letyourflat_2023-02-28', MAP_BOOKING_LANG],
-                ['embed', 'booking-form', {
-                    container: 'tl-booking-form',
-                    roomType: roomTypes,
-                    autoScroll: 'none',
-                    state: 'price-list',
-                    onTrackUserAction: trackUserAction,
-                    onNoAvailableRooms: noAvailableRooms
-                }]
-            ];
-        }
-
-
         var h=["ru-ibe.tlintegration.ru","ibe.tlintegration.ru","ibe.tlintegration.com"];
         var t = w.travelline = (w.travelline || {}),
             ti = t.integration = (t.integration || {});
