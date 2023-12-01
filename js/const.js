@@ -16,7 +16,7 @@ export const startScenariosHotel = () => {
             "spb_pet": [242816, 242822, 242859, 242860, 242877, 242880, 242881, 242882, 242888, 242890, 242927, 242938, 242899, 242956, 242958, 242956, 242966, 242961, 229587, 229589, 238066, 238057, 220557,250075],
             "spb_parking": [242817, 242822, 242859, 242871, 242890, 242901, 242902, 242903, 242927, 242949, 238060, 242958, 242959, 242963, 242845],
             "spb_conditioner": [242818, 242822, 242858, 229616, 243079, 242886, 242954, 242897, 242901, 242902, 242903, 242927, 242905, 242942, 242943, 238062, 242952, 242955, 242963, 242966, 229615, 238058, 242543,250075],
-            "spb_elevator": [242858,242845,242870,238061,242879,242881,242882,238063,242887,242893,242894,242895,242896,242938,242923,242942,242943,242948,242945,238062,242953,242955,242961,242963,242965,207010,242967,242969,238056,220557,229589,229587,242878,242877,242885,242927,229615,229612],
+            "spb_elevator": [242858,242845,242870,238061,242879,242881,242882,238063,242887,242893,242894,242895,242896,242938,242923,242942,242943,242945,238062,242953,242955,242961,242963,242965,242967,242969,238056,220557,229589,229587,242878,242877,242885,242927,229615],
         },
         "msk": [207010,242948,229605,229609,229610,229577,220559,229612],
     }
@@ -25,15 +25,22 @@ export const startScenariosHotel = () => {
     Object.keys(scenarioslist).forEach((scenario) => {
         let objScenarioslist = scenarioslist[scenario];
         if (!Array.isArray(objScenarioslist)) {
+
             let massiv = [];
             Object.keys(objScenarioslist).forEach((item) => {
-                massiv = Object.assign(massiv, objScenarioslist[item]);
-                scenarioslist[item] = objScenarioslist[item]
+                /*massiv = Object.assign(massiv, objScenarioslist[item]);*/
+                scenarioslist[item] = objScenarioslist[item];
+                massiv = massiv.concat(objScenarioslist[item]);
+
             })
+            massiv = Array.from(new Set(massiv))
             scenarioslist[scenario] = massiv;
             scenarioslist[scenario + "_price-list"] = massiv;
         }
     });
+
+
+
     return scenarioslist;
 }
 
