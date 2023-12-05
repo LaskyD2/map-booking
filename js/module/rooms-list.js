@@ -8,6 +8,14 @@ export const roomsList = (roomsFb, roomList) => {
     let minPriceMarker;
     let placemarksRoster = placemarks();
 
+
+    if (!roomsFb) {
+        geoObjects.forEach((item) => {
+            item.properties.set('iconContent', templateIconContent('price', undefined));
+        })
+        return;
+    }
+
     roomsFb.forEach((roomfb) => {
         geoObjects.forEach((item) => {
             if (item.properties.get('roomTypes').includes(roomfb.id)) {
@@ -60,11 +68,12 @@ export const roomsList = (roomsFb, roomList) => {
 
     function changeColorClusters() {
         let clusters = clusterer.getClusters();
+
         clusters.forEach((cluster) => {
-            let chechPrice = false;
+            let checkPrice = false;
             cluster.properties.get('geoObjects').forEach((item) => {
-                if (item.properties.get('price') && chechPrice === false) {
-                    chechPrice = true;
+                if (item.properties.get('price') && checkPrice === false) {
+                    checkPrice = true;
                     cluster.options.set('clusterIconColor', '#5a9b3b');
                 }
             })

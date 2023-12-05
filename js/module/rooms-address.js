@@ -1,20 +1,20 @@
-import { isStorageExpire } from '../model/room-load.js'
-import { getParameterByName } from "./module.js";
-import { scenariosHotel } from "../const.js";
+import {isStorageExpire} from '../model/room-load.js'
+import {getParameterByName} from "./module.js";
+import {scenariosHotel} from "../const.js";
 
 export const roomsAddress = () => {
 
     let roomList = isStorageExpire(),
-     roomListCache = [],
-     roomAddressList = [],
-     roomAddressItem = [],
-     rooms = [],
-     prov = getParameterByName('hotel_id'),
-     scenariosListHotel = scenariosHotel;
+        roomListCache = [],
+        roomAddressList = [],
+        roomAddressItem = [],
+        rooms = [],
+        prov = getParameterByName('hotel_id'),
+        scenariosListHotel = scenariosHotel;
 
     if (prov) {
         roomList.forEach((room) => {
-            if ( scenariosListHotel[prov].toString().includes(room.id)) {
+            if (scenariosListHotel[prov].toString().includes(room.id)) {
                 roomListCache.push(room)
             }
         });
@@ -33,7 +33,8 @@ export const roomsAddress = () => {
             continue;
         }
 
-        roomAddressItem.address = roomList[i].address;
+
+        roomAddressItem.address = roomList[i].address[MAP_BOOKING_LANG];
         roomAddressItem.longitude = roomList[i].longitude;
         roomAddressItem.latitude = roomList[i].latitude;
 

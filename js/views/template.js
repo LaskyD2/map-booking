@@ -27,7 +27,7 @@ function templateBalloonContentRoom(rooms) {
     return rooms.length ?
         rooms.map((room) =>
             ` <div class="map__balloon-room">
-                     <div class="map__balloon-room-name">${room.room}</div>
+                     <div class="map__balloon-room-name">${room.room[MAP_BOOKING_LANG]}</div>
                      <div class="map__balloon-room-status ${!!room.price}">${room.price ? LANG_SETTING[MAP_BOOKING_LANG].From + ' ' + room.price + ' ₽' : LANG_SETTING[MAP_BOOKING_LANG].Busy}</div>
                 </div>`
         ).join('') :
