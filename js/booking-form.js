@@ -1,7 +1,7 @@
 import { coordinatesCity, scenariosHotel } from './const.js'
 import { getParameterByName } from './module/module.js'
 import { roomsList } from './module/rooms-list.js'
-import { isStorageExpire } from './model/room-load.js'
+import { getPricesFromStorage } from './model/room-load.js'
 import { map, fillPoint } from './map.js'
 import { placemarks } from "./model/placemarks.js";
 
@@ -104,7 +104,7 @@ function trackUserAction(data) {
 
     if (data.action === 'search-rooms') {
         roomsFb = data.rooms;
-        roomList = isStorageExpire();
+        roomList = getPricesFromStorage();
 
         roomsList(roomsFb, roomList);
     }
@@ -113,13 +113,12 @@ function trackUserAction(data) {
 
 function noAvailableRooms(data) {
     let roomsFb = data.rooms;
-    let roomList = isStorageExpire();
+    let roomList = getPricesFromStorage();
     roomsList(roomsFb, roomList);
 }
 
 
 export function bookingForm(roomTypes) {
-
     (function (w) {
         var q = [
             ['setContext', 'TL-INT-letyourflat_2023-02-28', `${MAP_BOOKING_LANG}`],

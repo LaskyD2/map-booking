@@ -52,9 +52,7 @@
    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=d2905f6d-3e1c-4841-b651-5790cd49c349&lang=ru_RU" type="text/javascript"></script>-->
 <!--    <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU" type="text/javascript"></script>-->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-
-
-
+    <script src="\js\library\dayjs.min.js"></script>
 </body>
 </html>
 

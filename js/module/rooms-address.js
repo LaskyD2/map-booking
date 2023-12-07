@@ -1,10 +1,10 @@
-import {isStorageExpire} from '../model/room-load.js'
+import {getPricesFromStorage} from '../model/room-load.js'
 import {getParameterByName} from "./module.js";
 import {scenariosHotel} from "../const.js";
 
 export const roomsAddress = () => {
 
-    let roomList = isStorageExpire(),
+    let roomList = getPricesFromStorage(),
         roomListCache = [],
         roomAddressList = [],
         roomAddressItem = [],

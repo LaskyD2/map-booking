@@ -1,4 +1,4 @@
-import {templateIconContent, templateBalloonContent, templateClusterContent} from "../views/template.js";
+import {templateIconContent, templateBalloonContent} from "../views/template.js";
 import { placemarks } from '../model/placemarks.js';
 import { geoObjects, clusterer, map } from '../map.js';
 
