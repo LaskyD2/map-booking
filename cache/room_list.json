@@ -1,0 +1,1622 @@
+[
+  {
+    "room": {
+      "ru": "LetYourFlat \"Modern\" | 3 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Modern\" | 3 bedrooms"
+    },
+    "id": "261443",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u0430\u044f \u043a\u0430\u043d\u0430\u043b\u0430 \u0413\u0440\u0438\u0431\u043e\u0435\u0434\u043e\u0432\u0430 \u0434. 44",
+      "en": "  Saint Petersburg, 44 \u041d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u0430\u044f \u043a\u0430\u043d\u0430\u043b\u0430 \u0413\u0440\u0438\u0431\u043e\u0435\u0434\u043e\u0432\u0430"
+    },
+    "price": null,
+    "longitude": "30.317575",
+    "latitude": "59.9297"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Lampada David\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Lampada David\" | Studio"
+    },
+    "id": "261418",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 150",
+      "en": "  Saint Petersburg, 150 \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.372965",
+    "latitude": "59.928298"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Terrace\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Terrace\" | 1 bedroom"
+    },
+    "id": "238057",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, 26-\u044f \u043b\u0438\u043d\u0438\u044f \u0412\u0430\u0441\u0438\u043b\u044c\u0435\u0432\u0441\u043a\u043e\u0433\u043e \u043e\u0441\u0442\u0440\u043e\u0432\u0430 \u0434. 7 \u0441\u0442\u0440. 1",
+      "en": "  Saint Petersburg, 7 26-\u044f \u043b\u0438\u043d\u0438\u044f \u0412\u0430\u0441\u0438\u043b\u044c\u0435\u0432\u0441\u043a\u043e\u0433\u043e \u043e\u0441\u0442\u0440\u043e\u0432\u0430"
+    },
+    "price": null,
+    "longitude": "30.260523",
+    "latitude": "59.928834"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat  \"Loft A\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Loft A\" | 2 bedrooms"
+    },
+    "id": "242901",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0412\u043e\u0441\u0441\u0442\u0430\u043d\u0438\u044f \u0434. 55 \u0441\u0442\u0440. \u0411",
+      "en": "  Saint Petersburg, 55 \u0412\u043e\u0441\u0441\u0442\u0430\u043d\u0438\u044f"
+    },
+    "price": null,
+    "longitude": "30.361862",
+    "latitude": "59.943273"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Grand\" | 3 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Grand\" | 3 bedrooms"
+    },
+    "id": "242886",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u043f\u0435\u0440. \u0423\u043b\u044c\u044f\u043d\u044b \u0413\u0440\u043e\u043c\u043e\u0432\u043e\u0439 \u0434. 8",
+      "en": "  Saint Petersburg, 8 \u043f\u0435\u0440. \u0423\u043b\u044c\u044f\u043d\u044b \u0413\u0440\u043e\u043c\u043e\u0432\u043e\u0439"
+    },
+    "price": null,
+    "longitude": "30.362113",
+    "latitude": "59.934565"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Panorama\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Panorama\" | 1 bedroom"
+    },
+    "id": "248451",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, 26-\u044f \u043b\u0438\u043d\u0438\u044f \u0412\u0430\u0441\u0438\u043b\u044c\u0435\u0432\u0441\u043a\u043e\u0433\u043e \u043e\u0441\u0442\u0440\u043e\u0432\u0430 \u0434. 7",
+      "en": "  Saint Petersburg, 7 26-\u044f \u043b\u0438\u043d\u0438\u044f \u0412\u0430\u0441\u0438\u043b\u044c\u0435\u0432\u0441\u043a\u043e\u0433\u043e \u043e\u0441\u0442\u0440\u043e\u0432\u0430"
+    },
+    "price": null,
+    "longitude": "30.260523",
+    "latitude": "59.928834"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Lampada Venera\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Lampada Venera\" | Studio"
+    },
+    "id": "250078",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 150",
+      "en": "  Saint Petersburg, 150 \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.372965",
+    "latitude": "59.928298"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Boutique\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Boutique\" | 2 bedrooms"
+    },
+    "id": "242845",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041e\u0437\u0435\u0440\u043d\u044b\u0439 \u043f\u0435\u0440\u0435\u0443\u043b\u043e\u043a \u0434. 2-4",
+      "en": "  Saint Petersburg, 2-4 \u041e\u0437\u0435\u0440\u043d\u044b\u0439 \u043f\u0435\u0440\u0435\u0443\u043b\u043e\u043a"
+    },
+    "price": null,
+    "longitude": "30.361529",
+    "latitude": "59.938184"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Ensemble\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Ensemble\" | 1 bedroom"
+    },
+    "id": "242879",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f \u0434. 11 \u043a\u043e\u0440\u043f. 3",
+      "en": "  Saint Petersburg, 11 \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.37204",
+    "latitude": "59.922963"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Lampada Neptune\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Lampada Neptune\" | Atelier"
+    },
+    "id": "261419",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 150",
+      "en": "  Saint Petersburg, 150 \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.372965",
+    "latitude": "59.928298"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat  \"Mansarda\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Mansarda\" | 1 bedroom"
+    },
+    "id": "242905",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0421\u0430\u0434\u043e\u0432\u0430\u044f \u0434. 8\/7",
+      "en": "  Saint Petersburg, 8\/7 \u0421\u0430\u0434\u043e\u0432\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.336592",
+    "latitude": "59.937008"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Tropicana\" | 3 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Tropicana\" | 3 bedrooms"
+    },
+    "id": "242965",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0412\u043e\u0441\u0441\u0442\u0430\u043d\u0438\u044f \u0434. 22",
+      "en": "  Saint Petersburg, 22 \u0412\u043e\u0441\u0441\u0442\u0430\u043d\u0438\u044f"
+    },
+    "price": null,
+    "longitude": "30.360065",
+    "latitude": "59.938076"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Emerald\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Emerald\" | 1 bedroom"
+    },
+    "id": "242878",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0420\u0443\u0431\u0438\u043d\u0448\u0442\u0435\u0439\u043d\u0430 \u0434. 23",
+      "en": "  Saint Petersburg, 23 \u0420\u0443\u0431\u0438\u043d\u0448\u0442\u0435\u0439\u043d\u0430"
+    },
+    "price": null,
+    "longitude": "30.342952",
+    "latitude": "59.928045"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Oxford\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Oxford\" | 2 bedrooms"
+    },
+    "id": "212748",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0411\u043e\u043b\u044c\u0448\u0430\u044f \u041a\u043e\u043d\u044e\u0448\u0435\u043d\u043d\u0430\u044f \u0434. 4-6-8",
+      "en": "  Saint Petersburg, 4-6-8 \u0411\u043e\u043b\u044c\u0448\u0430\u044f \u041a\u043e\u043d\u044e\u0448\u0435\u043d\u043d\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.32363",
+    "latitude": "59.938013"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Yes\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Yes\" | Studio"
+    },
+    "id": "242967",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0421\u043e\u0446\u0438\u0430\u043b\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434. 21",
+      "en": "  Saint Petersburg, 21 \u0421\u043e\u0446\u0438\u0430\u043b\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.346016",
+    "latitude": "59.92023"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Status\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Status\" | 2 bedrooms"
+    },
+    "id": "242969",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041b\u0438\u0433\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 3\/9",
+      "en": "  Saint Petersburg, 3\/9 \u041b\u0438\u0433\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.364557",
+    "latitude": "59.937698"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Residence Galernaya\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Residence Galernaya\" | 1 bedroom"
+    },
+    "id": "229615",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0410\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u0430\u044f \u043d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u0430\u044f \u0434. 20",
+      "en": "  Saint Petersburg, 20 \u0410\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u0430\u044f \u043d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.295692",
+    "latitude": "59.934529"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Lampada Selena\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Lampada Selena\" | Studio"
+    },
+    "id": "250077",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 150",
+      "en": "  Saint Petersburg, 150 \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.372965",
+    "latitude": "59.928298"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Opera\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Opera\" | 2 bedrooms"
+    },
+    "id": "242543",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 74-76\u0411",
+      "en": "  Saint Petersburg, 74-76\u0411 \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.346285",
+    "latitude": "59.933758"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Rose\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Rose\" | 2 bedrooms"
+    },
+    "id": "242955",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041b\u0438\u0433\u043e\u0432\u0441\u043a\u0438\u0439 \u0434. 3\/9",
+      "en": "  Saint Petersburg, 3\/9 \u041b\u0438\u0433\u043e\u0432\u0441\u043a\u0438\u0439"
+    },
+    "price": null,
+    "longitude": "30.364557",
+    "latitude": "59.937698"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Futurist\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Futurist\" | 1 bedroom"
+    },
+    "id": "242882",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f \u0434. 9 \u043a\u043e\u0440\u043f. 2",
+      "en": "  Saint Petersburg, 9 \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.368581",
+    "latitude": "59.92355"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Rimskogo-Korsakova\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Rimsko-Korsakova\" | 1 bedroom"
+    },
+    "id": "242899",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0420\u0438\u043c\u0441\u043a\u043e\u0433\u043e-\u041a\u043e\u0440\u0441\u0430\u043a\u043e\u0432\u0430 \u0434. 93",
+      "en": "  Saint Petersburg, 93 \u0420\u0438\u043c\u0441\u043a\u043e\u0433\u043e-\u041a\u043e\u0440\u0441\u0430\u043a\u043e\u0432\u0430"
+    },
+    "price": null,
+    "longitude": "30.283017",
+    "latitude": "59.919396"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Fusion\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Fusion\" | 1 bedroom"
+    },
+    "id": "242881",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f \u0434. 11 \u043a\u043e\u0440\u043f. 2",
+      "en": "  Saint Petersburg, 11 \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.369291",
+    "latitude": "59.92267"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Loft B\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Loft B\" | Studio"
+    },
+    "id": "242902",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0412\u043e\u0441\u0441\u0442\u0430\u043d\u0438\u044f \u0434. 55 \u0441\u0442\u0440. \u0411",
+      "en": "  Saint Petersburg, 55 \u0412\u043e\u0441\u0441\u0442\u0430\u043d\u0438\u044f"
+    },
+    "price": null,
+    "longitude": "30.361862",
+    "latitude": "59.943273"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Provence\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Provence\" | 2 bedrooms"
+    },
+    "id": "242953",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041b\u0438\u0433\u043e\u0432\u0441\u043a\u0438\u0439 \u0434. 25",
+      "en": "  Saint Petersburg, 25 \u041b\u0438\u0433\u043e\u0432\u0441\u043a\u0438\u0439"
+    },
+    "price": null,
+    "longitude": "30.362661",
+    "latitude": "59.934461"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Studio 3\" | \u0421\u0442\u0443\u0434\u0438\u044f \u041c\u043e\u0441\u043a\u0432\u0430",
+      "en": "LetYourFlat \"Studio 3\" | Studio Moscow"
+    },
+    "id": "229605",
+    "city": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430",
+    "address": {
+      "ru": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0411\u0435\u0433\u043e\u0432\u0430\u044f \u0434. 11",
+      "en": "  Moscow, 11 \u0411\u0435\u0433\u043e\u0432\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "37.556936",
+    "latitude": "55.779459"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Urban\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Urban\" | Studio"
+    },
+    "id": "250075",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0422\u043e\u0441\u0438\u043d\u0430 \u0434. 6 \u0441\u0442\u0440. 1",
+      "en": "  Saint Petersburg, 6 \u0422\u043e\u0441\u0438\u043d\u0430"
+    },
+    "price": null,
+    "longitude": "30.347659",
+    "latitude": "59.904053"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Favorite #5\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Favorite #5\" | Studio"
+    },
+    "id": "229616",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0412\u043b\u0430\u0434\u0438\u043c\u0438\u0440\u0441\u043a\u0438\u0439 \u0434. 10",
+      "en": "  Saint Petersburg, 10 \u0412\u043b\u0430\u0434\u0438\u043c\u0438\u0440\u0441\u043a\u0438\u0439"
+    },
+    "price": null,
+    "longitude": "30.348198",
+    "latitude": "59.930584"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat  \"Garden\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Garden\" | 1 bedroom"
+    },
+    "id": "242885",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, 12 \u043b\u0438\u043d\u0438\u044f \u0412\u0430\u0441\u0438\u043b\u044c\u0435\u0432\u0441\u043a\u043e\u0433\u043e \u043e\u0441\u0442\u0440\u043e\u0432\u0430 \u0434. 37\u0411",
+      "en": "  Saint Petersburg, 37\u0411 12 \u043b\u0438\u043d\u0438\u044f \u0412\u0430\u0441\u0438\u043b\u044c\u0435\u0432\u0441\u043a\u043e\u0433\u043e \u043e\u0441\u0442\u0440\u043e\u0432\u0430"
+    },
+    "price": null,
+    "longitude": "30.270153",
+    "latitude": "59.942962"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Atrium\" | 3 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Atrium\" | 3 bedrooms"
+    },
+    "id": "242818",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0421\u0430\u0434\u043e\u0432\u0430\u044f \u0434. 8\/7",
+      "en": "  Saint Petersburg, 8\/7 \u0421\u0430\u0434\u043e\u0432\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.336592",
+    "latitude": "59.937008"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Studio 2\" | \u0421\u0442\u0443\u0434\u0438\u044f \u041c\u043e\u0441\u043a\u0432\u0430",
+      "en": "LetYourFlat \"Studio 2\" | Studio Moscow"
+    },
+    "id": "229609",
+    "city": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430",
+    "address": {
+      "ru": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0411\u0435\u0433\u043e\u0432\u0430\u044f \u0434. 11",
+      "en": "  Moscow, 11 \u0411\u0435\u0433\u043e\u0432\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "37.556936",
+    "latitude": "55.779459"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Empire\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Empire\" | 2 bedrooms"
+    },
+    "id": "229601",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0435\u043a\u0440\u0430\u0441\u043e\u0432\u0430 \u0434. 36",
+      "en": "  Saint Petersburg, 36 \u041d\u0435\u043a\u0440\u0430\u0441\u043e\u0432\u0430"
+    },
+    "price": null,
+    "longitude": "30.359302",
+    "latitude": "59.938933"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Season\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Season\" | Studio"
+    },
+    "id": "220557",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0413\u0430\u043b\u0435\u0440\u043d\u0430\u044f \u0434. 59",
+      "en": "  Saint Petersburg, 59 \u0413\u0430\u043b\u0435\u0440\u043d\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.28723",
+    "latitude": "59.931427"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Sigma\" | \u0421\u0442\u0443\u0434\u0438\u044f \u041c\u043e\u0441\u043a\u0432\u0430",
+      "en": "LetYourFlat \"Sigma\" | Studio Moscow"
+    },
+    "id": "229612",
+    "city": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430",
+    "address": {
+      "ru": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u043f\u0435\u0440. \u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u0417\u043b\u0430\u0442\u043e\u0443\u0441\u0442\u0438\u043d\u0441\u043a\u0438\u0439 \u0434. 3\u0410 \u0441\u0442\u0440. 2",
+      "en": "  Moscow, 3\u0410 \u043f\u0435\u0440. \u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u0417\u043b\u0430\u0442\u043e\u0443\u0441\u0442\u0438\u043d\u0441\u043a\u0438\u0439"
+    },
+    "price": null,
+    "longitude": "37.633347",
+    "latitude": "55.759957"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Praline\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Praline\" | Atelier"
+    },
+    "id": "242952",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 130",
+      "en": "  Saint Petersburg, 130 \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.36674",
+    "latitude": "59.930494"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Nevsky\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Nevsky\" | 1 bedroom"
+    },
+    "id": "229619",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440\u0430 \u041d\u0435\u0432\u0441\u043a\u043e\u0433\u043e \u0434. 10",
+      "en": "  Saint Petersburg, 10 \u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440\u0430 \u041d\u0435\u0432\u0441\u043a\u043e\u0433\u043e"
+    },
+    "price": null,
+    "longitude": "30.38441",
+    "latitude": "59.926188"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Classic\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Classic\" | 2 bedrooms"
+    },
+    "id": "242871",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041b\u0438\u0442\u0435\u0439\u043d\u044b\u0439 \u0434. 58",
+      "en": "  Saint Petersburg, 58 \u041b\u0438\u0442\u0435\u0439\u043d\u044b\u0439"
+    },
+    "price": null,
+    "longitude": "30.348414",
+    "latitude": "59.934069"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Colibri\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Colibri\" | 1 bedroom"
+    },
+    "id": "242870",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041c\u0430\u044f\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e \u0434. 3",
+      "en": "  Saint Petersburg, 3 \u041c\u0430\u044f\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e"
+    },
+    "price": null,
+    "longitude": "30.355071",
+    "latitude": "59.933974"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat  \"Skyline\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f \u041c\u043e\u0441\u043a\u0432\u0430",
+      "en": "LetYourFlat \"Skyline\" | 1 bedroom Moscow"
+    },
+    "id": "229577",
+    "city": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430",
+    "address": {
+      "ru": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430, 2-\u044f \u0411\u0440\u0435\u0441\u0442\u0441\u043a\u0430\u044f \u0434. 6",
+      "en": "  Moscow, 6 2-\u044f \u0411\u0440\u0435\u0441\u0442\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "37.591207",
+    "latitude": "55.770841"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Cabinet\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Cabinet\" | 1 bedroom"
+    },
+    "id": "238056",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041c\u0438\u043b\u043b\u0438\u043e\u043d\u043d\u0430\u044f \u0434. 23",
+      "en": "  Saint Petersburg, 23 \u041c\u0438\u043b\u043b\u0438\u043e\u043d\u043d\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.321626",
+    "latitude": "59.942894"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Aura\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Aura\" | 1 bedroom"
+    },
+    "id": "229611",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041a\u043e\u043b\u043e\u043c\u0435\u043d\u0441\u043a\u0430\u044f \u0434. 3",
+      "en": "  Saint Petersburg, 3 \u041a\u043e\u043b\u043e\u043c\u0435\u043d\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.354846",
+    "latitude": "59.926269"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Smart\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Smart\" | Studio"
+    },
+    "id": "242960",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f \u0434. 13 \u043a\u043e\u0440\u043f. 1",
+      "en": "  Saint Petersburg, 13 \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.371456",
+    "latitude": "59.922201"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Avenue 5\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Avenue 5\" | Studio"
+    },
+    "id": "243079",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0412\u043b\u0430\u0434\u0438\u043c\u0438\u0440\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 10\u0410",
+      "en": "  Saint Petersburg, 10\u0410 \u0412\u043b\u0430\u0434\u0438\u043c\u0438\u0440\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.348198",
+    "latitude": "59.930584"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Atelier\"  | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Atelier\" | 1 bedroom"
+    },
+    "id": "242817",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041b\u043e\u043c\u043e\u043d\u043e\u0441\u043e\u0432\u0430 \u0434. 11-13",
+      "en": "  Saint Petersburg, 11-13 \u041b\u043e\u043c\u043e\u043d\u043e\u0441\u043e\u0432\u0430"
+    },
+    "price": null,
+    "longitude": "30.340868",
+    "latitude": "59.92653"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"De Lux\"| 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"De Lux\"| 2 bedrooms"
+    },
+    "id": "238065",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041b\u0435\u0440\u043c\u043e\u043d\u0442\u043e\u0432\u0441\u043a\u0438\u0439 \u0434. 15",
+      "en": "  Saint Petersburg, 15 \u041b\u0435\u0440\u043c\u043e\u043d\u0442\u043e\u0432\u0441\u043a\u0438\u0439"
+    },
+    "price": null,
+    "longitude": "30.293814",
+    "latitude": "59.920717"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \u201cToscana\u201d | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \u201cToscana\" | 2 bedrooms"
+    },
+    "id": "229618",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u043d\u0430\u0431. \u041a\u0430\u043d\u0430\u043b\u0430 \u0413\u0440\u0438\u0431\u043e\u0435\u0434\u043e\u0432\u0430 \u0434. 117",
+      "en": "  Saint Petersburg, 117 \u043d\u0430\u0431. \u041a\u0430\u043d\u0430\u043b\u0430 \u0413\u0440\u0438\u0431\u043e\u0435\u0434\u043e\u0432\u0430"
+    },
+    "price": null,
+    "longitude": "30.301917",
+    "latitude": "59.924515"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Millennial\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Millennial\" | 1 bedroom"
+    },
+    "id": "242942",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041a\u043e\u0440\u043f\u0443\u0441\u043d\u0430\u044f \u0434. 3 \u0441\u0442\u0440. 1",
+      "en": "  Saint Petersburg, 3 \u041a\u043e\u0440\u043f\u0443\u0441\u043d\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.282505",
+    "latitude": "59.961688"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Gallery\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Gallery\" | Studio"
+    },
+    "id": "229597",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0435\u043a\u0440\u0430\u0441\u043e\u0432\u0430 \u0434. 17",
+      "en": "  Saint Petersburg, 17 \u041d\u0435\u043a\u0440\u0430\u0441\u043e\u0432\u0430"
+    },
+    "price": null,
+    "longitude": "30.357083",
+    "latitude": "59.938662"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Mont Blanc\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Mont Blanc\" | 1 bedroom"
+    },
+    "id": "242943",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u0421\u0430\u043c\u043f\u0441\u043e\u043d\u0438\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 4-6",
+      "en": "  Saint Petersburg, 4-6 \u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u0421\u0430\u043c\u043f\u0441\u043e\u043d\u0438\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.343851",
+    "latitude": "59.957696"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Lotus\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Lotus\" | Studio"
+    },
+    "id": "229613",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041c\u0430\u044f\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e \u0434. 6",
+      "en": "  Saint Petersburg, 6 \u041c\u0430\u044f\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e"
+    },
+    "price": null,
+    "longitude": "30.354055",
+    "latitude": "59.933068"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Benua\" | 3 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Benua\" | 3 bedrooms"
+    },
+    "id": "242822",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u0434. 11\/2",
+      "en": "  Saint Petersburg, 11\/2 \u041d\u0435\u0432\u0441\u043a\u0438\u0439"
+    },
+    "price": null,
+    "longitude": "30.316039",
+    "latitude": "59.936408"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"New Holland\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"New Holland\" | Studio"
+    },
+    "id": "242949",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041f\u0438\u0441\u0430\u0440\u0435\u0432\u0430 \u0434. 6-8",
+      "en": "  Saint Petersburg, 6-8 \u041f\u0438\u0441\u0430\u0440\u0435\u0432\u0430"
+    },
+    "price": null,
+    "longitude": "30.285972",
+    "latitude": "59.927734"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Avenue 4\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Avenue 4\" | Studio"
+    },
+    "id": "229617",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0412\u043b\u0430\u0434\u0438\u043c\u0438\u0440\u0441\u043a\u0438\u0439 \u0434. 10",
+      "en": "  Saint Petersburg, 10 \u0412\u043b\u0430\u0434\u0438\u043c\u0438\u0440\u0441\u043a\u0438\u0439"
+    },
+    "price": null,
+    "longitude": "30.348198",
+    "latitude": "59.930584"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Botanica\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Botanica\" | Studio"
+    },
+    "id": "242859",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0412\u043e\u0437\u043d\u0435\u0441\u0435\u043d\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 41\u041a",
+      "en": "  Saint Petersburg, 41\u041a \u0412\u043e\u0437\u043d\u0435\u0441\u0435\u043d\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.306409",
+    "latitude": "59.923229"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Grand View\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Grand View\" | 1 bedroom"
+    },
+    "id": "238063",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0418\u0437\u043c\u0430\u0439\u043b\u043e\u0432\u0441\u043a\u0438\u0439 \u0434. 7",
+      "en": "  Saint Petersburg, 7 \u0418\u0437\u043c\u0430\u0439\u043b\u043e\u0432\u0441\u043a\u0438\u0439"
+    },
+    "price": null,
+    "longitude": "30.306903",
+    "latitude": "59.917136"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Scandinavia\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Scandinavia\" | 1 bedroom"
+    },
+    "id": "242958",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u0434. 128",
+      "en": "  Saint Petersburg, 128 \u041d\u0435\u0432\u0441\u043a\u0438\u0439"
+    },
+    "price": null,
+    "longitude": "30.366398",
+    "latitude": "59.930624"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Hermitage Residence\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Hermitage Residence\" | 2 bedrooms"
+    },
+    "id": "242954",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041c\u0438\u043b\u043b\u0438\u043e\u043d\u043d\u0430\u044f \u0434. 17",
+      "en": "  Saint Petersburg, 17 \u041c\u0438\u043b\u043b\u0438\u043e\u043d\u043d\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.323773",
+    "latitude": "59.943755"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"La Prima\"| 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"La Prima\"| 1 bedroom"
+    },
+    "id": "238066",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041f\u043e\u043b\u0442\u0430\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0435\u0437\u0434 \u0434. 3",
+      "en": "  Saint Petersburg, 3 \u041f\u043e\u043b\u0442\u0430\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0435\u0437\u0434"
+    },
+    "price": null,
+    "longitude": "30.367925",
+    "latitude": "59.927116"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Indigo 2\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Indigo 2\" | Studio"
+    },
+    "id": "242894",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f \u0434. 13 \u0441\u0442\u0440. 2",
+      "en": "  Saint Petersburg, 13 \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.369569",
+    "latitude": "59.921913"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat  \u201cBohemian Prestige\u201d | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \u201cBohemian Prestige\" | 1 bedroom"
+    },
+    "id": "242858",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0427\u0435\u0440\u043d\u044f\u0445\u043e\u0432\u0441\u043a\u043e\u0433\u043e \u0434. 25",
+      "en": "  Saint Petersburg, 25 \u0427\u0435\u0440\u043d\u044f\u0445\u043e\u0432\u0441\u043a\u043e\u0433\u043e"
+    },
+    "price": null,
+    "longitude": "30.357577",
+    "latitude": "59.917632"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Indigo 4\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Indigo 4\" | Studio"
+    },
+    "id": "242896",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f \u0434. 13 \u043a\u043e\u0440\u043f. 2",
+      "en": "  Saint Petersburg, 13 \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.369569",
+    "latitude": "59.921913"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Indigo 1\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Indigo 1\" | Studio"
+    },
+    "id": "242893",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f \u0434. 13 \u043a\u043e\u0440\u043f. 2",
+      "en": "  Saint Petersburg, 13 \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.369569",
+    "latitude": "59.921913"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Petite 3\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Petite 3\" | Studio"
+    },
+    "id": "242950",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041c\u0430\u0440\u0430\u0442\u0430 \u0434. 73",
+      "en": "  Saint Petersburg, 73 \u041c\u0430\u0440\u0430\u0442\u0430"
+    },
+    "price": null,
+    "longitude": "30.342485",
+    "latitude": "59.920817"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Amber\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Amber\" | 1 bedroom"
+    },
+    "id": "242816",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u0434. 127",
+      "en": "  Saint Petersburg, 127 \u041d\u0435\u0432\u0441\u043a\u0438\u0439"
+    },
+    "price": null,
+    "longitude": "30.37486",
+    "latitude": "59.92713"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Legend\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Legend\" | 2 bedrooms"
+    },
+    "id": "250076",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0421\u0430\u0434\u043e\u0432\u0430\u044f \u0434. 22\/2",
+      "en": "  Saint Petersburg, 22\/2 \u0421\u0430\u0434\u043e\u0432\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.333421",
+    "latitude": "59.933099"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Vintage\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Vintage\" | 2 bedrooms"
+    },
+    "id": "242966",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, 1-\u044f \u0421\u043e\u0432\u0435\u0442\u0441\u043a\u0430\u044f \u0434. 12",
+      "en": "  Saint Petersburg, 12 1-\u044f \u0421\u043e\u0432\u0435\u0442\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.365087",
+    "latitude": "59.931071"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat  \"Fontanka\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Fontanka\" | 2 bedrooms"
+    },
+    "id": "242880",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u043d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u0430\u044f \u0440\u0435\u043a\u0438 \u0424\u043e\u043d\u0442\u0430\u043d\u043a\u0438 \u0434. 40\/68",
+      "en": "  Saint Petersburg, 40\/68 \u043d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u0430\u044f \u0440\u0435\u043a\u0438 \u0424\u043e\u043d\u0442\u0430\u043d\u043a\u0438"
+    },
+    "price": null,
+    "longitude": "30.344551",
+    "latitude": "59.933726"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Sweet\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Sweet\" | 2 bedrooms"
+    },
+    "id": "242963",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, 3-\u044f \u0421\u043e\u0432\u0435\u0442\u0441\u043a\u0430\u044f \u0434. 6",
+      "en": "  Saint Petersburg, 6 3-\u044f \u0421\u043e\u0432\u0435\u0442\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.366533",
+    "latitude": "59.9336"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Studio 4\" | \u0421\u0442\u0443\u0434\u0438\u044f \u041c\u043e\u0441\u043a\u0432\u0430",
+      "en": "LetYourFlat \"Studio 4\" | Studio Moscow"
+    },
+    "id": "249085",
+    "city": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430",
+    "address": {
+      "ru": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0411\u0435\u0433\u043e\u0432\u0430\u044f \u0434. 11",
+      "en": "  Moscow, 11 \u0411\u0435\u0433\u043e\u0432\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "37.556936",
+    "latitude": "55.779459"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Settle 11\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Settle 11\" | Studio"
+    },
+    "id": "241982",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0416\u0443\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e \u0434. 28",
+      "en": "  Saint Petersburg, 28 \u0416\u0443\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e"
+    },
+    "price": null,
+    "longitude": "30.359697",
+    "latitude": "59.936039"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Matisse\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Matisse\" | 2 bedrooms"
+    },
+    "id": "242923",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041b\u0438\u0433\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 25",
+      "en": "  Saint Petersburg, 25 \u041b\u0438\u0433\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.362661",
+    "latitude": "59.934461"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Stockholm\" | 3 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Stockholm\" | 3 bedrooms"
+    },
+    "id": "242961",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u0434. 146",
+      "en": "  Saint Petersburg, 146 \u041d\u0435\u0432\u0441\u043a\u0438\u0439"
+    },
+    "price": null,
+    "longitude": "30.370863",
+    "latitude": "59.929078"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Moskovskaya\" | 3 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Moskovskaya\" | 3 bedrooms"
+    },
+    "id": "242945",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 197",
+      "en": "  Saint Petersburg, 197 \u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.320988",
+    "latitude": "59.848665"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Loft C\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Loft C\" | Studio"
+    },
+    "id": "242903",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0412\u043e\u0441\u0441\u0442\u0430\u043d\u0438\u044f \u0434. 55 \u0441\u0442\u0440. \u0411",
+      "en": "  Saint Petersburg, 55 \u0412\u043e\u0441\u0441\u0442\u0430\u043d\u0438\u044f"
+    },
+    "price": null,
+    "longitude": "30.361862",
+    "latitude": "59.943273"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Settle 7\"|\u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Settle 7\"|Studio"
+    },
+    "id": "229596",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0416\u0443\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e \u0434. 28",
+      "en": "  Saint Petersburg, 28 \u0416\u0443\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e"
+    },
+    "price": null,
+    "longitude": "30.359697",
+    "latitude": "59.936039"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Nevsky Hi-Tech\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Nevsky Hi-Tech\" | 2 bedrooms"
+    },
+    "id": "242890",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u0434. 150",
+      "en": "  Saint Petersburg, 150 \u041d\u0435\u0432\u0441\u043a\u0438\u0439"
+    },
+    "price": null,
+    "longitude": "30.372965",
+    "latitude": "59.928298"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Candy\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Candy\" | Studio"
+    },
+    "id": "242862",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0416\u0443\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e 21",
+      "en": "  Saint Petersburg, \u0416\u0443\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e 21"
+    },
+    "price": null,
+    "longitude": "30.35384",
+    "latitude": "59.935746"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat  \"Santorini\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Santorini\" | 2 bedrooms"
+    },
+    "id": "242956",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041c\u0430\u0440\u0430\u0442\u0430 \u0434. 36-38",
+      "en": "  Saint Petersburg, 36-38 \u041c\u0430\u0440\u0430\u0442\u0430"
+    },
+    "price": null,
+    "longitude": "30.35243",
+    "latitude": "59.925714"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Griboedova\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Griboedova\" | 2 bedrooms"
+    },
+    "id": "242888",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0420\u0438\u043c\u0441\u043a\u043e\u0433\u043e-\u041a\u043e\u0440\u0441\u0430\u043a\u043e\u0432\u0430 \u0434. 93",
+      "en": "  Saint Petersburg, 93 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0420\u0438\u043c\u0441\u043a\u043e\u0433\u043e-\u041a\u043e\u0440\u0441\u0430\u043a\u043e\u0432\u0430"
+    },
+    "price": null,
+    "longitude": "30.283017",
+    "latitude": "59.919396"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Peter Suites\" | 3 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Peter Suites\" | 3 bedrooms"
+    },
+    "id": "242951",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u041f.\u0421 \u0434. 49\/18",
+      "en": "  Saint Petersburg, 49\/18 \u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u041f.\u0421"
+    },
+    "price": null,
+    "longitude": "30.305484",
+    "latitude": "59.961489"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Elegant\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Elegant\" | Studio"
+    },
+    "id": "238061",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0413\u043e\u0440\u043e\u0445\u043e\u0432\u0430\u044f \u0434. 70",
+      "en": "  Saint Petersburg, 70 \u0413\u043e\u0440\u043e\u0445\u043e\u0432\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.332631",
+    "latitude": "59.922458"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Mosfilm\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438 \u041c\u043e\u0441\u043a\u0432\u0430",
+      "en": "LetYourFlat \"Mosfilm\" | 2 bedrooms Moscow"
+    },
+    "id": "242948",
+    "city": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430",
+    "address": {
+      "ru": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u041c\u043e\u0441\u0444\u0438\u043b\u044c\u043c\u043e\u0432\u0441\u043a\u0430\u044f \u0434. 11 \u043a\u043e\u0440\u043f. 3",
+      "en": "  Moscow, 11 \u041c\u043e\u0441\u0444\u0438\u043b\u044c\u043c\u043e\u0432\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "37.524624",
+    "latitude": "55.716488"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Green\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Green\" | Studio"
+    },
+    "id": "242887",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041b\u0438\u0433\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 232",
+      "en": "  Saint Petersburg, 232 \u041b\u0438\u0433\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.344947",
+    "latitude": "59.906359"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat  \"Mirage\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat  \"Mirage\" | Atelier"
+    },
+    "id": "242962",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0414\u043e\u0441\u0442\u043e\u0435\u0432\u0441\u043a\u043e\u0433\u043e \u0434. 30",
+      "en": "  Saint Petersburg, 30 \u0414\u043e\u0441\u0442\u043e\u0435\u0432\u0441\u043a\u043e\u0433\u043e"
+    },
+    "price": null,
+    "longitude": "30.347839",
+    "latitude": "59.92355"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat  \"Dostoevsky\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Dostoevsky\" | Studio"
+    },
+    "id": "242872",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0414\u043e\u0441\u0442\u043e\u0435\u0432\u0441\u043a\u043e\u0433\u043e \u0434. 30",
+      "en": "  Saint Petersburg, 30 \u0414\u043e\u0441\u0442\u043e\u0435\u0432\u0441\u043a\u043e\u0433\u043e"
+    },
+    "price": null,
+    "longitude": "30.347839",
+    "latitude": "59.92355"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Aquamarine\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Aquamarine\" | Atelier"
+    },
+    "id": "242821",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0417\u0430\u0433\u043e\u0440\u043e\u0434\u043d\u044b\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 9",
+      "en": "  Saint Petersburg, 9 \u0417\u0430\u0433\u043e\u0440\u043e\u0434\u043d\u044b\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.343761",
+    "latitude": "59.926886"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Breeze\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Breeze\" | 2 bedrooms"
+    },
+    "id": "242860",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041e\u043f\u043e\u0447\u0438\u043d\u0438\u043d\u0430 \u0434. 7",
+      "en": "  Saint Petersburg, 7 \u041e\u043f\u043e\u0447\u0438\u043d\u0438\u043d\u0430"
+    },
+    "price": null,
+    "longitude": "30.24067",
+    "latitude": "59.928212"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Dream Loft\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Dream Loft\" | 1 bedroom"
+    },
+    "id": "242877",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0411\u043e\u043b\u044c\u0448\u0430\u044f \u041f\u043e\u0434\u044a\u044f\u0447\u0435\u0441\u043a\u0430\u044f \u0434. 8",
+      "en": "  Saint Petersburg, 8 \u0411\u043e\u043b\u044c\u0448\u0430\u044f \u041f\u043e\u0434\u044a\u044f\u0447\u0435\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.305816",
+    "latitude": "59.92566"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Olimp\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Olimp\" | 1 bedroom"
+    },
+    "id": "238062",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0413\u043e\u0440\u043e\u0445\u043e\u0432\u0430\u044f \u0434. 70",
+      "en": "  Saint Petersburg, 70 \u0413\u043e\u0440\u043e\u0445\u043e\u0432\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.332631",
+    "latitude": "59.922458"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Honey\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Honey\" | Studio"
+    },
+    "id": "242891",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041a\u0443\u0437\u043d\u0435\u0447\u043d\u044b\u0439 \u043f\u0435\u0440\u0435\u0443\u043b\u043e\u043a \u0434. 14\u0410",
+      "en": "  Saint Petersburg, 14\u0410 \u041a\u0443\u0437\u043d\u0435\u0447\u043d\u044b\u0439 \u043f\u0435\u0440\u0435\u0443\u043b\u043e\u043a"
+    },
+    "price": null,
+    "longitude": "30.354199",
+    "latitude": "59.927301"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Red\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Red\" | Studio"
+    },
+    "id": "229587",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 45",
+      "en": "  Saint Petersburg, 45 \u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.30472",
+    "latitude": "59.961021"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Island\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Island\" | Studio"
+    },
+    "id": "242892",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0411\u0438\u0440\u0436\u0435\u0432\u0430\u044f \u043b\u0438\u043d\u0438\u044f \u0434. 1",
+      "en": "  Saint Petersburg, 1 \u0411\u0438\u0440\u0436\u0435\u0432\u0430\u044f \u043b\u0438\u043d\u0438\u044f"
+    },
+    "price": null,
+    "longitude": "30.29686",
+    "latitude": "59.943877"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Indigo 3\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Indigo 3\" | Studio"
+    },
+    "id": "242895",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f \u0434. 13 \u0441\u0442\u0440. 2",
+      "en": "  Saint Petersburg, 13 \u041a\u0440\u0435\u043c\u0435\u043d\u0447\u0443\u0433\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.369569",
+    "latitude": "59.921913"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Kazansky\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Kazansky\" | 2 bedrooms"
+    },
+    "id": "242897",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u043d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u0430\u044f \u043a\u0430\u043d\u0430\u043b\u0430 \u0413\u0440\u0438\u0431\u043e\u0435\u0434\u043e\u0432\u0430 \u0434. 29",
+      "en": "  Saint Petersburg, 29 \u043d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u0430\u044f \u043a\u0430\u043d\u0430\u043b\u0430 \u0413\u0440\u0438\u0431\u043e\u0435\u0434\u043e\u0432\u0430"
+    },
+    "price": null,
+    "longitude": "30.324151",
+    "latitude": "59.93222"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Maison\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Maison\" | 1 bedroom"
+    },
+    "id": "242915",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041a\u043e\u043b\u043e\u043c\u0435\u043d\u0441\u043a\u0430\u044f \u0434. 23",
+      "en": "  Saint Petersburg, 23 \u041a\u043e\u043b\u043e\u043c\u0435\u043d\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.353103",
+    "latitude": "59.923617"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Makarova\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Makarova\" | 2 bedrooms"
+    },
+    "id": "242927",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u043d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u0430\u044f \u041c\u0430\u043a\u0430\u0440\u043e\u0432\u0430 \u0434. 12",
+      "en": "  Saint Petersburg, 12 \u043d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u0430\u044f \u041c\u0430\u043a\u0430\u0440\u043e\u0432\u0430"
+    },
+    "price": null,
+    "longitude": "30.291137",
+    "latitude": "59.945819"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Marble\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Marble\" | 1 bedroom"
+    },
+    "id": "242938",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041c\u0438\u0440\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u0434. 20",
+      "en": "  Saint Petersburg, 20 \u041c\u0438\u0440\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.373522",
+    "latitude": "59.924898"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Sapphire\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Sapphire\" | Atelier"
+    },
+    "id": "242957",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0416\u0443\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e \u0434. 21",
+      "en": "  Saint Petersburg, 21 \u0416\u0443\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e"
+    },
+    "price": null,
+    "longitude": "30.35384",
+    "latitude": "59.935746"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Sofitel\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Sofitel\" | 2 bedrooms"
+    },
+    "id": "242959",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0412\u043e\u0437\u043d\u0435\u0441\u0435\u043d\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 4",
+      "en": "  Saint Petersburg, 4 \u0412\u043e\u0437\u043d\u0435\u0441\u0435\u043d\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.308825",
+    "latitude": "59.935232"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Blue\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Blue\" | Atelier"
+    },
+    "id": "229589",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 45",
+      "en": "  Saint Petersburg, 45 \u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.30472",
+    "latitude": "59.961021"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Settle 10\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Settle 10\" | Studio"
+    },
+    "id": "238064",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0416\u0443\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e \u0434. 28",
+      "en": "  Saint Petersburg, 28 \u0416\u0443\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e"
+    },
+    "price": null,
+    "longitude": "30.359697",
+    "latitude": "59.936039"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Premier\" | 2 \u0441\u043f\u0430\u043b\u044c\u043d\u0438",
+      "en": "LetYourFlat \"Premier\" | 2 bedrooms"
+    },
+    "id": "220553",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0434. 150\u0435",
+      "en": "  Saint Petersburg, 150\u0435 \u041d\u0435\u0432\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442"
+    },
+    "price": null,
+    "longitude": "30.372965",
+    "latitude": "59.928298"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Sakura\" | 1 \u0441\u043f\u0430\u043b\u044c\u043d\u044f",
+      "en": "LetYourFlat \"Sakura\" | 1 bedroom"
+    },
+    "id": "238060",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0417\u0432\u0435\u043d\u0438\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u0434. 6",
+      "en": "  Saint Petersburg, 6 \u0417\u0432\u0435\u043d\u0438\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f"
+    },
+    "price": null,
+    "longitude": "30.336898",
+    "latitude": "59.9223"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Platinum\" | \u0421\u0442\u0443\u0434\u0438\u044f \u041c\u043e\u0441\u043a\u0432\u0430",
+      "en": "LetYourFlat \"Platinum\" | Studio Moscow"
+    },
+    "id": "220559",
+    "city": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430",
+    "address": {
+      "ru": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u043f\u0435\u0440. \u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u041b\u0451\u0432\u0448\u0438\u043d\u0441\u043a\u0438\u0439 \u0434. 8\/1 \u0441\u0442\u0440. 2",
+      "en": "  Moscow, 8\/1 \u043f\u0435\u0440. \u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u041b\u0451\u0432\u0448\u0438\u043d\u0441\u043a\u0438\u0439"
+    },
+    "price": null,
+    "longitude": "37.587703",
+    "latitude": "55.74263"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Tverskaya\" | \u0421\u0442\u0443\u0434\u0438\u044f \u041c\u043e\u0441\u043a\u0432\u0430",
+      "en": "LetYourFlat \"Tverskaya\" | Studio Moscow"
+    },
+    "id": "207010",
+    "city": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430",
+    "address": {
+      "ru": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430, 2- \u0430\u044f \u0411\u0440\u0435\u0441\u0442\u0441\u043a\u0430\u044f \u0443\u043b\u0438\u0446\u0430 \u0434. 6",
+      "en": "  Moscow, 6 2- \u0430\u044f \u0411\u0440\u0435\u0441\u0442\u0441\u043a\u0430\u044f \u0443\u043b\u0438\u0446\u0430"
+    },
+    "price": null,
+    "longitude": "37.591207",
+    "latitude": "55.770841"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Metropolis\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Metropolis\" | Studio"
+    },
+    "id": "229600",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041d\u0435\u043a\u0440\u0430\u0441\u043e\u0432\u0430 \u0434. 29",
+      "en": "  Saint Petersburg, 29 \u041d\u0435\u043a\u0440\u0430\u0441\u043e\u0432\u0430"
+    },
+    "price": null,
+    "longitude": "30.361107",
+    "latitude": "59.938604"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Studio 5\" | \u0421\u0442\u0443\u0434\u0438\u044f \u041c\u043e\u0441\u043a\u0432\u0430",
+      "en": "LetYourFlat \"Studio 5\" | Studio Moscow"
+    },
+    "id": "229610",
+    "city": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430",
+    "address": {
+      "ru": "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0411\u0435\u0433\u043e\u0432\u0430\u044f \u0443\u043b\u0438\u0446\u0430 \u0434. 11",
+      "en": "  Moscow, 11 \u0411\u0435\u0433\u043e\u0432\u0430\u044f \u0443\u043b\u0438\u0446\u0430"
+    },
+    "price": null,
+    "longitude": "37.556936",
+    "latitude": "55.779459"
+  },
+  {
+    "room": {
+      "ru": "LetYourFlat \"Settle 6\" | \u0421\u0442\u0443\u0434\u0438\u044f",
+      "en": "LetYourFlat \"Settle 6\" | Studio"
+    },
+    "id": "229594",
+    "city": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+    "address": {
+      "ru": "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0416\u0443\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e \u0434. 28",
+      "en": "  Saint Petersburg, 28 \u0416\u0443\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e"
+    },
+    "price": null,
+    "longitude": "30.359697",
+    "latitude": "59.936039"
+  }
+]
