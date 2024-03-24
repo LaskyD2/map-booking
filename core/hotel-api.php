@@ -1,7 +1,11 @@
 <?php
+$settings = json_decode(file_get_contents(__DIR__ . '\settings\settings.json'), true);
 
-$hotelCode = 15121;
-$languages = ["ru", "en"];
+$settingsHotelCode = implode(',',$settings['hotels']);
+$settingsLanguages = implode(',',$settings['languages']);
+
+$hotelsCode = explode(',', $settingsHotelCode);
+$languages = explode(',', $settingsLanguages);
 
 function requestHotel($url) {
     $ch = curl_init();
@@ -24,16 +28,17 @@ function requestHotel($url) {
 
 function getRoom($roomDate, $lang) {
     $room = [];
+
     $room['room'][$lang] = $roomDate['name'];
     $room['id'] = $roomDate['code'];
     $room['city'] = $roomDate['contact_info']['addresses'][0]['city_name'];
     $room['address'][$lang] = $roomDate['contact_info']['addresses'][0]['city_name'] . ', ' .  $roomDate['contact_info']['addresses'][0]['address_line'][0];
     $room['price'] = null;
 
-    $coordinates = requestAddress($room['address'][$lang]);
+    /* Адреса номеров */
+/*  $coordinates = requestAddress($room['address'][$lang]);
     $room['longitude'] = $coordinates[0];
-    $room['latitude'] = $coordinates[1];
-
+    $room['latitude'] = $coordinates[1];*/
 
     return $room;
 }
@@ -47,7 +52,6 @@ function getRoomLang($roomDate, $lang) {
 }
 
 function getRoomList($roomsList, $responseMas, $lang, $value) {
-
     $roomsInfo = $responseMas['hotels']['0']['room_types'];
 
     foreach ($roomsInfo as $i => $currRoomData) {
@@ -82,7 +86,7 @@ function correctLanguages($lang)
     return $languageCodes;
 }
 
-function requestAddress($address)
+/*function requestAddress($address)
 {
 
     $ch = curl_init('https://geocode-maps.yandex.ru/1.x/?apikey=d2905f6d-3e1c-4841-b651-5790cd49c349&format=json&geocode=' . urlencode($address));
@@ -96,27 +100,38 @@ function requestAddress($address)
     $coordinates = $res['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point']['pos'];
     $coordinates = explode(' ', $coordinates);
     return $coordinates;
+}*/
+$result = [];
+foreach ($hotelsCode as $hotel) {
+    $host = 'https://ibe.tlintegration.com/ibe/RegionMap/host?hotel_code=' . $hotel;
+    $hostUrl = json_decode(requestHotel($host));
+    $roomsList= [];
+    foreach ($languages as $value => $language) {
+        $longLanguages = correctLanguages($language)[0];
+        $url = "https://" . $hostUrl->host . "/ChannelDistributionApi/BookingForm/hotel_info?language=" . $longLanguages . "&hotels[0].code=" . $hotel;
+        $response = requestHotel($url);
+        $responseMas = json_decode($response, true);
+
+
+        $hotelData = $responseMas['hotels']['0'];
+        $addressInfo = $hotelData['contact_info']['addresses'][0];
+
+        $roomsList['cityName'][$language] = $addressInfo['city_name'];
+        $roomsList['address'][$language] = $addressInfo['address_line'][0];
+        $roomsList['geLt'] = $addressInfo['latitude'];
+        $roomsList['geLg'] = $addressInfo['longitude'];
+
+        $roomsList['rooms'] = getRoomList($roomsList['rooms'], $responseMas, $language, $value);
+    }
+   $result[$hotel] = $roomsList;
 }
 
-$host = 'https://ibe.tlintegration.com/ibe/RegionMap/host?hotel_code=' . $hotelCode;
-$hostUrl = json_decode(requestHotel($host));
-$rooms = [];
-$roomsList = [];
-foreach ($languages as $value => $language) {
-    $longLanguages = correctLanguages($language)[0];
-    $url = "https://" . $hostUrl->host . "/ChannelDistributionApi/BookingForm/hotel_info?language=" . $longLanguages . "&hotels[0].code=" . $hotelCode;
-    $response = requestHotel($url);
-    $responseMas = json_decode($response, true);
-    $roomsList = getRoomList($roomsList, $responseMas, $language, $value);
-}
-
-
-$fileCache = __DIR__ . '/cache/room_list.json';
-file_put_contents($fileCache, json_encode($roomsList));
+$fileCache = __DIR__ . '\..\cache\room_list.json';
+file_put_contents($fileCache, json_encode($result));
 
 
 echo "<pre>";
-var_dump($roomsList);
+var_dump($result);
 echo "</pre>";
 
 
