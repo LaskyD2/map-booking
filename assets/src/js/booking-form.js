@@ -1,14 +1,14 @@
-import { coordinatesCity, scenariosHotel } from './const.js'
+// import { coordinatesCity, scenariosHotel } from './const.js'
 import { getParameterByName, diffDates } from './module/module.js'
 import { roomsList } from './module/rooms-list.js'
 import { getRoomsFromStorage } from './model/room-load.js'
 import { map, fillPoint } from './map.js'
-import { placemarks } from "./model/placemarks.js";
+import { placeMarks } from "./model/placemarks.js";
 
 
 export function tabsBookingForm() {
-    let scenariosListHotel = scenariosHotel;
-    let citySelector = document.querySelector('select.tl-city-select');
+    // let scenariosListHotel = scenariosHotel;
+
     let listElement = document.querySelectorAll('.bookmarks li[id ^="hotel-"]');
 
     const changeURL = (value) => {
@@ -29,7 +29,9 @@ export function tabsBookingForm() {
         window.history.pushState(false, false, path);
     }
 
-    const selectCity = () => {
+    /* START Селект городов, пока хз что с ним делать */
+    /*let citySelector = document.querySelector('select.tl-city-select');
+     const selectCity = () => {
         let citySelector = document.querySelector('select.tl-city-select').value;
         let hotels = document.querySelectorAll('.tl-container .bookmarks li[id^="hotel-"]');
 
@@ -45,9 +47,20 @@ export function tabsBookingForm() {
 
 
     };
-
-
     selectCity();
+    citySelector.addEventListener('change', function () {
+        changeURL(this.value);
+        selectCity();
+        fillPoint(placeMarks());
+        map.setCenter(coordinatesCity[citySelector.value], 12, {duration: 300});
+    });
+
+        document.querySelectorAll('.bookmarks li').forEach(function (elem) {
+        citySelector.value === document.getElementById(elem.getAttribute('id')).getAttribute('data-city') ?
+            elem.classList.remove('hidden') : elem.classList.add('hidden');
+    })
+    */
+    /* END Селект городов, пока хз что с ним делать */
 
     document.querySelectorAll('.bookmarks li').forEach(function (elem) {
         let prov = getParameterByName('hotel_id');
@@ -55,8 +68,9 @@ export function tabsBookingForm() {
 
         if (document.getElementById(el).getAttribute('data-id') === prov) {
             document.getElementById(el).classList.add('active');
-            citySelector.value = document.getElementById(el).getAttribute('data-city');
-            bookingForm(scenariosListHotel[prov]) ;
+            /*citySelector.value = document.getElementById(el).getAttribute('data-city');
+            bookingForm(scenariosListHotel[prov]) ;*/ //Селект городов
+            bookingForm();
         } else {
             document.getElementById(el).classList.remove('active');
         }
@@ -65,10 +79,7 @@ export function tabsBookingForm() {
             document.getElementById("hotel-1").classList.add('active');
         }
     });
-    document.querySelectorAll('.bookmarks li').forEach(function (elem) {
-        citySelector.value === document.getElementById(elem.getAttribute('id')).getAttribute('data-city') ?
-            elem.classList.remove('hidden') : elem.classList.add('hidden');
-    })
+
 
     listElement.forEach(function (elem) {
         elem.addEventListener("click", function () {
@@ -82,20 +93,13 @@ export function tabsBookingForm() {
             document.getElementById(elem.getAttribute('id')).classList.add('active');
 
             changeURL(data_id);
-            bookingForm(scenariosListHotel[data_id]);
+            // bookingForm(scenariosListHotel[data_id]);
+            bookingForm();
 
-            fillPoint(placemarks());
-            map.setCenter(coordinatesCity[citySelector.value], 12, {duration: 300});
+            fillPoint(placeMarks());
+            // map.setCenter(coordinatesCity[citySelector.value], 12, {duration: 300}); - селект городов
         });
     });
-
-    citySelector.addEventListener('change', function () {
-        changeURL(this.value);
-        selectCity();
-        fillPoint(placemarks());
-        map.setCenter(coordinatesCity[citySelector.value], 12, {duration: 300});
-    });
-
 }
 
 function changeURLDate(param, regex, value) {
@@ -113,7 +117,6 @@ function changeURLDate(param, regex, value) {
     }
     window.history.pushState(false, false, path);
 }
-
 
 function trackUserAction(data) {
     let roomList = null;
@@ -153,13 +156,12 @@ function noAvailableRooms(data) {
 }
 
 
-export function bookingForm(roomTypes) {
+export function bookingForm() {
     (function (w) {
         var q = [
-            ['setContext', 'TL-INT-letyourflat_2023-02-28', `${MAP_BOOKING_LANG}`],
+            ['setContext', 'TL-INT-becar-group', `${MAP_BOOKING_LANG}`],
             ['embed', 'booking-form', {
                 container: 'tl-booking-form',
-                roomType: roomTypes,
                 autoScroll: 'none',
                 onTrackUserAction: trackUserAction,
                 onNoAvailableRooms: noAvailableRooms

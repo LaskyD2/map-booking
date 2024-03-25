@@ -116,10 +116,11 @@ foreach ($hotelsCode as $hotel) {
         $hotelData = $responseMas['hotels']['0'];
         $addressInfo = $hotelData['contact_info']['addresses'][0];
 
+        $roomsList['name'][$language] = $hotelData['name'];
         $roomsList['cityName'][$language] = $addressInfo['city_name'];
         $roomsList['address'][$language] = $addressInfo['address_line'][0];
-        $roomsList['geLt'] = $addressInfo['latitude'];
-        $roomsList['geLg'] = $addressInfo['longitude'];
+        $roomsList['latitude'] = $addressInfo['latitude'];
+        $roomsList['longitude'] = $addressInfo['longitude'];
 
         $roomsList['rooms'] = getRoomList($roomsList['rooms'], $responseMas, $language, $value);
     }

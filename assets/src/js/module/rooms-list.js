@@ -1,12 +1,12 @@
 import {templateIconContent, templateBalloonContent} from "../views/template.js";
-import { placemarks } from '../model/placemarks.js';
+import { placeMarks } from '../model/placemarks.js';
 import { geoObjects, clusterer, map } from '../map.js';
 
 
 export const roomsList = (roomsFb, roomList) => {
 
     let minPriceMarker;
-    let placemarksRoster = placemarks();
+    let placemarksRoster = placeMarks();
 
 
     if (!roomsFb) {
@@ -60,7 +60,9 @@ export const roomsList = (roomsFb, roomList) => {
         let address = geoObjects[index].properties.get('address');
         let idElement = geoObjects[index].properties.get('id');
 
-        geoObjects[index].properties.set('iconContent', templateIconContent('price', minPriceMarker, idElement, roomsObj.length));
+        console.log(name);
+
+        geoObjects[index].properties.set('iconContent', templateIconContent('price',minPriceMarker, idElement, roomsObj.length));
         geoObjects[index].properties.set('balloonContent', templateBalloonContent(address, roomsObj));
 
     })

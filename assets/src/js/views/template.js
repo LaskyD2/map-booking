@@ -1,16 +1,29 @@
 import { LANG_SETTING } from '../lang.js';
 
-export const templateIconContent = (text, price, id, count) => {
+export const templateIconContent = (text,name, price, id, count) => {
+    const langMap = LANG_SETTING[MAP_BOOKING_LANG];
+    const nameHotel = name[MAP_BOOKING_LANG]
+    const getArrivalDate = localStorage.getItem('tl-arrivalDate');
+
     const content = {
-        'loader' : localStorage.getItem('tl-arrivalDate') ? '<div class="loader"></div>' : LANG_SETTING[MAP_BOOKING_LANG].SelectDate,
-        'price' : price ? LANG_SETTING[MAP_BOOKING_LANG].From + ' ' + price + ' ₽' : LANG_SETTING[MAP_BOOKING_LANG].NoPlaces,
+        'loader' : getArrivalDate ? '<div class="loader"></div>' : langMap.SelectDate,
+        'price' : price ? langMap.From + ' ' + price + ' ₽' : langMap.NoPlaces,
     }
+    console.log(name[MAP_BOOKING_LANG])
     return (
-        ` <div class="map__hint ${price ? '' : 'no-rooms'}" id="${id}">
+        ` <div class="map__hint ${!price && 'no-rooms'}" id="${id}">
             <div class="map__hint-icon"></div>
-            <div class="map__hint-price"> ${content[text]} ${count > 1 ? ' (' + count + ' ' + LANG_SETTING[MAP_BOOKING_LANG].Apartments + ')' : ''}</div>
+            <div class="map__hint-name">${nameHotel}</div>
+
           </div>`
     );
+
+    /*return (
+        ` <div class="map__hint ${price ? '' : 'no-rooms'}" id="${id}">
+            <div class="map__hint-icon"></div>
+            <div class="map__hint-price"> ${content[text]} ${count > 1 ? ' (' + count + ' ' + langMap.Apartments + ')' : ''}</div>
+          </div>`
+    );*/
 };
 
 

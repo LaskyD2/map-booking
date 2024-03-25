@@ -1,16 +1,16 @@
 import {getRoomsFromStorage} from '../model/room-load.js'
 import {getParameterByName} from "./module.js";
-import {scenariosHotel} from "../const.js";
+// import {scenariosHotel} from "../const.js";
 
 export const roomsAddress = () => {
-    console.log(getRoomsFromStorage())
+
     let roomList = getRoomsFromStorage(),
         roomListCache = [],
         roomAddressList = [],
         roomAddressItem = [],
         rooms = [],
-        prov = getParameterByName('hotel_id'),
-        scenariosListHotel = scenariosHotel;
+        prov = getParameterByName('hotel_id');
+        // scenariosListHotel = scenariosHotel;
 
     if (prov) {
         roomList.forEach((room) => {
