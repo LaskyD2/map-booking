@@ -1,24 +1,24 @@
 import {init} from './map.js';
 import {accordion} from './module/module.js';
-import {setRoomsStorage} from './model/room-load.js';
+import {setHotelsStorage} from './model/hotel-load.js';
 import {setModuleLanguage} from "./module/module-language.js";
 import {tabsBookingForm} from './booking-form.js';
 
-import {RoomLoad as RoomLoadController} from './controller/room-load.js';
+import {HotelLoad as HotelLoadController} from './controller/hotel-load.js';
 
-window.setTlRooms = () => {
-    const roomLoadController = new RoomLoadController();
+window.setTlHotel = () => {
+    const hotelLoadController = new HotelLoadController();
 
-    roomLoadController.load()
+    hotelLoadController.load()
         .then(() => {
             setModuleLanguage();
             accordion();
-            setRoomsStorage();
-            // tabsBookingForm();
+            setHotelsStorage();
+            tabsBookingForm();
             ymaps.ready(init);
         });
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    window.setTlRooms();
+    window.setTlHotel();
 });

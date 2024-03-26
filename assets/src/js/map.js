@@ -2,10 +2,12 @@ import {coordinatesCity} from './const.js';
 import {placeMarks} from './model/placemarks.js';
 import { handleButtonClick } from './module/module.js';
 import {bookingForm} from './booking-form.js';
+import {getHotelsFromStorage} from "./model/hotel-load.js";
+import {hotelsList} from "./module/hotels-list.js";
 // import {templateClusterContent} from './views/template.js';
 
 export let geoObjects = [];
-export let clusterer;
+export let cluster;
 export let map;
 let isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 
@@ -17,9 +19,10 @@ export let fillPoint = (placeMarksList) => {
         geoObjects[i] = new ymaps.Placemark([placeMarksList[i].latitude, placeMarksList[i].longitude],
             {
                 iconContent: placeMarksList[i].iconContent,
-                roomTypes: placeMarksList[i].roomTypes,
-                address: placeMarksList[i].address,
                 id: placeMarksList[i].id,
+                name: placeMarksList[i].name,
+                address: placeMarksList[i].address,
+                roomTypes: placeMarksList[i].roomTypes,
                 price: null
             },
             {
@@ -57,15 +60,16 @@ export let fillPoint = (placeMarksList) => {
         });
 
         geoObjects[i].events.add('balloonopen', function () {
+            let balloonRoom = document.querySelectorAll(".map__balloon-room");
             let bookingFormBlock = document.getElementById("tl-booking-form");
-            let btns = document.querySelectorAll(".map__balloon-room");
+
 
             let handleButtonClick = () => {
                 bookingFormBlock.scrollIntoView({block: "end", behavior: "smooth"});
             }
 
-            btns.forEach((btn) => {
-                btn.addEventListener("click", handleButtonClick);
+            balloonRoom.forEach((balloon) => {
+                balloon.addEventListener("click", handleButtonClick);
             })
 
         });
@@ -82,43 +86,20 @@ export let fillPoint = (placeMarksList) => {
         });
     })
 
-    clusterer = new ymaps.Clusterer({
+    cluster = new ymaps.Clusterer({
         gridSize: 95,
         clusterIconColor: '#7F7165',
     });
 
-    let uniqueIds = new WeakMap();
-    let lastUniqueId = 0;
-
-    function getUniqueId(geoObject) {
-        if (!uniqueIds.has(geoObject)) {
-            uniqueIds.set(geoObject, lastUniqueId++);
-        }
-        return uniqueIds.get(geoObject);
-    }
-
-    // эта штука должна менять масштаю при клики на кластер
-    clusterer.events.add('click', (event) => {
-        const needZoom = ymaps.util.bounds.containsBounds(map.getBounds(), clusterer.getBounds());
-        if (needZoom) {
-            clusterer.options.set('clusterDisableClickZoom', true)
-            event.stopPropagation();
-            const center = ymaps.util.bounds.getCenter(clusterer.getBounds());
-            map.setCenter(center, map.getZoom() + 5);
-
-        }
-        clusterer.options.set('clusterDisableClickZoom', false)
-    });
+    map.geoObjects.add(cluster);
+    cluster.add(geoObjects);
 
 
-    map.geoObjects.add(clusterer);
-    clusterer.add(geoObjects);
+    hotelsList(getHotelsFromStorage());
 
 }
 
 export function init() {
-
-    // let cooCity = document.querySelector('.tl-city-select').value;
 
     map = new ymaps.Map('map', {
         center: coordinatesCity['spb'], // Доделать выбранный город

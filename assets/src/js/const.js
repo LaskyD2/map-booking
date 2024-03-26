@@ -3,7 +3,7 @@ export const coordinatesCity = {
     "msk": [55.75, 37.61]
 }
 
-export const MODULE_NAME = 'room-list';
+export const MODULE_NAME = 'hotels-list';
 export const LOCAL_STORAGE_EXPIRE_ITEM = `${MODULE_NAME}:expire`;
 export const LOCAL_STORAGE_ROOMS_ITEM = `${MODULE_NAME}:prices`;
 export const LOCAL_STORAGE_CACHE_VALUE = 1440;

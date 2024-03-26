@@ -1,7 +1,8 @@
 // import { coordinatesCity, scenariosHotel } from './const.js'
 import { getParameterByName, diffDates } from './module/module.js'
-import { roomsList } from './module/rooms-list.js'
-import { getRoomsFromStorage } from './model/room-load.js'
+import { changeDate } from './controller/price-load.js'
+import { hotelsList } from './module/hotels-list.js'
+import { getHotelsFromStorage } from './model/hotel-load.js'
 import { map, fillPoint } from './map.js'
 import { placeMarks } from "./model/placemarks.js";
 
@@ -96,7 +97,7 @@ export function tabsBookingForm() {
             // bookingForm(scenariosListHotel[data_id]);
             bookingForm();
 
-            fillPoint(placeMarks());
+            // fillPoint(placeMarks());
             // map.setCenter(coordinatesCity[citySelector.value], 12, {duration: 300}); - селект городов
         });
     });
@@ -118,43 +119,25 @@ function changeURLDate(param, regex, value) {
     window.history.pushState(false, false, path);
 }
 
-function trackUserAction(data) {
-    let roomList = null;
-    let roomsFb;
 
-    if (getParameterByName('date'))    {
-        if (data.action === 'change-dates') {
+function searchRooms(data) {
 
-            let arrival = data.arrival;
-            let departure = data.departure;
-            let nights = diffDates(new Date(departure),  new Date(arrival));
+    let arrival = data.arrivalDate;
+    let departure = data.departureDate;
+    let nights = data.nights;
 
-            let date = "date";
-            let regexDate = new RegExp(/date=[A-Za-z0-9_-]+/g);
-            changeURLDate(date, regexDate, arrival)
+    changeDate(arrival, nights);
 
-            let nightsUrl = "nights";
-            let regexNights = new RegExp(/nights=\d+/g);
-            changeURLDate(nightsUrl, regexNights, nights)
-        }
+    if (getParameterByName('date')) {
+        let date = "date";
+        let regexDate = new RegExp(/date=[A-Za-z0-9_-]+/g);
+        changeURLDate(date, regexDate, arrival)
+
+        let nightsUrl = "nights";
+        let regexNights = new RegExp(/nights=\d+/g);
+        changeURLDate(nightsUrl, regexNights, nights);
     }
-
-
-    if (data.action === 'search-rooms') {
-        roomsFb = data.rooms;
-        roomList = getRoomsFromStorage();
-
-        roomsList(roomsFb, roomList);
-    }
-
 }
-
-function noAvailableRooms(data) {
-    let roomsFb = data.rooms;
-    let roomList = getRoomsFromStorage();
-    roomsList(roomsFb, roomList);
-}
-
 
 export function bookingForm() {
     (function (w) {
@@ -163,8 +146,7 @@ export function bookingForm() {
             ['embed', 'booking-form', {
                 container: 'tl-booking-form',
                 autoScroll: 'none',
-                onTrackUserAction: trackUserAction,
-                onNoAvailableRooms: noAvailableRooms
+                onSearchRooms: searchRooms,
             }]
         ];
         var h=["ru-ibe.tlintegration.ru","ibe.tlintegration.ru","ibe.tlintegration.com"];

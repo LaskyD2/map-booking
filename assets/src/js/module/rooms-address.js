@@ -1,10 +1,10 @@
-import {getRoomsFromStorage} from '../model/room-load.js'
+import {getHotelsFromStorage} from '../model/hotel-load.js'
 import {getParameterByName} from "./module.js";
 // import {scenariosHotel} from "../const.js";
 
 export const roomsAddress = () => {
 
-    let roomList = getRoomsFromStorage(),
+    let roomList = getHotelsFromStorage(),
         roomListCache = [],
         roomAddressList = [],
         roomAddressItem = [],
