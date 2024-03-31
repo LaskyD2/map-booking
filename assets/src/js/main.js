@@ -17,6 +17,7 @@ window.setTlHotel = () => {
             tabsBookingForm();
             ymaps.ready(init);
         });
+
 };
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -6,6 +6,11 @@ export const coordinatesCity = {
 export const MODULE_NAME = 'hotels-list';
 export const LOCAL_STORAGE_EXPIRE_ITEM = `${MODULE_NAME}:expire`;
 export const LOCAL_STORAGE_ROOMS_ITEM = `${MODULE_NAME}:prices`;
+
+export const PRICE_NAME = 'price-list';
+export const LOCAL_STORAGE_EXPIRE_PRICE_ITEM = `${PRICE_NAME}:expire`;
+export const LOCAL_STORAGE_PRICES_ITEM = `${PRICE_NAME}:prices`;
+
 export const LOCAL_STORAGE_CACHE_VALUE = 1440;
 export const LOCAL_STORAGE_CACHE_MEASURE = 'minute';
 export const LOCAL_STORAGE_EMPTY_CACHE = '';

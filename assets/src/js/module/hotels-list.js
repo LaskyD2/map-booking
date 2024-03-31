@@ -1,21 +1,14 @@
-import { templateIconContent, templateBalloonContent } from "../views/template.js";
+import { templateIconContent } from "../views/template.js";
 import { placeMarks } from '../model/placemarks.js';
 import { geoObjects, cluster, map } from '../map.js';
-import {setRoomsStorage} from "../controller/price-load.js";
 
 
-export const hotelsList = (roomList) => {
-
+export const hotelsList = () => {
     let minPriceMarker;
     let placeMarksRoster = placeMarks();
 
-    setRoomsStorage();
-
-
     placeMarksRoster.forEach((item, index) => {
         let roomPrice = []
-
-
 
         minPriceMarker = roomPrice.length ? Math.min.apply(null, roomPrice) : null;
 
@@ -23,8 +16,7 @@ export const hotelsList = (roomList) => {
         let address = geoObjects[index].properties.get('address');
         let idElement = geoObjects[index].properties.get('id');
 
-        geoObjects[index].properties.set('iconContent', templateIconContent('price', name, address, minPriceMarker, idElement));
-
+        geoObjects[index].properties.set('iconContent', templateIconContent('loader', name, address, minPriceMarker, idElement));
     })
 
 

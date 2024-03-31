@@ -257,6 +257,10 @@ body {
     color: #FFFFFF;
 }
 
+.map__hint.hotel-active {
+    background: orange !important;
+}
+
 .map__hint:hover .map__hint-price {
     color: #000000;
 }

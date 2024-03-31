@@ -1,7 +1,7 @@
 import {coordinatesCity} from './const.js';
 import {placeMarks} from './model/placemarks.js';
-import { handleButtonClick } from './module/module.js';
-import {bookingForm} from './booking-form.js';
+import {handleButtonClick} from './module/module.js';
+import {bookingForm, changeURL} from './booking-form.js';
 import {getHotelsFromStorage} from "./model/hotel-load.js";
 import {hotelsList} from "./module/hotels-list.js";
 // import {templateClusterContent} from './views/template.js';
@@ -31,19 +31,19 @@ export let fillPoint = (placeMarksList) => {
                 iconImageOffset: [0, -15],
                 iconImageClipRect: [[415, 0], [461, 57]],
                 hideIconOnBalloonOpen: false,
-                balloonOffset:[20, -15]
+                balloonOffset: [20, -15]
             }
         );
 
         geoObjects[i].events.add('click', function (e) {
             let placeMark = e.get('target');
-            let rt = placeMark.properties.get('roomTypes');
             let id = placeMark.properties.get('id');
 
             if (document.getElementById(id) == null) {
                 handleButtonClick();
             } else if (!document.getElementById(id).classList.contains('active')) {
-                bookingForm(rt);
+                changeURL(id);
+                bookingForm();
             }
 
             document.querySelectorAll('.map__hint').forEach((item) => {

@@ -1,39 +1,32 @@
+import { fetchPrices,getPricesFromStorage, savePriceToStorage} from '../model/price-load.js';
 
-export const changeDate = (roomList) => {
+const FETCH_PRICES_ERROR = 'PriceLoad load error:';
 
-    setRoomsStorage();
-
-
-}
-
-
-export const fetchPrices = async () => {
-
-    // const url = `/map-booking/core/price-api.php?date=${date}&nights=${nights}&hotelIds=${hotelIds}`;
-    const url = `/map-booking/core/price-api.php?date=2024-03-27nights=3&hotelIds=17997`;
-
-    console.log(url)
-
-    const result = await fetch(url);
-    if (!result.ok) {
-        console.error('null');
+export class PriceLoad {
+    constructor() {
+        this._cachePrices = getPricesFromStorage();
     }
-    return await result.json();
-};
 
-export const setRoomsStorage = () => {
-    if (!localStorage.getItem('price-list')) {
-        console.log(fetchPrices())
-        fetchPrices()
+    isLoadNeeded() {
+        return !this._cachePrices;
+    }
+
+    load(date, nights, adults) {
+
+        const url = `/core/price-api.php?date=${date}&nights=${nights}&adults=${adults}`;
+        return fetchPrices(url)
             .then((prices) => {
-                localStorage.setItem('price-list', JSON.stringify(prices));
+                savePriceToStorage(JSON.stringify(prices));
+                return prices;
             })
-            .catch(() => {
-                console.log('not load');
+            .catch((error) => {
+                console.log(FETCH_PRICES_ERROR);
+                console.log(error);
             });
     }
-}
 
-export const isStorageExpire = () => {
-    return JSON.parse(localStorage.getItem('price-list'))
-};
+    getFromCache() {
+        console.log(this._cachePrices)
+        return JSON.parse(this._cachePrices);
+    }
+}

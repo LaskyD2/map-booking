@@ -1,6 +1,6 @@
 import { LANG_SETTING } from '../lang.js';
 
-export const templateIconContent = (text, name, address, price, id, count) => {
+export const templateIconContent = (text, name, address, price, id, idActive ) => {
     const langMap = LANG_SETTING[MAP_BOOKING_LANG];
     const nameHotel = name[MAP_BOOKING_LANG]
     const addressHotel = address[MAP_BOOKING_LANG]
@@ -12,12 +12,12 @@ export const templateIconContent = (text, name, address, price, id, count) => {
         'price' : price ? langMap.From + ' ' + price + ' ₽' : langMap.NoPlaces,
     }
     return (
-        `<div class="map__hint ${!price && 'no-rooms'}" id="${id}">
+        `<div class="map__hint ${!price ? 'no-rooms' : ''} ${id == idActive ? 'hotel-active': ''}" id="${id}">
             <div class="map__hint-icon"></div>
             <div class="map__hint-data">
                 <div class="hint-block map__hint-name">${nameHotel}</div>
                 <div class="hint-block map__hint-name">${addressHotel}</div>
-                <div class="map__hint-price"> ${content[text]} ${count > 1 ? ' (' + count + ' ' + langMap.Apartments + ')' : ''}</div>
+                <div class="map__hint-price"> ${content[text]}</div>
             </div>
           </div>`
     );
