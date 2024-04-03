@@ -52,8 +52,10 @@
 
 <!--    <script type="module" src="/assets/public/map-booking.js"></script>-->
 <script type="module" src="/assets/src/js/main.js"></script>
-<script src="https://api-maps.yandex.ru/2.1/?apikey=d2905f6d-3e1c-4841-b651-5790cd49c349&lang=ru_RU"
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
         type="text/javascript"></script>
+<!--<script src="https://api-maps.yandex.ru/2.1/?apikey=d2905f6d-3e1c-4841-b651-5790cd49c349&lang=ru_RU"
+        type="text/javascript"></script>-->
 
 
 </body>
