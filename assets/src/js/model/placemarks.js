@@ -14,8 +14,8 @@ export const placeMarks = () => {
             address: hotel.address,
             latitude: hotel.latitude,
             longitude: hotel.longitude,
-            iconContent: templateIconContent('loader', hotel.name, hotel.address),
-            width: 90,
+            iconContent: templateIconContent('loader'),
+            width: 100,
             roomTypes: hotel.rooms
         };
 

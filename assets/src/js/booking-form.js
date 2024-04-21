@@ -1,4 +1,5 @@
 // import { coordinatesCity, scenariosHotel } from './const.js'
+import { coordinatesCity } from './const.js'
 import { getParameterByName, diffDates } from './module/module.js'
 import { changeDate } from './model/price-load.js'
 import { hotelsList } from './module/hotels-list.js'
@@ -80,7 +81,12 @@ export function tabsBookingForm() {
             bookingForm(data_id);
 
             // fillPoint(placeMarks());
-            // map.setCenter(coordinatesCity[citySelector.value], 12, {duration: 300}); - селект городов;
+            if (data_id == 17997) {
+                map.setCenter(coordinatesCity['msk'], 10, {duration: 300}); // - селект городов;
+            } else {
+                map.setCenter(coordinatesCity['spb'], 10, {duration: 300}); // - селект городов;
+            }
+
 
             let listPointsMap = document.querySelectorAll('.map__hint');
             listPointsMap.forEach((point) => {

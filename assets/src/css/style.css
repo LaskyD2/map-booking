@@ -213,7 +213,7 @@ body {
     color: #000000;
     text-align: center;
 
-    width: 170px;
+    width: 100px;
 }
 
 
@@ -248,7 +248,7 @@ body {
 .map__hint.no-rooms.active {
     background: #7F7165 !important;
 }
-
+.map__hint
 .map__hint.no-rooms.active .map__hint-icon {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyQzIgMTcuNTIgNi40OCAyMiAxMiAyMkMxNy41MiAyMiAyMiAxNy41MiAyMiAxMkMyMiA2LjQ4IDE3LjUyIDIgMTIgMlpNMTIgMjBDNy41OCAyMCA0IDE2LjQyIDQgMTJDNCA3LjU4IDcuNTggNCAxMiA0QzE2LjQyIDQgMjAgNy41OCAyMCAxMkMyMCAxNi40MiAxNi40MiAyMCAxMiAyMFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMiAxN0MxNC43NjE0IDE3IDE3IDE0Ljc2MTQgMTcgMTJDMTcgOS4yMzg1OCAxNC43NjE0IDcgMTIgN0M5LjIzODU4IDcgNyA5LjIzODU4IDcgMTJDNyAxNC43NjE0IDkuMjM4NTggMTcgMTIgMTdaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
 }
@@ -297,7 +297,8 @@ body {
 }
 
 [class*="balloon__content"] ymaps{
-    width: 280px !important;
+    width: 195px !important;
+    cursor: auto;
 }
 
 .map__balloon {
@@ -322,14 +323,21 @@ body {
     cursor: pointer;
 }
 
-.map__balloon-address {
+.balloon-hotel {
     color: #C87A31;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.map__balloon-room-name {
+.balloon-address {
+    color: #333333;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.balloon-hotel {
     margin-right: 5px;
     margin-bottom: 10px;
     text-decoration-line: underline;
@@ -339,13 +347,13 @@ body {
     /*border-bottom: 1px dashed #5a9b3b;*/
 }
 
-.map__balloon-room-status {
+.balloon-room-status {
     color: #5a9b3b;
     font-weight: 600;
     white-space: nowrap;
 }
 
-.map__balloon-room-status.false {
+.balloon-room-status.false {
     color: #C87A31;
 }
 

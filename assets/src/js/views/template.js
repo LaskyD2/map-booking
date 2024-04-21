@@ -1,46 +1,40 @@
-import { LANG_SETTING } from '../lang.js';
+import {LANG_SETTING} from '../lang.js';
 
-export const templateIconContent = (text, name, address, price, id, idActive ) => {
+export const templateIconContent = (text, price, id, idActive) => {
     const langMap = LANG_SETTING[MAP_BOOKING_LANG];
-    const nameHotel = name[MAP_BOOKING_LANG]
-    const addressHotel = address[MAP_BOOKING_LANG]
     const getArrivalDate = localStorage.getItem('tl-arrivalDate');
-    const loaderBlock = `<div>Загружается цена - <span class="loader"></span></div>`
+    const loaderBlock = `<div class="loader"></div>`
 
     const content = {
-        'loader' : getArrivalDate ? loaderBlock : langMap.SelectDate,
-        'price' : price ? langMap.From + ' ' + price + ' ₽' : langMap.NoPlaces,
+        'loader': getArrivalDate ? loaderBlock : langMap.SelectDate,
+        'price': price ? langMap.From + ' ' + price + ' ₽' : langMap.NoPlaces,
     }
+
     return (
-        `<div class="map__hint ${!price ? 'no-rooms' : ''} ${id == idActive ? 'hotel-active': ''}" id="${id}">
+        ` <div class="map__hint ${price ? '' : 'no-rooms'} ${id === idActive ? 'hotel-active' : ''}" id="${id}">
             <div class="map__hint-icon"></div>
-            <div class="map__hint-data">
-                <div class="hint-block map__hint-name">${nameHotel}</div>
-                <div class="hint-block map__hint-name">${addressHotel}</div>
-                <div class="map__hint-price"> ${content[text]}</div>
-            </div>
+            <div class="map__hint-price"> ${content[text]}</div>
           </div>`
     );
-
-    /*return (
-        ` <div class="map__hint ${price ? '' : 'no-rooms'}" id="${id}">
-            <div class="map__hint-icon"></div>
-            <div class="map__hint-price"> ${content[text]} ${count > 1 ? ' (' + count + ' ' + langMap.Apartments + ')' : ''}</div>
-          </div>`
-    );*/
 };
 
 
-export const templateBalloonContent = (address, rooms) => {
+export const templateBalloonContent = (name, address, price) => {
+    console.log(price)
+    const langMap = LANG_SETTING[MAP_BOOKING_LANG];
+    const nameHotel = name[MAP_BOOKING_LANG];
+    const addressHotel = address[MAP_BOOKING_LANG];
+    const priceHotel = price ? langMap.From + ' ' + price + ' ₽' : langMap.NoPlaces;
     return (
         `  <div class="map__balloon">
-            <div class="map__balloon-address">${address}</div>
-            ${templateBalloonContentRoom(rooms)}
+            <div class="balloon-hotel">${nameHotel}</div>
+             <div class="balloon-address">${addressHotel}</div>
+            <div class="balloon-price">${priceHotel}</div>
         </div`
     )
 };
 
-function templateBalloonContentRoom(rooms) {
+/*function templateBalloonContentRoom(rooms) {
     return rooms.length ?
         rooms.map((room) =>
             ` <div class="map__balloon-room">
@@ -51,7 +45,7 @@ function templateBalloonContentRoom(rooms) {
         ` <div class="map__balloon-room">
              <div class="map__balloon-room-name">${LANG_SETTING[MAP_BOOKING_LANG].NoPlaces}</div>
         </div>`
-}
+}*/
 
 export const templateClusterContent = (length) => {
     length = length ? length : '';

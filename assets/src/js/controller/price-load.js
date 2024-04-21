@@ -11,10 +11,9 @@ export class PriceLoad {
         return !this._cachePrices;
     }
 
-    load(date, nights, adults) {
+    load() {
 
-        const url = `/core/price-api.php?date=${date}&nights=${nights}&adults=${adults}`;
-        return fetchPrices(url)
+        return fetchPrices()
             .then((prices) => {
                 savePriceToStorage(JSON.stringify(prices));
                 return prices;
