@@ -2,7 +2,7 @@ export const LANG_SETTING = {
     ru: {
         SelectDate: `Выберите дату`,
         From: `От`,
-        NoPlaces: `Нет свободных мест`,
+        NoPlaces: `Нет мест`,
         Apartments: `квартиры`,
         Busy: `Занято`,
 
@@ -10,7 +10,7 @@ export const LANG_SETTING = {
     en: {
         SelectDate: `Select date`,
         From: `From`,
-        NoPlaces: `No free places`,
+        NoPlaces: `No places`,
         Apartments: `apart.`,
         Busy: `Busy`,
     },

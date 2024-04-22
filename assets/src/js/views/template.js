@@ -3,7 +3,7 @@ import {LANG_SETTING} from '../lang.js';
 export const templateIconContent = (text, price, id, idActive) => {
     const langMap = LANG_SETTING[MAP_BOOKING_LANG];
     const getArrivalDate = localStorage.getItem('tl-arrivalDate');
-    const loaderBlock = `<div class="loader"></div>`
+    const loaderBlock = '<div class="loader"></div>'
 
     const content = {
         'loader': getArrivalDate ? loaderBlock : langMap.SelectDate,
@@ -11,16 +11,14 @@ export const templateIconContent = (text, price, id, idActive) => {
     }
 
     return (
-        ` <div class="map__hint ${price ? '' : 'no-rooms'} ${id === idActive ? 'hotel-active' : ''}" id="${id}">
+        ` <div class="map__hint ${price ? '' : 'no-rooms'} ${idActive == id ? 'active' : '' } " id="${id}">
             <div class="map__hint-icon"></div>
             <div class="map__hint-price"> ${content[text]}</div>
           </div>`
     );
 };
 
-
 export const templateBalloonContent = (name, address, price) => {
-    console.log(price)
     const langMap = LANG_SETTING[MAP_BOOKING_LANG];
     const nameHotel = name[MAP_BOOKING_LANG];
     const addressHotel = address[MAP_BOOKING_LANG];

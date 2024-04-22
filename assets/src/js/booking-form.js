@@ -4,15 +4,13 @@ import { getParameterByName, diffDates } from './module/module.js'
 import { changeDate } from './model/price-load.js'
 import { hotelsList } from './module/hotels-list.js'
 import { getHotelsFromStorage } from './model/hotel-load.js'
-import { map, fillPoint } from './map.js'
+import {map, fillPoint, geoObjects} from './map.js'
 import { placeMarks } from "./model/placemarks.js";
 
 export function tabsBookingForm() {
     // let scenariosListHotel = scenariosHotel;
 
     let listElement = document.querySelectorAll('.bookmarks li[id ^="hotel-"]');
-
-
 
     /* START Селект городов, пока хз что с ним делать */
     /*let citySelector = document.querySelector('select.tl-city-select');
@@ -47,24 +45,7 @@ export function tabsBookingForm() {
     */
     /* END Селект городов, пока хз что с ним делать */
 
-    document.querySelectorAll('.bookmarks li').forEach(function (elem) {
-        let prov = getParameterByName('hotel_id');
-        let el = elem.getAttribute('id');
-
-        if (document.getElementById(el).getAttribute('data-id') === prov) {
-            document.getElementById(el).classList.add('active');
-            /*citySelector.value = document.getElementById(el).getAttribute('data-city');
-            bookingForm(scenariosListHotel[prov]) ;*/ //Селект городов
-
-        } else {
-            document.getElementById(el).classList.remove('active');
-        }
-        bookingForm();
-        if ((prov === 0) || (prov === '0') || (prov == null) || (prov === '')) {
-            document.getElementById("hotel-1").classList.add('active');
-        }
-    });
-
+    firstActiveTab();
 
     listElement.forEach(function (elem) {
         elem.addEventListener("click", function () {
@@ -77,8 +58,6 @@ export function tabsBookingForm() {
             listActiveElement.classList.remove('active');
             document.getElementById(elem.getAttribute('id')).classList.add('active');
 
-            changeURL(data_id);
-            bookingForm(data_id);
 
             // fillPoint(placeMarks());
             if (data_id == 17997) {
@@ -87,17 +66,47 @@ export function tabsBookingForm() {
                 map.setCenter(coordinatesCity['spb'], 10, {duration: 300}); // - селект городов;
             }
 
+            map.balloon.close();
+
 
             let listPointsMap = document.querySelectorAll('.map__hint');
             listPointsMap.forEach((point) => {
                 if (point.id === data_id) {
-                    point.classList.add('hotel-active');
+                    point.classList.add('active');
                 } else {
-                    point.classList.remove('hotel-active');
+                    point.classList.remove('active');
                 }
             })
+
+            changeURL(data_id);
+            bookingForm(data_id);
         });
     });
+}
+
+export function firstActiveTab() {
+    let prov = getParameterByName('hotel_id');
+    document.querySelectorAll('.bookmarks li').forEach(function (elem) {
+        let el = elem.getAttribute('id');
+
+        if (document.getElementById(el).getAttribute('data-id') === prov) {
+            document.getElementById(el).classList.add('active');
+            /*citySelector.value = document.getElementById(el).getAttribute('data-city');
+            bookingForm(scenariosListHotel[prov]) ;*/ //Селект городов
+
+        } else {
+            document.getElementById(el).classList.remove('active');
+        }
+
+        bookingForm();
+        if ((prov === 0) || (prov === '0') || (prov == null) || (prov === '')) {
+            document.getElementById("hotel-1").classList.add('active');
+        }
+    });
+
+    geoObjects.forEach((item) => {
+        console.log(item)
+    })
 }
 
 export const changeURL = (value) => {
@@ -134,27 +143,28 @@ function changeURLDate(param, regex, value) {
     window.history.pushState(false, false, path);
 }
 
-
+let arrival;
 function searchRooms(data) {
+    if (arrival !== data.arrivalDate) {
+        arrival = data.arrivalDate;
+        let nights = data.nights;
+        let adults = data.guests[0].adults;
+        let idHotel = data.providerId;
 
-    let arrival = data.arrivalDate;
-    let departure = data.departureDate;
-    let nights = data.nights;
-    let adults = data.guests[0].adults;
-    let idHotel = data.providerId;
+        changeDate(arrival, nights, adults, idHotel);
 
-    changeDate(arrival, nights, adults, idHotel);
+        if (getParameterByName('date')) {
+            let date = "date";
+            let regexDate = new RegExp(/date=[A-Za-z0-9_-]+/g);
+            changeURLDate(date, regexDate, arrival)
 
-    if (getParameterByName('date')) {
-        let date = "date";
-        let regexDate = new RegExp(/date=[A-Za-z0-9_-]+/g);
-        changeURLDate(date, regexDate, arrival)
-
-        let nightsUrl = "nights";
-        let regexNights = new RegExp(/nights=\d+/g);
-        changeURLDate(nightsUrl, regexNights, nights);
+            let nightsUrl = "nights";
+            let regexNights = new RegExp(/nights=\d+/g);
+            changeURLDate(nightsUrl, regexNights, nights);
+        }
     }
 }
+
 
 export function bookingForm() {
     (function (w) {

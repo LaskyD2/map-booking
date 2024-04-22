@@ -15,6 +15,7 @@
     }
 
     </script>
+
     <link rel="stylesheet" href="assets/src/css/style.css"
 
 </head>
@@ -50,7 +51,6 @@
 </div>
 
 
-<!--    <script type="module" src="/assets/public/map-booking.js"></script>-->
 <script type="module" src="/assets/src/js/main.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
         type="text/javascript"></script>

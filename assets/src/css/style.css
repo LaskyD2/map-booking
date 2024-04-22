@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&display=swap');
+@import "style-setting.css";
+
+
+:root {
+    --activeMarkMain: var(--background);
+    --activeMarkInner: var(--basic);
+}
 
 body {
     margin: 0;
@@ -151,7 +158,6 @@ body {
     transition: height 0.5s ease;
 
     height: 0;
-    /*height: 500px;*/
     max-height: 500px;
     width: 100%;
     cursor: grab;
@@ -175,11 +181,6 @@ body {
         display: none;
     }
 }
-/*@media (max-width: 420px) {*/
-/*    .map, .map-show  {*/
-/*        height: 350px;*/
-/*    }*/
-/*}*/
 
 
 [class*="hint"] {
@@ -196,6 +197,7 @@ body {
     border: 1px solid rgba(127, 113, 101, 0.45);
     background: rgba(255, 255, 255, 0.75) !important;
     padding: 0 10px 0 5px!important;
+    cursor: pointer !important;
 }
 
 
@@ -204,65 +206,78 @@ body {
     display: flex;
     align-items: center;
     border-radius: 15px;
-    border: 1px solid rgba(127, 113, 101, 0.45) !important;
-    background: rgba(255, 255, 255, 0.75) !important;
+    border: 1px solid var(--border) !important;
+    background: var(--background) !important;
     padding: 2px 10px 3px 5px!important;
     box-sizing: content-box;
-
-    /*height: 24px;*/
-    color: #000000;
+    color: var(--textBallun);
     text-align: center;
 
-    width: 100px;
 }
-
-
 
 .map__hint.active {
-    background: #5a9b3b !important;
+    background: var(--basic) !important;
 }
-
 
 .map__hint.active-check .map__hint-price {
     color: rgba(0, 0, 0, 0.5);
 }
 
 .map__hint-icon {
-    min-width: 24px;
-    height: 24px;
     margin-right: 5px;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJDMiAxNy41MiA2LjQ4IDIyIDEyIDIyQzE3LjUyIDIyIDIyIDE3LjUyIDIyIDEyQzIyIDYuNDggMTcuNTIgMiAxMiAyWk0xMiAyMEM3LjU4IDIwIDQgMTYuNDIgNCAxMkM0IDcuNTggNy41OCA0IDEyIDRDMTYuNDIgNCAyMCA3LjU4IDIwIDEyQzIwIDE2LjQyIDE2LjQyIDIwIDEyIDIwWiIgZmlsbD0iIzVhOWIzYiIvPg0KICAgIDxwYXRoIGQ9Ik0xMiAxN0MxNC43NjE0IDE3IDE3IDE0Ljc2MTQgMTcgMTJDMTcgOS4yMzg1OCAxNC43NjE0IDcgMTIgN0M5LjIzODU4IDcgNyA5LjIzODU4IDcgMTJDNyAxNC43NjE0IDkuMjM4NTggMTcgMTIgMTdaIiBmaWxsPSIjNWE5YjNiIi8+DQo8L3N2Zz4NCg==");
-    background-repeat: no-repeat;
-    background-size: contain;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background: var(--basic);
 }
 
+.map__hint-icon::after {
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 3px solid var(--background);
+    border-radius: 50px;
+}
 
 .map__hint.active .map__hint-icon {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDBDNC40OCAwIDAgNC40OCAwIDEwQzAgMTUuNTIgNC40OCAyMCAxMCAyMEMxNS41MiAyMCAyMCAxNS41MiAyMCAxMEMyMCA0LjQ4IDE1LjUyIDAgMTAgMFpNMTAgMThDNS41OCAxOCAyIDE0LjQyIDIgMTBDMiA1LjU4IDUuNTggMiAxMCAyQzE0LjQyIDIgMTggNS41OCAxOCAxMEMxOCAxNC40MiAxNC40MiAxOCAxMCAxOFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMCAxNUMxMi43NjE0IDE1IDE1IDEyLjc2MTQgMTUgMTBDMTUgNy4yMzg1OCAxMi43NjE0IDUgMTAgNUM3LjIzODU4IDUgNSA3LjIzODU4IDUgMTBDNSAxMi43NjE0IDcuMjM4NTggMTUgMTAgMTVaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
+    background: var(--activeMarkMain);
+}
+
+.map__hint.active .map__hint-icon::after {
+    border-color: var(--activeMarkInner);
+}
+
+.map__hint.no-rooms {
+    background: var(--backgroundNotActive) !important;
 }
 
 .map__hint.no-rooms .map__hint-icon {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDBDNC40OCAwIDAgNC40OCAwIDEwQzAgMTUuNTIgNC40OCAyMCAxMCAyMEMxNS41MiAyMCAyMCAxNS41MiAyMCAxMEMyMCA0LjQ4IDE1LjUyIDAgMTAgMFpNMTAgMThDNS41OCAxOCAyIDE0LjQyIDIgMTBDMiA1LjU4IDUuNTggMiAxMCAyQzE0LjQyIDIgMTggNS41OCAxOCAxMEMxOCAxNC40MiAxNC40MiAxOCAxMCAxOFoiIGZpbGw9IiM3RjcxNjUiLz4KPHBhdGggZD0iTTEwIDE1QzEyLjc2MTQgMTUgMTUgMTIuNzYxNCAxNSAxMEMxNSA3LjIzODU4IDEyLjc2MTQgNSAxMCA1QzcuMjM4NTggNSA1IDcuMjM4NTggNSAxMEM1IDEyLjc2MTQgNy4yMzg1OCAxNSAxMCAxNVoiIGZpbGw9IiM3RjcxNjUiLz4KPC9zdmc+Cg==");
+    background: var(--background);
+}
+
+.map__hint.no-rooms .map__hint-icon::after {
+    border-color: var(--backgroundNotActive);
+}
+
+.map__hint.no-rooms .map__hint-price {
+    color: var(--textNotActive);
 }
 
 .map__hint.no-rooms.active {
     background: #7F7165 !important;
 }
-.map__hint
+
 .map__hint.no-rooms.active .map__hint-icon {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyQzIgMTcuNTIgNi40OCAyMiAxMiAyMkMxNy41MiAyMiAyMiAxNy41MiAyMiAxMkMyMiA2LjQ4IDE3LjUyIDIgMTIgMlpNMTIgMjBDNy41OCAyMCA0IDE2LjQyIDQgMTJDNCA3LjU4IDcuNTggNCAxMiA0QzE2LjQyIDQgMjAgNy41OCAyMCAxMkMyMCAxNi40MiAxNi40MiAyMCAxMiAyMFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMiAxN0MxNC43NjE0IDE3IDE3IDE0Ljc2MTQgMTcgMTJDMTcgOS4yMzg1OCAxNC43NjE0IDcgMTIgN0M5LjIzODU4IDcgNyA5LjIzODU4IDcgMTJDNyAxNC43NjE0IDkuMjM4NTggMTcgMTIgMTdaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
+    background: var(--basic);
 }
 
 .map__hint.active .map__hint-price {
-    color: #FFFFFF;
-}
-
-.map__hint.hotel-active {
-    background: orange !important;
-}
-
-.map__hint:hover .map__hint-price {
-    color: #000000;
+    color: var(--textMarker);
 }
 
 .map__hint-data {
@@ -275,24 +290,22 @@ body {
     margin-bottom: 5px;
 }
 
-
 .map__hint-price {
-    color: #000;
+    color: var(--text);
     white-space: nowrap;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    margin-left: 5px;
 }
 
 .map__hint-price .loader {
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #7f7165;
+    border: 5px solid var(--loaderTwo);
+    border-top: 5px solid var(--loader);
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     animation: spin 2s linear infinite;
 }
 
@@ -302,7 +315,7 @@ body {
 }
 
 .map__balloon {
-    color: #000;
+    color: var(--text);
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     font-style: normal;
@@ -324,10 +337,16 @@ body {
 }
 
 .balloon-hotel {
-    color: #C87A31;
+    color: var(--titleBallunColor);
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 10px;
+    margin-right: 5px;
+    text-decoration-line: underline;
+    text-decoration-color: var(--titleBallunColor);
+    text-decoration-style: dotted;
+    text-underline-offset: 4px;
+    /*border-bottom: 1px dashed var(--basic);*/
 }
 
 .balloon-address {
@@ -337,24 +356,16 @@ body {
     margin-bottom: 10px;
 }
 
-.balloon-hotel {
-    margin-right: 5px;
-    margin-bottom: 10px;
-    text-decoration-line: underline;
-    text-decoration-color: #5a9b3b;
-    text-decoration-style: dotted;
-    text-underline-offset: 4px;
-    /*border-bottom: 1px dashed #5a9b3b;*/
-}
 
 .balloon-room-status {
-    color: #5a9b3b;
+    color: var(--basic);
     font-weight: 600;
     white-space: nowrap;
 }
 
-.balloon-room-status.false {
-    color: #C87A31;
+.balloon-price {
+    color: var(--basic);
+    font-weight: 700;
 }
 
 .map__cluster {

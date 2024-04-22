@@ -3,7 +3,7 @@ import { LOCAL_STORAGE_EXPIRE_PRICE_ITEM, LOCAL_STORAGE_PRICES_ITEM, LOCAL_STORA
 import { minPrice } from "../module/min-price.js";
 import { placeMarks } from './placemarks.js';
 import { geoObjects } from "../map.js";
-import { templateIconContent } from "../views/template.js";
+import {templateBalloonContent, templateIconContent} from "../views/template.js";
 
 export const changeDate = (date, nights, adults, providerIdActive) => {
     const url = `/core/price-api.php?date=${date}&nights=${nights}&adults=${adults}`;
@@ -11,8 +11,6 @@ export const changeDate = (date, nights, adults, providerIdActive) => {
     let  placeMarksRoster = placeMarks();
 
     placeMarksRoster.forEach((item, index) => {
-        let hotelName = geoObjects[index].properties.get('name');
-        let hotelAddress = geoObjects[index].properties.get('address');
         geoObjects[index].properties.set('iconContent', templateIconContent('loader'));
     })
     setPricesStorage(url, providerIdActive);
@@ -41,6 +39,8 @@ export const setPricesStorage = (url, providerIdActive) => {
                     let hotelIdMinPrice = hotelsMinPrice[hotelId];
 
                     geoObjects[index].properties.set('iconContent', templateIconContent('price', hotelIdMinPrice, hotelId, providerIdActive));
+                    geoObjects[index].properties.set('balloonContent', templateBalloonContent(hotelName, hotelAddress, hotelIdMinPrice));
+
                 })
                 return prices;
             })

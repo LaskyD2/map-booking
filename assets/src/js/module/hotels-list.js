@@ -9,19 +9,15 @@ export const hotelsList = () => {
 
     placeMarksRoster.forEach((item, index) => {
         let roomPrice = []
-
         minPriceMarker = roomPrice.length ? Math.min.apply(null, roomPrice) : null;
-
-        let name = geoObjects[index].properties.get('name');
-        let address = geoObjects[index].properties.get('address');
-        let idElement = geoObjects[index].properties.get('id');
-
-        geoObjects[index].properties.set('iconContent', templateIconContent('loader', minPriceMarker, idElement));
-        geoObjects[index].properties.set('balloonContent', templateBalloonContent(name, address, minPriceMarker));
+        geoObjects[index].properties.set('iconContent', templateIconContent('loader', minPriceMarker));
     })
 
 
     function changeColorClusters() {
+        const rootStyles = getComputedStyle(document.documentElement);
+        const mainColor = rootStyles.getPropertyValue('--basic').trim();
+
         let clusters = cluster.getClusters();
 
         clusters.forEach((cluster) => {
@@ -29,7 +25,7 @@ export const hotelsList = () => {
             cluster.properties.get('geoObjects').forEach((item) => {
                 if (item.properties.get('price') && checkPrice === false) {
                     checkPrice = true;
-                    cluster.options.set('clusterIconColor', '#5a9b3b');
+                    cluster.options.set('clusterIconColor', mainColor);
                 }
             })
         });

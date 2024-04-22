@@ -1,7 +1,7 @@
 import {coordinatesCity} from './const.js';
 import {placeMarks} from './model/placemarks.js';
 import {handleButtonClick} from './module/module.js';
-import {bookingForm, changeURL} from './booking-form.js';
+import {bookingForm, changeURL, firstActiveTab} from './booking-form.js';
 import {getHotelsFromStorage} from "./model/hotel-load.js";
 import {hotelsList} from "./module/hotels-list.js";
 // import {templateClusterContent} from './views/template.js';
@@ -39,8 +39,13 @@ export let fillPoint = (placeMarksList) => {
             let placeMark = e.get('target');
             let id = placeMark.properties.get('id');
 
-            if (!document.getElementById(id).classList.contains('active')) {
+            if (document.getElementById(id) == null) {
+                handleButtonClick();
+            } else if (!document.getElementById(id).classList.contains('active')) {
                 changeURL(id);
+
+                firstActiveTab();
+
                 // bookingForm();
             }
 
@@ -49,7 +54,7 @@ export let fillPoint = (placeMarksList) => {
             });
 
             if (document.getElementById(id)) {
-                document.getElementById(id).classList.add('active-check');
+                // document.getElementById(id).classList.add('active-check');
                 document.getElementById(id).classList.add('active');
             }
 
@@ -77,7 +82,7 @@ export let fillPoint = (placeMarksList) => {
             let id = placeMark.properties.get('id');
 
             if (document.getElementById(id)) {
-                document.getElementById(id).classList.add('active-check')
+                // document.getElementById(id).classList.add('active-check')
                 document.getElementById(id).classList.remove('active');
             }
 
