@@ -39,11 +39,9 @@ export let fillPoint = (placeMarksList) => {
             let placeMark = e.get('target');
             let id = placeMark.properties.get('id');
 
-            if (document.getElementById(id) == null) {
-                handleButtonClick();
-            } else if (!document.getElementById(id).classList.contains('active')) {
+            if (!document.getElementById(id).classList.contains('active')) {
                 changeURL(id);
-                bookingForm();
+                // bookingForm();
             }
 
             document.querySelectorAll('.map__hint').forEach((item) => {

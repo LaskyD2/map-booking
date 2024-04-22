@@ -1,4 +1,4 @@
-import { templateIconContent } from "../views/template.js";
+import { templateIconContent, templateBalloonContent } from "../views/template.js";
 import { placeMarks } from '../model/placemarks.js';
 import { geoObjects, cluster, map } from '../map.js';
 
@@ -16,7 +16,8 @@ export const hotelsList = () => {
         let address = geoObjects[index].properties.get('address');
         let idElement = geoObjects[index].properties.get('id');
 
-        geoObjects[index].properties.set('iconContent', templateIconContent('loader', name, address, minPriceMarker, idElement));
+        geoObjects[index].properties.set('iconContent', templateIconContent('loader', minPriceMarker, idElement));
+        geoObjects[index].properties.set('balloonContent', templateBalloonContent(name, address, minPriceMarker));
     })
 
 

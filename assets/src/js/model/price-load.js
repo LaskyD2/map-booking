@@ -13,8 +13,7 @@ export const changeDate = (date, nights, adults, providerIdActive) => {
     placeMarksRoster.forEach((item, index) => {
         let hotelName = geoObjects[index].properties.get('name');
         let hotelAddress = geoObjects[index].properties.get('address');
-        console.log(geoObjects[index].properties.get('iconContent'))
-        // geoObjects[index].properties.set('iconContent', templateIconContent('loader', hotelName, hotelAddress));
+        geoObjects[index].properties.set('iconContent', templateIconContent('loader'));
     })
     setPricesStorage(url, providerIdActive);
 }
@@ -41,7 +40,7 @@ export const setPricesStorage = (url, providerIdActive) => {
                     let hotelId = geoObjects[index].properties.get('id');
                     let hotelIdMinPrice = hotelsMinPrice[hotelId];
 
-                    geoObjects[index].properties.set('iconContent', templateIconContent('price', hotelName, hotelAddress, hotelIdMinPrice, hotelId, providerIdActive));
+                    geoObjects[index].properties.set('iconContent', templateIconContent('price', hotelIdMinPrice, hotelId, providerIdActive));
                 })
                 return prices;
             })
