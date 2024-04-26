@@ -29,9 +29,8 @@ function getRoom($roomDate, $lang) {
     $room['price'] = null;
 
     /* Адреса номеров */
-/*  $coordinates = requestAddress($room['address'][$lang]);
-    $room['longitude'] = $coordinates[0];
-    $room['latitude'] = $coordinates[1];*/
+/*    $room['longitude'] = $roomDate['contact_info']['addresses'][0]['longitude'];
+    $room['latitude'] = $roomDate['contact_info']['addresses'][0]['latitude'];*/
 
     return $room;
 }
@@ -83,7 +82,7 @@ foreach ($hotelsCode as $hotel) {
    $result[$hotel] = $hotelsList;
 }
 
-$fileCache = __DIR__ . '\..\cache\room_list.json';
+$fileCache = __DIR__ . '\..\cache\hotel_list.json';
 file_put_contents($fileCache, json_encode($result));
 
 

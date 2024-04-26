@@ -3,7 +3,7 @@ import { LOCAL_STORAGE_EXPIRE_ITEM, LOCAL_STORAGE_ROOMS_ITEM, LOCAL_STORAGE_CACH
 
 
 export const fetchHotels = async () => {
-    const result = await fetch('./cache/room_list.json');
+    const result = await fetch('./cache/hotel_list.json');
     if (!result.ok) {
         console.error('null');
     }

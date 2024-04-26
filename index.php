@@ -42,7 +42,7 @@
         <div id="map" class="map map-show"></div>
     </div>
 
-    <button class="accordion">Развернуть карту</button>
+    <button class="accordion">Свернуть карту</button>
     <div class="blocks ">
         <div class="blocks__booking-form"><select id="tl-hotel-select"></select>
             <div id="tl-booking-form"></div>

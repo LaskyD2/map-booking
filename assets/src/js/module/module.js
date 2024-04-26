@@ -21,14 +21,15 @@ export const accordion = () => {
     acc.addEventListener("click", function() {
         this.classList.toggle("active");
         if (this.classList.contains('active')) {
+            mapWrapper.classList.remove('map-show');
+            map.classList.remove('map-show');
+            this.innerText = 'Развернуть карту'
+
+        } else {
             mapWrapper.classList.add('map-show');
             map.classList.add('map-show');
             this.innerText = 'Свернуть карту';
 
-        } else {
-            mapWrapper.classList.remove('map-show');
-            map.classList.remove('map-show');
-            this.innerText = 'Развернуть карту'
 
         }
 
