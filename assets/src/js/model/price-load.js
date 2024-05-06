@@ -30,7 +30,9 @@ export const setPricesStorage = (url, providerIdActive) => {
                 savePriceToStorage(JSON.stringify(prices));
 
                 let hotelsMinPrice = minPrice(prices),
-                    placeMarksRoster = placeMarks();
+                    placeMarksRoster = placeMarks(),
+                    listElement = document.querySelector('.bookmarks li.active'),
+                    activeHotelTab = listElement.getAttribute('data-id');
 
                 placeMarksRoster.forEach((item, index) => {
                     let hotelName = geoObjects[index].properties.get('name');
@@ -41,11 +43,16 @@ export const setPricesStorage = (url, providerIdActive) => {
                     geoObjects[index].properties.set('iconContent', templateIconContent('price', hotelIdMinPrice, hotelId, providerIdActive));
                     geoObjects[index].properties.set('balloonContent', templateBalloonContent(hotelName, hotelAddress, hotelIdMinPrice));
 
+                    if (hotelId === activeHotelTab) {
+                        geoObjects[index].balloon.open();
+                    }
+
                 })
+
                 return prices;
             })
             .catch(() => {
-                console.log('not load');
+                console.log('not load price');
             });
 }
 

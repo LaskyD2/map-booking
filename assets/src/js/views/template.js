@@ -11,7 +11,7 @@ export const templateIconContent = (text, price, id, idActive) => {
     }
 
     return (
-        ` <div class="map__hint ${price ? '' : 'no-rooms'} ${idActive == id ? 'active' : '' } " id="${id}">
+        ` <div class="map__hint ${price ? '' : 'no-rooms'}${idActive == id ? 'active' : '' }" id="${id}">
             <div class="map__hint-icon"></div>
             <div class="map__hint-price"> ${content[text]}</div>
           </div>`

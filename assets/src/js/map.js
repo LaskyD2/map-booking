@@ -43,20 +43,31 @@ export let fillPoint = (placeMarksList) => {
                 handleButtonClick();
             } else if (!document.getElementById(id).classList.contains('active')) {
                 changeURL(id);
-
                 firstActiveTab();
-
-                // bookingForm();
             }
 
-            document.querySelectorAll('.map__hint').forEach((item) => {
+            /*document.querySelectorAll('.map__hint').forEach((item) => {
                 item.classList.remove('active');
             });
 
-            if (document.getElementById(id)) {
+             if (document.getElementById(id)) {
                 // document.getElementById(id).classList.add('active-check');
                 document.getElementById(id).classList.add('active');
-            }
+            }*/
+
+            let placeMarksRoster = placeMarks();
+            placeMarksRoster.forEach((item, i) => {
+                let hotelId = geoObjects[i].properties.get('id');
+                if (hotelId === id) {
+                    let iconContent = geoObjects[i].properties.get('iconContent').replace('class="map__hint', 'class="map__hint active')
+                    geoObjects[i].properties.set('iconContent', iconContent);
+                } else {
+                    let iconContentDisabled = geoObjects[i].properties.get('iconContent').replace('class="map__hint active', 'class="map__hint');
+                    geoObjects[i].properties.set('iconContent', iconContentDisabled);
+                }
+            })
+
+
 
 
             e.stopPropagation();
@@ -83,7 +94,7 @@ export let fillPoint = (placeMarksList) => {
 
             if (document.getElementById(id)) {
                 // document.getElementById(id).classList.add('active-check')
-                document.getElementById(id).classList.remove('active');
+                // document.getElementById(id).classList.remove('active');
             }
 
         });

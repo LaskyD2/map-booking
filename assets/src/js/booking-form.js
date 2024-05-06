@@ -1,4 +1,3 @@
-// import { coordinatesCity, scenariosHotel } from './const.js'
 import { coordinatesCity } from './const.js'
 import { getParameterByName, diffDates } from './module/module.js'
 import { changeDate } from './model/price-load.js'
@@ -47,7 +46,9 @@ export function tabsBookingForm() {
 
     firstActiveTab();
 
-    listElement.forEach(function (elem) {
+    let placeMarksRoster = placeMarks();
+
+    listElement.forEach(function (elem, i) {
         elem.addEventListener("click", function () {
             let listActiveElement = document.querySelector('.bookmarks li.active'),
                 data_id = document.getElementById(elem.getAttribute('id')).getAttribute('data-id');
@@ -58,25 +59,33 @@ export function tabsBookingForm() {
             listActiveElement.classList.remove('active');
             document.getElementById(elem.getAttribute('id')).classList.add('active');
 
-
-            // fillPoint(placeMarks());
-            if (data_id == 17997) {
-                map.setCenter(coordinatesCity['msk'], 10, {duration: 300}); // - селект городов;
-            } else {
-                map.setCenter(coordinatesCity['spb'], 10, {duration: 300}); // - селект городов;
-            }
-
             map.balloon.close();
 
+            placeMarksRoster.forEach((item, i) => {
 
-            let listPointsMap = document.querySelectorAll('.map__hint');
+                let hotelId = geoObjects[i].properties.get('id');
+                if (hotelId === data_id) {
+                    console.log(geoObjects[i])
+                    let iconContent =  geoObjects[i].properties.get('iconContent').replace('class="map__hint', 'class="map__hint active')
+                    let coords = geoObjects[i].geometry.getCoordinates();
+                    map.setCenter(coords, 10, {duration: 300})
+                    geoObjects[i].properties.set('iconContent', iconContent);
+                    setTimeout(() => geoObjects[i].balloon.open(), 350);
+
+                } else {
+                    let iconContentDisabled = geoObjects[i].properties.get('iconContent').replace('class="map__hint active', 'class="map__hint');
+                    geoObjects[i].properties.set('iconContent', iconContentDisabled);
+                }
+            })
+
+           /* let listPointsMap = document.querySelectorAll('.map__hint');
             listPointsMap.forEach((point) => {
                 if (point.id === data_id) {
                     point.classList.add('active');
                 } else {
                     point.classList.remove('active');
                 }
-            })
+            })*/
 
             changeURL(data_id);
             bookingForm(data_id);
@@ -86,14 +95,12 @@ export function tabsBookingForm() {
 
 export function firstActiveTab() {
     let prov = getParameterByName('hotel_id');
+    let placeMarksRoster = placeMarks();
     document.querySelectorAll('.bookmarks li').forEach(function (elem) {
         let el = elem.getAttribute('id');
 
         if (document.getElementById(el).getAttribute('data-id') === prov) {
             document.getElementById(el).classList.add('active');
-            /*citySelector.value = document.getElementById(el).getAttribute('data-city');
-            bookingForm(scenariosListHotel[prov]) ;*/ //Селект городов
-
         } else {
             document.getElementById(el).classList.remove('active');
         }
@@ -102,6 +109,16 @@ export function firstActiveTab() {
         if ((prov === 0) || (prov === '0') || (prov == null) || (prov === '')) {
             document.getElementById("hotel-1").classList.add('active');
         }
+
+        /*placeMarksRoster.forEach((item, i) => {
+            // console.log(geoObjects)
+            /!*let hotelId = geoObjects[i].properties.get('id');
+            if (hotelId === prov) {
+                let coords = geoObjects[i].geometry.getCoordinates();
+                map.setCenter(coords, 10, {duration: 300})
+            }*!/
+        })*/
+
     });
 
     geoObjects.forEach((item) => {
@@ -150,7 +167,7 @@ function searchRooms(data) {
         let nights = data.nights;
         let adults = data.guests[0].adults;
         let idHotel = data.providerId;
-
+        map.balloon.close();
         changeDate(arrival, nights, adults, idHotel);
 
         if (getParameterByName('date')) {
@@ -164,7 +181,6 @@ function searchRooms(data) {
         }
     }
 }
-
 
 export function bookingForm() {
     (function (w) {
