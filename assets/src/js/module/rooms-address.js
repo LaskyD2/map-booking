@@ -1,6 +1,5 @@
 import {getHotelsFromStorage} from '../model/hotel-load.js'
 import {getParameterByName} from "./module.js";
-// import {scenariosHotel} from "../const.js";
 
 export const roomsAddress = () => {
 
@@ -10,8 +9,6 @@ export const roomsAddress = () => {
         roomAddressItem = [],
         rooms = [],
         prov = getParameterByName('hotel_id');
-        // scenariosListHotel = scenariosHotel;
-
     if (prov) {
         roomList.forEach((room) => {
             if (scenariosListHotel[prov].toString().includes(room.id)) {

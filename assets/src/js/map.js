@@ -1,10 +1,9 @@
 import {coordinatesCity} from './const.js';
 import {placeMarks} from './model/placemarks.js';
 import {handleButtonClick} from './module/module.js';
-import {bookingForm, changeURL, firstActiveTab} from './booking-form.js';
+import {changeURL, firstActiveTab} from './booking-form.js';
 import {getHotelsFromStorage} from "./model/hotel-load.js";
 import {hotelsList} from "./module/hotels-list.js";
-// import {templateClusterContent} from './views/template.js';
 
 export let geoObjects = [];
 export let cluster;
@@ -46,15 +45,6 @@ export let fillPoint = (placeMarksList) => {
                 firstActiveTab();
             }
 
-            /*document.querySelectorAll('.map__hint').forEach((item) => {
-                item.classList.remove('active');
-            });
-
-             if (document.getElementById(id)) {
-                // document.getElementById(id).classList.add('active-check');
-                document.getElementById(id).classList.add('active');
-            }*/
-
             let placeMarksRoster = placeMarks();
             placeMarksRoster.forEach((item, i) => {
                 let hotelId = geoObjects[i].properties.get('id');
@@ -88,7 +78,7 @@ export let fillPoint = (placeMarksList) => {
 
         });
 
-        geoObjects[i].events.add('balloonclose', function (e) {
+       /* geoObjects[i].events.add('balloonclose', function (e) {
             let placeMark = e.get('target');
             let id = placeMark.properties.get('id');
 
@@ -97,7 +87,7 @@ export let fillPoint = (placeMarksList) => {
                 // document.getElementById(id).classList.remove('active');
             }
 
-        });
+        });*/
     })
 
     cluster = new ymaps.Clusterer({

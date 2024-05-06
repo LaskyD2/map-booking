@@ -1,48 +1,10 @@
-import { coordinatesCity } from './const.js'
-import { getParameterByName, diffDates } from './module/module.js'
+import { getParameterByName } from './module/module.js'
 import { changeDate } from './model/price-load.js'
-import { hotelsList } from './module/hotels-list.js'
-import { getHotelsFromStorage } from './model/hotel-load.js'
-import {map, fillPoint, geoObjects} from './map.js'
+import {map, geoObjects} from './map.js'
 import { placeMarks } from "./model/placemarks.js";
 
 export function tabsBookingForm() {
-    // let scenariosListHotel = scenariosHotel;
-
     let listElement = document.querySelectorAll('.bookmarks li[id ^="hotel-"]');
-
-    /* START Селект городов, пока хз что с ним делать */
-    /*let citySelector = document.querySelector('select.tl-city-select');
-     const selectCity = () => {
-        let citySelector = document.querySelector('select.tl-city-select').value;
-        let hotels = document.querySelectorAll('.tl-container .bookmarks li[id^="hotel-"]');
-
-        hotels.forEach((hotel) => {
-            let hotelCity = hotel.getAttribute('data-city');
-            hotelCity === citySelector ? hotel.classList.remove('hidden') : hotel.classList.add('hidden');
-            hotel.classList.remove('active')
-        });
-
-        document.querySelector(`[data-city="${citySelector}"]`).classList.add('active')
-
-        bookingForm(scenariosListHotel[citySelector]);
-
-
-    };
-    selectCity();
-    citySelector.addEventListener('change', function () {
-        changeURL(this.value);
-        selectCity();
-        fillPoint(placeMarks());
-        map.setCenter(coordinatesCity[citySelector.value], 12, {duration: 300});
-    });
-
-        document.querySelectorAll('.bookmarks li').forEach(function (elem) {
-        citySelector.value === document.getElementById(elem.getAttribute('id')).getAttribute('data-city') ?
-            elem.classList.remove('hidden') : elem.classList.add('hidden');
-    })
-    */
-    /* END Селект городов, пока хз что с ним делать */
 
     firstActiveTab();
 
@@ -62,10 +24,8 @@ export function tabsBookingForm() {
             map.balloon.close();
 
             placeMarksRoster.forEach((item, i) => {
-
                 let hotelId = geoObjects[i].properties.get('id');
                 if (hotelId === data_id) {
-                    console.log(geoObjects[i])
                     let iconContent =  geoObjects[i].properties.get('iconContent').replace('class="map__hint', 'class="map__hint active')
                     let coords = geoObjects[i].geometry.getCoordinates();
                     map.setCenter(coords, 10, {duration: 300})
@@ -77,16 +37,6 @@ export function tabsBookingForm() {
                     geoObjects[i].properties.set('iconContent', iconContentDisabled);
                 }
             })
-
-           /* let listPointsMap = document.querySelectorAll('.map__hint');
-            listPointsMap.forEach((point) => {
-                if (point.id === data_id) {
-                    point.classList.add('active');
-                } else {
-                    point.classList.remove('active');
-                }
-            })*/
-
             changeURL(data_id);
             bookingForm(data_id);
         });
@@ -95,7 +45,7 @@ export function tabsBookingForm() {
 
 export function firstActiveTab() {
     let prov = getParameterByName('hotel_id');
-    let placeMarksRoster = placeMarks();
+
     document.querySelectorAll('.bookmarks li').forEach(function (elem) {
         let el = elem.getAttribute('id');
 
@@ -109,21 +59,7 @@ export function firstActiveTab() {
         if ((prov === 0) || (prov === '0') || (prov == null) || (prov === '')) {
             document.getElementById("hotel-1").classList.add('active');
         }
-
-        /*placeMarksRoster.forEach((item, i) => {
-            // console.log(geoObjects)
-            /!*let hotelId = geoObjects[i].properties.get('id');
-            if (hotelId === prov) {
-                let coords = geoObjects[i].geometry.getCoordinates();
-                map.setCenter(coords, 10, {duration: 300})
-            }*!/
-        })*/
-
     });
-
-    geoObjects.forEach((item) => {
-        console.log(item)
-    })
 }
 
 export const changeURL = (value) => {
