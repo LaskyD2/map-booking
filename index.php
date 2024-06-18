@@ -16,23 +16,35 @@
 
     </script>
 
-    <link rel="stylesheet" href="assets/src/css/style.css"
+    <link rel="stylesheet" href="/map-booking/assets/src/css/style.css"
 
 </head>
 <body>
 
 <div class="tl-container">
     <ul class="bookmarks clearfix">
-        <li id="hotel-1" data-id="17892" class="active">
+        <li id="hotel-1" data-id="12514" class="active">
             <p class="hotel-class">Vertical Петербург</p>
         </li>
-        <li id="hotel-2" data-id="16579">
+        <li id="hotel-2" data-id="5199">
             <p class="hotel-class">We&I Петербург</p>
         </li>
-        <li id="hotel-2472" data-id="31447">
+        <li id="hotel-2472" data-id="34810">
             <p class="hotel-class">We&I Ramada Петербург</p>
         </li>
-        <li id="hotel-3" data-id="17997">
+        <li id="hotel-3" data-id="34804">
+            <p class="hotel-class">Vertical Boutique Москва</p>
+        </li>
+        <li id="hotel-3" data-id="8944">
+            <p class="hotel-class">Vertical Boutique Москва</p>
+        </li>
+        <li id="hotel-3" data-id="8760">
+            <p class="hotel-class">Vertical Boutique Москва</p>
+        </li>
+        <li id="hotel-3" data-id="8856">
+            <p class="hotel-class">Vertical Boutique Москва</p>
+        </li>
+        <li id="hotel-3" data-id="16493">
             <p class="hotel-class">Vertical Boutique Москва</p>
         </li>
     </ul>
@@ -51,12 +63,9 @@
 </div>
 
 
-<script type="module" src="/assets/src/js/main.js"></script>
+<script type="module" src="/map-booking/assets/src/js/main.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
         type="text/javascript"></script>
-<!--<script src="https://api-maps.yandex.ru/2.1/?apikey=d2905f6d-3e1c-4841-b651-5790cd49c349&lang=ru_RU"
-        type="text/javascript"></script>-->
-
 
 </body>
 </html>
