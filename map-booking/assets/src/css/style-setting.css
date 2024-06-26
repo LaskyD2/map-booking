@@ -1,0 +1,15 @@
+:root {
+    --basic: #9CB33C;
+    --background: #FFFFFF;
+    --border: rgba(119, 119, 119, 0.4667);
+    --textMarker: #FFFFFF;
+
+    --backgroundNotActive: #7F7165;
+    --textNotActive: #FFFFFF;
+
+    --titleBallunColor: #F3972A;
+    --textBallun: #000000;
+
+    --loader: var(--backgroundNotActive);
+    --loaderTwo: #f3f3f3;
+}

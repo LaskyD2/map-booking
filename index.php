@@ -16,7 +16,7 @@
 
     </script>
 
-    <link rel="stylesheet" href="/map-booking/assets/src/css/style.css"
+<!--    <link rel="stylesheet" href="/map-booking/assets/src/css/style.css"-->
 
 </head>
 <body>
@@ -51,7 +51,7 @@
 
     <div class="map__wrapper ">
         <div class="map__mobile-text">Чтобы переместить карту, проведите по ней двумя пальцами</div>
-        <div id="map" class="map map-show"></div>
+        <div id="map-be" class="map map-show"></div>
     </div>
 
     <button class="accordion">Свернуть карту</button>
@@ -63,7 +63,74 @@
 </div>
 
 
-<script type="module" src="/map-booking/assets/src/js/main.js"></script>
+<script>
+    let arrival;
+    function searchRooms(data) {
+        if (arrival !== data.arrivalDate) {
+            arrival = data.arrivalDate;
+            let nights = data.nights;
+            let adults = data.guests[0].adults;
+            let idHotel = data.providerId;
+            // map.balloon.close();
+            window.setTlHotel.changeDate(arrival, nights, adults, idHotel);
+
+            if (window.getParameterByName('date')) {
+                let date = "date";
+                let regexDate = new RegExp(/date=[A-Za-z0-9_-]+/g);
+                window.changeURLDate(date, regexDate, arrival)
+
+                let nightsUrl = "nights";
+                let regexNights = new RegExp(/nights=\d+/g);
+                window.changeURLDate(nightsUrl, regexNights, nights);
+            }
+        }
+    }
+
+
+        (function (w) {
+            var q = [
+                ['setContext', `TL-INT-station-hotels`, `ru`],
+                ['embed', 'booking-form', {
+                    container: 'tl-booking-form',
+                    autoScroll: 'none',
+                    onSearchRooms: searchRooms
+                }]
+            ];
+            var h=["ru-ibe.tlintegration.ru","ibe.tlintegration.ru","ibe.tlintegration.com"];
+            var t = w.travelline = (w.travelline || {}),
+                ti = t.integration = (t.integration || {});
+            ti.__cq = ti.__cq? ti.__cq.concat(q) : q;
+            if (!ti.__loader) {
+                ti.__loader = true;
+                var d=w.document,c=d.getElementsByTagName("head")[0]||d.getElementsByTagName("body")[0];
+                function e(s,f) {return function() {w.TL||(c.removeChild(s),f())}}
+                (function l(h) {
+                    if (0===h.length) return; var s=d.createElement("script");
+                    s.type="text/javascript";s.async=!0;s.src="https://"+h[0]+"/integration/loader.js";
+                    s.onerror=s.onload=e(s,function(){l(h.slice(1,h.length))});c.appendChild(s)
+                })(h);
+            }
+        })(window);
+
+
+</script>
+
+<script>
+    (function() {
+        var js = document.createElement("script");
+        js.setAttribute('type', 'module')
+        // js.src = "/map-booking/assets/src/js/main.js?v=1.0.1";
+        js.src = "/map-booking/assets/public/map-booking.js?v=1.0.1";
+        document.head.appendChild(js);
+
+
+        var css = document.createElement("link");
+        css.href = "/map-booking/assets/src/css/style.css?v=1.0.1";
+        css.rel = "stylesheet";
+        document.head.appendChild(css);
+    })(window, document);
+</script>
+<!--<script type="module" src="/map-booking/assets/src/js/main.js"></script>-->
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
         type="text/javascript"></script>
 
