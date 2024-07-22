@@ -47,9 +47,7 @@ export function tabsBookingForm() {
             }
         })
         changeURL(data_id);
-        selector.value = data_id;
-        fireEvent(selector[0], 'change');
-        // bookingForm(data_id);
+        bookingForm(data_id);
         window.history.pushState(false, false, path);
     });
 
@@ -83,9 +81,7 @@ export function tabsBookingForm() {
                 }
             })
             changeURL(data_id);
-            selector.value = data_id;
-            fireEvent(selector[0], 'change');
-            // bookingForm();
+            bookingForm();
         });
     });
 }
@@ -103,9 +99,7 @@ export function firstActiveTab() {
             document.getElementById(el).classList.remove('active');
         }
 
-        // bookingForm();
-        selector.value = prov;
-        fireEvent(selector[0], 'change');
+        bookingForm();
         if ((prov === 0) || (prov === '0') || (prov == null) || (prov === '')) {
             document.getElementById("hotel-1").classList.add('active');
         }
@@ -160,7 +154,6 @@ export function fireEvent(element, event) {
     }
 }
 
-/*
 
 let arrival;
 function searchRooms(data) {
@@ -210,5 +203,4 @@ export function bookingForm() {
     })(window);
 
 }
-*/
 
