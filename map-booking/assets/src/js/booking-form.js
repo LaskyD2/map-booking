@@ -1,6 +1,6 @@
 import { getParameterByName } from './module/module.js'
 import { changeDate } from './model/price-load.js'
-import {map, geoObjects} from './map.js'
+import {map, geoObjects, cluster} from './map.js'
 import { YM_COUNTER } from './settings.js'
 import { placeMarks } from "./model/placemarks.js";
 
@@ -37,7 +37,8 @@ export function tabsBookingForm() {
             if (hotelId === this.value) {
                 let iconContent =  geoObjects[i].properties.get('iconContent').replace('class="map__hint', 'class="map__hint active')
                 let coords = geoObjects[i].geometry.getCoordinates();
-                map.setCenter(coords, 16, {duration: 300})
+                console.log(geoObjects[i])
+                map.setCenter(coords, 13, {duration: 300})
                 geoObjects[i].properties.set('iconContent', iconContent);
                 setTimeout(() => geoObjects[i].balloon.open(), 350);
 
@@ -46,8 +47,8 @@ export function tabsBookingForm() {
                 geoObjects[i].properties.set('iconContent', iconContentDisabled);
             }
         })
-        changeURL(data_id);
-        bookingForm(data_id);
+        changeURL(this.value);
+        bookingForm();
         window.history.pushState(false, false, path);
     });
 
@@ -59,21 +60,35 @@ export function tabsBookingForm() {
             if (data_id === listActiveElement.getAttribute('data-id')) {
                 return false;
             }
-            listActiveElement.classList.remove('active');
+
+            document.querySelectorAll('.bookmarks__item').forEach((item) => {
+                item.classList.remove('active')
+            })
+
             document.getElementById(elem.getAttribute('id')).classList.add('active');
 
             map.balloon.close();
             // ym(YM_COUNTER,'reachGoal','click_on_tab');
-            console.log('click_on_tab');
+            // console.log('click_on_tab');
 
             placeMarksRoster.forEach((item, i) => {
                 let hotelId = geoObjects[i].properties.get('id');
                 if (hotelId === data_id) {
                     let iconContent =  geoObjects[i].properties.get('iconContent').replace('class="map__hint', 'class="map__hint active')
                     let coords = geoObjects[i].geometry.getCoordinates();
-                    map.setCenter(coords, 16, {duration: 300})
+
+                    map.setCenter(coords, 13, {duration: 300})
                     geoObjects[i].properties.set('iconContent', iconContent);
-                    setTimeout(() => geoObjects[i].balloon.open(), 350);
+                    setTimeout(() => {
+                            try {
+                                geoObjects[i].balloon.open()
+                            } catch (err) {
+                                map.setCenter(coords, 13, {duration: 300})
+                                geoObjects[i].balloon.open()
+                            }
+                        }
+                    , 350);
+
 
                 } else {
                     let iconContentDisabled = geoObjects[i].properties.get('iconContent').replace('class="map__hint active', 'class="map__hint');
@@ -92,7 +107,6 @@ export function firstActiveTab() {
 
     document.querySelectorAll('.bookmarks li').forEach(function (elem) {
         let el = elem.getAttribute('id');
-
         if (document.getElementById(el).getAttribute('data-id') === prov) {
             document.getElementById(el).classList.add('active');
         } else {
@@ -176,10 +190,12 @@ function searchRooms(data) {
         }
     }
 }
+
+
 export function bookingForm() {
     (function (w) {
         var q = [
-            ['setContext', `TL-INT-station-hotels`, `${MAP_BOOKING_LANG}`],
+            ['setContext', `TL-INT-kravt-affarts-dev_2022-08-30`, `${MAP_BOOKING_LANG}`],
             ['embed', 'booking-form', {
                 container: 'tl-booking-form',
                 autoScroll: 'none',

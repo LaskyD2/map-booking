@@ -57,7 +57,7 @@ export const setPricesStorage = (url, providerIdActive) => {
                                 geoObjects[index].balloon.open();
                             } catch (err) {
                                 let coords = geoObjects[index].geometry.getCoordinates();
-                                map.setCenter(coords, 16, {duration: 300});
+                                map.setCenter(coords, 13, {duration: 300});
                                 setTimeout(() => geoObjects[index].balloon.open(), 350);
                             }
                         }

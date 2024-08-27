@@ -1,6 +1,7 @@
 export const coordinatesCity = {
-    "spb": [59.932193, 30.356005],
-    "msk": [55.75, 37.61]
+    "spb": [59.931429, 30.325081],
+    "msk": [55.758905, 37.627425],
+    "estosadok": [43.685014, 40.258632]
 }
 
 export const MODULE_NAME = 'hotels-list';

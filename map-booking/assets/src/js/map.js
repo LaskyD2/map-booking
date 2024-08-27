@@ -14,7 +14,7 @@ let isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
 export let fillPoint = (placeMarksList) => {
     map.geoObjects.removeAll();
     geoObjects.length = 0;
-    map.setZoom(12.5);
+    map.setZoom(13);
     placeMarksList.forEach((point, i) => {
         geoObjects[i] = new ymaps.Placemark([placeMarksList[i].latitude, placeMarksList[i].longitude],
             {
@@ -96,7 +96,7 @@ export let fillPoint = (placeMarksList) => {
 
     cluster = new ymaps.Clusterer({
         gridSize: 10,
-        clusterIconColor: '#9CAC58',
+        clusterIconColor: '#A40045',
     });
 
     map.geoObjects.add(cluster);

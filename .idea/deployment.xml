@@ -128,6 +128,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="a-house.ru_2024-07-18">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="a0743588.xsph.ru_2022-12-28">
         <serverdata>
           <mappings>
@@ -430,6 +437,13 @@
         </serverdata>
       </paths>
       <paths name="altay-green.ru_2023-10-12">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="altay-west.ru_2024-07-19">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -1787,6 +1801,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="dah-sl.ru-2024-06-28">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="dah-sl.ru_2022-12-23">
         <serverdata>
           <mappings>
@@ -1809,6 +1830,13 @@
         </serverdata>
       </paths>
       <paths name="dah-sl.ru_2024-06-24">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="dah-sl.ru_2024-07-25">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -2102,6 +2130,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="dsc-hotel.ru_2024-07-15">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="dsol-druzhba_2022-01-13">
         <serverdata>
           <mappings>
@@ -2186,6 +2221,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="ecovillageclub.ru_2024-07-22">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="edem-altay.ru_2023-11-23">
         <serverdata>
           <mappings>
@@ -2236,6 +2278,13 @@
         </serverdata>
       </paths>
       <paths name="elovoeclub.ru_2022-03-28">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="elovoeclub.ru_2024-07-24">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -3621,6 +3670,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="hotel-altai22.ru_2024-08-19">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="hotel-altun_2021-12-10">
         <serverdata>
           <mappings>
@@ -4027,7 +4083,21 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="hotel-siberia.com_2024-07-30">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="hotel-silverhouse.ru_2022-04-22">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="hotel-sky.ru_2024-07-25">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -4916,6 +4986,20 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="kkdachi.ru_2024-07-15">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="kkdachi.ru_2024-07-17">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="kkdachi_2021-11-22">
         <serverdata>
           <mappings>
@@ -5302,6 +5386,27 @@
         </serverdata>
       </paths>
       <paths name="lesnoyparkhotel.ru_2022-03-29">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lesnoyparkhotel.ru_2024-06-28">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lesnoyparkhotel.ru_2024-07-17">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lesriviera.ru_2024-07-24">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -5805,6 +5910,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="miris-hotel.ru_2024-08-01">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="mirros-hotels.com_2023-08-17">
         <serverdata>
           <mappings>
@@ -6246,6 +6358,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="new.elovoeclub.ru.host1634321.serv11.hostland.pro">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="new.gkkiparis.ru_2022-14-20">
         <serverdata>
           <mappings>
@@ -6652,6 +6771,20 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="palmira-garden.com_2024-08-19">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="palmira-palace.com_2024-08-19">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="pansionat-nikolaev.com.ua_2022-01-23">
         <serverdata>
           <mappings>
@@ -6911,6 +7044,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="polyanagroup.ru_2024-04-27">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="pontosplaza.ru_2022-01-27">
         <serverdata>
           <mappings>
@@ -7058,6 +7198,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="pushkarka.ru_2024-07-15">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="pushkarka.vilkadev1.tmweb.ru_2022-10-18">
         <serverdata>
           <mappings>
@@ -7122,6 +7269,13 @@
         </serverdata>
       </paths>
       <paths name="qwerqwer">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="rachmaninoff-hotel.ru_2024-07-19">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -7793,6 +7947,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="selzaplav.ru_2024-07-23">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="seminyakparadisohotel.com_2023-10-31">
         <serverdata>
           <mappings>
@@ -7829,6 +7990,13 @@
         </serverdata>
       </paths>
       <paths name="sevastopol-hotel.ru_2023-02-08">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="sevenhillshotels.ru_2024-08-20">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -8535,6 +8703,27 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="taleonimperialhotel.com_2024-07-17">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="taleonimperialhotel.com_2024-07-17 (1)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="taleonimperialhotel.com_2024-07-19">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="talka.ru_2023-03-02">
         <serverdata>
           <mappings>
@@ -9060,6 +9249,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="voljanka.com_2024-07-30">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="volyn60.ru_2023-01-27">
         <serverdata>
           <mappings>
@@ -9089,6 +9285,13 @@
         </serverdata>
       </paths>
       <paths name="vshokoladi.com.ua_2022-10-07">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="w-time.ru_2024-07-24">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
