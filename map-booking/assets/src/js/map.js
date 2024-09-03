@@ -1,4 +1,4 @@
-import {coordinatesCity} from './const.js';
+import {coordinatesCity, ZOOM_MAP} from './const.js';
 import {YM_COUNTER} from './settings.js';
 import {placeMarks} from './model/placemarks.js';
 import {handleButtonClick} from './module/module.js';
@@ -14,7 +14,7 @@ let isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
 export let fillPoint = (placeMarksList) => {
     map.geoObjects.removeAll();
     geoObjects.length = 0;
-    map.setZoom(13);
+    map.setZoom(ZOOM_MAP);
     placeMarksList.forEach((point, i) => {
         geoObjects[i] = new ymaps.Placemark([placeMarksList[i].latitude, placeMarksList[i].longitude],
             {
@@ -38,7 +38,7 @@ export let fillPoint = (placeMarksList) => {
         geoObjects[i].events.add('click', function (e) {
             let placeMark = e.get('target');
             let id = placeMark.properties.get('id');
-
+            console.log(id)
             // ym(YM_COUNTER,'reachGoal','click_on_map')
 
             if (document.getElementById(id) == null) {
@@ -111,7 +111,7 @@ export function init() {
 
     map = new ymaps.Map('map-be', {
         center: coordinatesCity['spb'], // Доделать выбранный город
-        zoom: 13,
+        zoom: ZOOM_MAP,
         controls: ['zoomControl'],
         behaviors: isMobile ? ['dblClickZoom', 'multiTouch'] : ['drag', 'scrollZoom'],
 

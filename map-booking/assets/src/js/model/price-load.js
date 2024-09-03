@@ -16,7 +16,7 @@ export const changeDate = (date, nights, adults, providerIdActive) => {
         })
     }
 
-    setPricesStorage(url, providerIdActive);
+    setPricesStorage(url, providerIdActive, adults);
 }
 
 export const fetchPrices = async (url) => {
@@ -27,15 +27,14 @@ export const fetchPrices = async (url) => {
     return await result.json();
 };
 
-export const setPricesStorage = (url, providerIdActive) => {
+export const setPricesStorage = (url, providerIdActive, adults) => {
         fetchPrices(url)
             .then((prices) => {
                 savePriceToStorage(JSON.stringify(prices));
 
-                let hotelsMinPrice = minPrice(prices),
+                let hotelsMinPrice = minPrice(prices, adults),
                     placeMarksRoster = placeMarks(),
                     listElement, activeHotelTab;
-
 
                 if (providerIdActive) {
                     listElement = document.querySelector('.bookmarks li.active');

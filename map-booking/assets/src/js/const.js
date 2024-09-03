@@ -4,6 +4,8 @@ export const coordinatesCity = {
     "estosadok": [43.685014, 40.258632]
 }
 
+export const ZOOM_MAP = 10;
+
 export const MODULE_NAME = 'hotels-list';
 export const LOCAL_STORAGE_EXPIRE_ITEM = `${MODULE_NAME}:expire`;
 export const LOCAL_STORAGE_ROOMS_ITEM = `${MODULE_NAME}:prices`;
