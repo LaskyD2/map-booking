@@ -189,19 +189,12 @@
     })(window);
 
     (function() {
-        // var js = document.createElement("script");
-        // js.src = "/map-booking/assets/src/js/main.js?v=1.0.0";
-        // js.type = "module";
-        // document.head.appendChild(js);
-
         var css = document.createElement("link");
         css.href = "/map-booking/assets/src/css/style.css?v=1.0.0";
         css.rel = "stylesheet";
         document.head.appendChild(css);
 
     })(window, document);
-
-
 </script>
 
 
