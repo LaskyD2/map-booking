@@ -16,7 +16,7 @@ export const getParameterByName = (name, url) => {
 
 export const accordion = () => {
     /* свернуть/развернуть карту */
-    let acc = document.querySelector(".accordion");
+    let acc = document.querySelector(".accordion-map");
     let accText = document.querySelector(".accordion-text");
     let mapWrapper = document.querySelector(".map__wrapper");
     let map = document.getElementById("map-be");

@@ -16,7 +16,7 @@ export const changeDate = (date, nights, adults, providerIdActive) => {
         })
     }
 
-    setPricesStorage(url, providerIdActive);
+    setPricesStorage(url, providerIdActive, adults);
 }
 
 export const fetchPrices = async (url) => {
@@ -27,15 +27,14 @@ export const fetchPrices = async (url) => {
     return await result.json();
 };
 
-export const setPricesStorage = (url, providerIdActive) => {
+export const setPricesStorage = (url, providerIdActive, adults) => {
         fetchPrices(url)
             .then((prices) => {
                 savePriceToStorage(JSON.stringify(prices));
 
-                let hotelsMinPrice = minPrice(prices),
+                let hotelsMinPrice = minPrice(prices, adults),
                     placeMarksRoster = placeMarks(),
                     listElement, activeHotelTab;
-
 
                 if (providerIdActive) {
                     listElement = document.querySelector('.bookmarks li.active');
@@ -57,7 +56,7 @@ export const setPricesStorage = (url, providerIdActive) => {
                                 geoObjects[index].balloon.open();
                             } catch (err) {
                                 let coords = geoObjects[index].geometry.getCoordinates();
-                                map.setCenter(coords, 16, {duration: 300});
+                                map.setCenter(coords, 13, {duration: 300});
                                 setTimeout(() => geoObjects[index].balloon.open(), 350);
                             }
                         }

@@ -1,11 +1,13 @@
-export const minPrice = (hotels) => {
+export const minPrice = (hotels, adults) => {
     let minPrice = [];
-    Object.keys(hotels).map((hotel) => {
-        let priceRoom = [];
-        Object.values(hotels[hotel]).map((rooms) => {
-            priceRoom.push(rooms);
+    let priceRoom = [];
+
+    Object.keys(hotels['hotels']).map((hotel) => {
+        priceRoom = [];
+        Object.values(hotels['hotels'][hotel]).map((room) => {
+            priceRoom.push(room[adults]);
         })
-        minPrice[hotel] = Math.min.apply(null,priceRoom)
+        minPrice[hotel] = Math.min.apply(null, priceRoom)
     })
     return minPrice;
 }
