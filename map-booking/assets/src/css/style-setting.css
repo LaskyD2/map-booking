@@ -1,22 +1,18 @@
 :root {
-    --basic: #0A0A0A;
+    --basic: #8E9C43;
     --background: #FFFFFF;
     --border: rgba(119, 119, 119, 0.4667);
     --text: #000000;
     --textActive: #FFFFFF;
     --textMarker: #CB8832;
 
-    --backgroundNotActive: #0A0A0A;
-    --textNotActive: #FFFFFF;
+    --backgroundNotActive: #FFFFFF;
+    --textNotActive: #000000;
 
-    --titleBallunColor: #D19A5C;
+    --titleBallunColor: #8E9C43;
     --textBallun: #777777;
-    --priceBallun: #D19A5C;
+    --priceBallun: #5A7EBE;
 
-    --loader: #0A0A0A;
+    --loader: #8E9C43;
     --loaderTwo: #f3f3f3;
-
-    --button: #0A0A0A;
-    --buttonHover: #0A0A0A;
-    --buttonText: #FFFFFF;
 }

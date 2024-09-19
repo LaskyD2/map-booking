@@ -1,4 +1,4 @@
-import {coordinatesCity, ZOOM_MAP} from './const.js';
+import {CENTER_MAP, ZOOM_MAP} from './const.js';
 import {YM_COUNTER} from './settings.js';
 import {placeMarks} from './model/placemarks.js';
 import {handleButtonClick} from './module/module.js';
@@ -38,7 +38,6 @@ export let fillPoint = (placeMarksList) => {
         geoObjects[i].events.add('click', function (e) {
             let placeMark = e.get('target');
             let id = placeMark.properties.get('id');
-            console.log(id)
             // ym(YM_COUNTER,'reachGoal','click_on_map')
 
             if (document.getElementById(id) == null) {
@@ -99,9 +98,12 @@ export let fillPoint = (placeMarksList) => {
         clusterIconColor: '#A40045',
     });
 
+
+
     map.geoObjects.add(cluster);
     cluster.add(geoObjects);
 
+    map.setBounds(map.geoObjects.getBounds())
 
     hotelsList(getHotelsFromStorage());
 
@@ -110,7 +112,7 @@ export let fillPoint = (placeMarksList) => {
 export function init() {
 
     map = new ymaps.Map('map-be', {
-        center: coordinatesCity['spb'], // Доделать выбранный город
+        center: CENTER_MAP,
         zoom: ZOOM_MAP,
         controls: ['zoomControl'],
         behaviors: isMobile ? ['dblClickZoom', 'multiTouch'] : ['drag', 'scrollZoom'],

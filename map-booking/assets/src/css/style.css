@@ -13,102 +13,13 @@ body {
 }
 
 
-.tl-city-select {
-    font-family: 'Montserrat', sans-serif !important;
-    font-weight: 400 !important;
-    font-size: 16px !important;
-    line-height: 20px !important;
-    color: #636261 !important;
-    background: #fff url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDAuNTk5OTc2TDYgNy43OTk5N0wxMiAwLjU5OTk3NkgwWiIgZmlsbD0iI0U1OEYzRCIvPgo8L3N2Zz4K") no-repeat right/45px 9px !important;
-    border: 1px solid #7F7165 !important;
-    -webkit-appearance: none !important;
-    appearance: none !important;
-    padding: 15px 55px 15px 30px !important;
-    width: 100% !important;
-    margin-bottom: 15px;
-}
-.tl-city-select::-ms-expand {
-    display: none;
-}
-.tl-container {
-    max-width: 1440px;
-    margin: 25px auto 0;
-    position: relative;
-    display: block;
-}
-
-.tl-container h4 {
-    margin-bottom: 18px;
-}
-
-.bookmarks {
-    width: 100%;
-    padding: 0!important;
-    margin: 0 0 10px 0!important;
-    list-style: none !important;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-}
-
-.bookmarks li.active {
-    cursor: default;
-    background-color: #7F7165;
-    color: #FFFFFF;
-}
-
-.bookmarks li {
-    background-color: #F9F5F1;
-    cursor: poMontserrat;
-    padding: 15px;
-    margin: 0;
-    min-height: 26px;
-    position: relative;
-    z-index: 99;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #7F7165;
-}
-
-.bookmarks li:hover {
-    background-color: #7F7165;
-    color: #FFFFFF;
-}
-
-.bookmarks li.hidden {
-    display: none;
-}
-
-/*
-#tl-hotel-select {
-    display: none !important;
-}
-*/
-
-@media (max-width: 710px) {
-    .bookmarks {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.blocks {
-    padding-bottom: 20px;
-}
-
 .accordion-map {
     display: flex;
     align-items: center;
     position: relative;
     border: none;
-    background: var(--button);
-    color: var(--buttonText);
+    background: #5A7EBE;
+    color: #FFFFFF;
     float: right;
     cursor: pointer;
     font-family: Montserrat, sans-serif;
@@ -120,7 +31,7 @@ body {
 
 .accordion-map:hover,
 .accordion-map:focus {
-    background: var(--buttonHover) !important;
+    background: #A40045 !important;
 }
 
 /*.accordion-map:hover svg {
@@ -231,7 +142,7 @@ body {
     border: 1px solid rgba(127, 113, 101, 0.45);
     background: rgba(255, 255, 255, 0.75) !important;
     padding: 0 10px 0 5px!important;
-    cursor: poMontserrat !important;
+    cursor: pointer !important;
 }
 
 
@@ -361,17 +272,17 @@ body {
     display: flex;
     justify-content: space-between;
 
-    cursor: poMontserrat;
+    cursor: pointer;
 }
 
 .map__balloon-room:hover .map__balloon-room-name {
     color: #C87A31;
     text-decoration-color: #ff7d00;
-    cursor: poMontserrat;
+    cursor: pointer;
 }
 
 .balloon-hotel {
-    cursor: poMontserrat;
+    cursor: pointer;
     color: var(--titleBallunColor);
     font-size: 14px;
     font-weight: 600;

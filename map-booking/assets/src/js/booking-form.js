@@ -1,6 +1,5 @@
 import { ZOOM_MAP } from './const.js'
 import { getParameterByName } from './module/module.js'
-import { changeDate } from './model/price-load.js'
 import {map, geoObjects, cluster} from './map.js'
 import { YM_COUNTER } from './settings.js'
 import { placeMarks } from "./model/placemarks.js";
@@ -35,7 +34,6 @@ export function tabsBookingForm() {
             }
         })
         changeURL(this.value);
-        // bookingForm();
     });
 
     listElement.forEach(function (elem, i) {
@@ -74,7 +72,6 @@ export function tabsBookingForm() {
             changeURL(data_id);
             selector.value = data_id;
             fireEvent(selector[0], 'change')
-            // bookingForm();
         });
     });
 }
@@ -91,7 +88,6 @@ export function firstActiveTab() {
             document.getElementById(el).classList.remove('active');
         }
 
-        // bookingForm();
         selector.value = prov;
         fireEvent(selector[0], 'change')
         if ((prov === 0) || (prov === '0') || (prov == null) || (prov === '')) {
