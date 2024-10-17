@@ -50,8 +50,10 @@ export const templateBalloonContent = (name, address, price, hotelId, idActive) 
         </div>`
 }*/
 
+
+/*
+
 export const templateClusterContent = (length) => {
-    length = length ? length : '';
     return ymaps.templateLayoutFactory.createClass(
         `  <div class="map__cluster">
                 <div class="map__cluster-in">${length}</div>
@@ -59,3 +61,5 @@ export const templateClusterContent = (length) => {
         `
     )
 };
+
+*/

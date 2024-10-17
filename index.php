@@ -20,24 +20,17 @@
 </head>
 <body>
 
+
+
+
+
+
+
+
 <div class="tl-container">
-    <ul class="bookmarks clearfix">
-        <li id="hotel-1" data-id="18115" class="active">
-            <p class="hotel-class">izzzi 3* у Гостиного двора</p>
-        </li>
-        <li id="hotel-2" data-id="5128">
-            <p class="hotel-class">izzziUP 4* COMMUNITY L&C</p>
-        </li>
-        <li id="hotel-3" data-id="11535">
-            <p class="hotel-class">izzzi 3* у Владимирской</p>
-        </li>
-        <li id="hotel-4" data-id="21849">
-            <p class="hotel-class">izzzi 3* на Банковском</p>
-        </li>
-        <li id="hotel-5" data-id="38581">
-            <p class="hotel-class">izzzi.life Vibe</p>
-        </li>
-    </ul>
+    <div id="tl-block-select">
+        <select id="tl-hotel-select"> </select>
+    </div>
 
     <div class="map-booking">
         <div class="map__wrapper ">
@@ -55,11 +48,7 @@
         </button>
     </div>
 
-    <div class="blocks ">
-        <div class="blocks__booking-form"><select id="tl-hotel-select"></select>
-            <div id="tl-booking-form"></div>
-        </div>
-    </div>
+    <div id="tl-booking-form"></div>
 </div>
 
 <script>
@@ -82,75 +71,6 @@
         window.history.pushState(false, false, path);
     });
 
-    document.addEventListener('DOMContentLoaded', function(){
-        function getParameterByName(name, url) {
-            if (!url) {
-                url = window.location.href;
-            }
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
-
-        var bookmarksElements = document.querySelectorAll('.bookmarks li');
-        if (bookmarksElements != null) {
-            for (var i = bookmarksElements.length - 1; i >= 0; i--) {
-                var elem = bookmarksElements[i];
-                (function(elem){
-                    var prov = getParameterByName('hotel_id');
-                    var el = elem.getAttribute('id');
-                    if(document.getElementById(el).getAttribute('data-id') === prov) {
-                        document.getElementById(el).classList.add('active');
-                    }
-                    else {
-                        document.getElementById(el).classList.remove('active');
-                    }
-
-                    if((prov === 0) || (prov == null) || (prov === '0')) {
-                        document.getElementById("hotel-1").classList.add('active');
-                    }
-                })(elem)
-            }
-        };
-
-        var selector = document.getElementById('tl-hotel-select'),
-            listElement = document.querySelectorAll('.bookmarks li[id ^="hotel-"]');
-
-        if (listElement != null) {
-
-            for (var i = listElement.length - 1; i >= 0; i--) {
-                var elem = listElement[i];
-                (function(elem){
-                    elem.addEventListener("click", function () {
-                        var listActiveElement = document.querySelector('.bookmarks li.active'),
-                            data_id = document.getElementById(elem.getAttribute('id')).getAttribute('data-id');
-
-                        listActiveElement.classList.remove('active');
-                        document.getElementById(elem.getAttribute('id')).classList.add('active');
-                        selector.value = data_id;
-                        fireEvent(selector[0], 'change');
-                    });
-                })(elem)
-            }
-        };
-
-        function fireEvent(element, event) {
-            if (document.createEventObject) {
-                var ieEvt = document.createEventObject();
-                return element.fireEvent('on' + event, ieEvt);
-            }
-            else {
-                var evt = document.createEvent("HTMLEvents");
-                evt.initEvent(event, true, true);
-                return !element.dispatchEvent(evt);
-            }
-        }
-    });
-
-
     let arrival;
     function searchRooms(data) {
 
@@ -169,7 +89,7 @@
 
     (function (w) {
         var q = [
-            ['setContext', `TL-INT-kravt-affarts-dev_2022-08-30`, `ru`],
+            ['setContext', 'TL-INT-topapart', 'ru'],
             ['embed', 'booking-form', {
                 container: 'tl-booking-form',
                 autoScroll: 'none',
@@ -209,90 +129,3 @@
 
 </body>
 </html>
-
-<style>
-    .tl-city-select {
-        font-family: 'Montserrat', sans-serif !important;
-        font-weight: 400 !important;
-        font-size: 16px !important;
-        line-height: 20px !important;
-        color: #636261 !important;
-        background: #fff url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDAuNTk5OTc2TDYgNy43OTk5N0wxMiAwLjU5OTk3NkgwWiIgZmlsbD0iI0U1OEYzRCIvPgo8L3N2Zz4K") no-repeat right/45px 9px !important;
-        border: 1px solid #7F7165 !important;
-        -webkit-appearance: none !important;
-        appearance: none !important;
-        padding: 15px 55px 15px 30px !important;
-        width: 100% !important;
-        margin-bottom: 15px;
-    }
-    .tl-city-select::-ms-expand {
-        display: none;
-    }
-    .tl-container {
-        max-width: 1440px;
-        margin: 25px auto 0;
-        position: relative;
-        display: block;
-    }
-
-    .tl-container h4 {
-        margin-bottom: 18px;
-    }
-
-    .bookmarks {
-        width: 100%;
-        padding: 0!important;
-        margin: 0 0 10px 0!important;
-        list-style: none !important;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 15px;
-    }
-
-    .bookmarks li.active {
-        cursor: default;
-        background-color: #7F7165;
-        color: #FFFFFF;
-    }
-
-    .bookmarks li {
-        background-color: #F9F5F1;
-        cursor: pointer;
-        padding: 15px;
-        margin: 0;
-        min-height: 26px;
-        position: relative;
-        z-index: 99;
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: #7F7165;
-    }
-
-    .bookmarks li:hover {
-        background-color: #7F7165;
-        color: #FFFFFF;
-    }
-
-    .bookmarks li.hidden {
-        display: none;
-    }
-
-    #tl-hotel-select {
-        display: none !important;
-    }
-
-    @media (max-width: 710px) {
-        .bookmarks {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-
-</style>

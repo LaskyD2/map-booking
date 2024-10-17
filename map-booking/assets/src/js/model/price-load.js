@@ -1,8 +1,8 @@
 import dayjs from 'dayjs';
-import { LOCAL_STORAGE_EXPIRE_PRICE_ITEM, LOCAL_STORAGE_PRICES_ITEM, LOCAL_STORAGE_CACHE_MEASURE, LOCAL_STORAGE_CACHE_VALUE, LOCAL_STORAGE_EMPTY_CACHE} from '../const.js';
+import { LOCAL_STORAGE_EXPIRE_PRICE_ITEM, LOCAL_STORAGE_PRICES_ITEM, LOCAL_STORAGE_CACHE_MEASURE, LOCAL_STORAGE_CACHE_VALUE, LOCAL_STORAGE_EMPTY_CACHE, TYPE_SELECT } from '../const.js';
 import { minPrice } from "../module/min-price.js";
 import { placeMarks } from './placemarks.js';
-import {geoObjects, map} from "../map.js";
+import { geoObjects, map } from "../map.js";
 import {templateBalloonContent, templateIconContent} from "../views/template.js";
 
 export const changeDate = (date, nights, adults, providerIdActive) => {
@@ -37,8 +37,13 @@ export const setPricesStorage = (url, providerIdActive, adults) => {
                     listElement, activeHotelTab;
 
                 if (providerIdActive) {
-                    listElement = document.querySelector('.bookmarks li.active');
-                    activeHotelTab = listElement.getAttribute('data-id');
+                    if (TYPE_SELECT === 'select')
+                        activeHotelTab = document.querySelector('#tl-hotel-select').value;
+                    else {
+                        listElement = document.querySelector('.bookmarks li.active');
+                        activeHotelTab = listElement.getAttribute('data-id');
+                    }
+
                 }
 
                 placeMarksRoster.forEach((item, index) => {
