@@ -1,4 +1,3 @@
-import {YM_COUNTER} from "../settings.js";
 import {LANG_SETTING} from "../lang.js";
 
 export const getParameterByName = (name, url) => {
@@ -15,23 +14,25 @@ export const getParameterByName = (name, url) => {
 
 
 export const accordion = () => {
-    /* свернуть/развернуть карту */
-    let acc = document.querySelector(".accordion-map");
+
     let accText = document.querySelector(".accordion-text");
-    let mapWrapper = document.querySelector(".map__wrapper");
-    let map = document.getElementById("map-be");
-    let mapMobileText = document.querySelector(".map__mobile-text");
+
+    const acc = document.querySelector(".accordion-map");
+    const mapBooking = document.querySelector(".map-booking");
+    const mapMobileText = document.querySelector(".map__mobile-text");
+
+    if (mapBooking.classList.contains('map-show')) {
+        accText.innerText = LANG_SETTING[MAP_BOOKING_LANG].MapClose;
+    } else {
+        accText.innerText = LANG_SETTING[MAP_BOOKING_LANG].MapShow;
+    }
 
     acc.addEventListener("click", function() {
-        this.classList.toggle("active");
-        if (this.classList.contains('active')) {
-            mapWrapper.classList.add('map-show');
-            map.classList.add('map-show');
+        mapBooking.classList.toggle("map-show");
+
+        if (mapBooking.classList.contains('map-show')) {
             accText.innerText = LANG_SETTING[MAP_BOOKING_LANG].MapClose;
         } else {
-            // ym(YM_COUNTER,'reachGoal','open_map');
-            mapWrapper.classList.remove('map-show');
-            map.classList.remove('map-show');
             accText.innerText = LANG_SETTING[MAP_BOOKING_LANG].MapShow;
         }
 

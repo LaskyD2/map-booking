@@ -2,7 +2,7 @@ import { ZOOM_MAP, TYPE_SELECT } from './const.js'
 import { getParameterByName } from './module/module.js'
 import {map, geoObjects, cluster} from './map.js'
 
-import { placeMarks } from "./model/placemarks.js";
+import { placeMarksHotel } from "./model/placeMarks.js";
 
 export function tabsBookingForm() {
     let listElement = document.querySelectorAll('.bookmarks li[id ^="hotel-"]');
@@ -13,34 +13,31 @@ export function tabsBookingForm() {
         bookmarksBlock.scrollIntoView({ block: "start", behavior: "smooth" });
     }
 
+    let placeMarksRoster = placeMarksHotel();
 
-    // firstActiveTab();
+    if (TYPE_SELECT === 'select') {
+        let selectorHotels = document.getElementById('tl-hotel-select');
+        selectorHotels.addEventListener('change', function () {
 
-    let placeMarksRoster = placeMarks();
+            map.balloon.close();
 
-    let selectorHotels = document.getElementById('tl-hotel-select');
-    selectorHotels.addEventListener('change', function () {
+            placeMarksRoster.forEach((item, i) => {
+                let hotelId = geoObjects[i].properties.get('id');
+                if (hotelId === this.value) {
+                    let iconContent = geoObjects[i].properties.get('iconContent').replace('class="map__hint', 'class="map__hint active')
+                    let coords = geoObjects[i].geometry.getCoordinates();
+                    map.setCenter(coords, ZOOM_MAP, {duration: 300})
+                    geoObjects[i].properties.set('iconContent', iconContent);
+                    setTimeout(() => geoObjects[i].balloon.open(), 350);
 
-        map.balloon.close();
-
-        placeMarksRoster.forEach((item, i) => {
-            let hotelId = geoObjects[i].properties.get('id');
-            if (hotelId === this.value) {
-                let iconContent =  geoObjects[i].properties.get('iconContent').replace('class="map__hint', 'class="map__hint active')
-                let coords = geoObjects[i].geometry.getCoordinates();
-                map.setCenter(coords, ZOOM_MAP, {duration: 300})
-                geoObjects[i].properties.set('iconContent', iconContent);
-                setTimeout(() => geoObjects[i].balloon.open(), 350);
-
-            } else {
-                let iconContentDisabled = geoObjects[i].properties.get('iconContent').replace('class="map__hint active', 'class="map__hint');
-                geoObjects[i].properties.set('iconContent', iconContentDisabled);
-            }
-        })
-        changeURL(this.value);
-    });
-
-    if (TYPE_SELECT === 'tabs') {
+                } else {
+                    let iconContentDisabled = geoObjects[i].properties.get('iconContent').replace('class="map__hint active', 'class="map__hint');
+                    geoObjects[i].properties.set('iconContent', iconContentDisabled);
+                }
+            })
+            changeURL(this.value);
+        });
+    }else if (TYPE_SELECT === 'tabs') {
         listElement.forEach(function (elem, i) {
             elem.addEventListener("click", function () {
                 let data_id = document.getElementById(elem.getAttribute('id')).getAttribute('data-id');

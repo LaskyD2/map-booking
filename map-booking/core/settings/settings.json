@@ -1,6 +1,8 @@
 {
-  "hotels": [7909,10020,13384,21687,28845,44281],
+  "hotels": [10102, 16744],
   "languages": ["ru", "en"],
-  "currency": "RUB"
+  "currency": "RUB",
+  "type": "hotels"
+
 }
 

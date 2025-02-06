@@ -20,7 +20,7 @@ function getPriceLoader($hotelIds, $startDate, $endDate, $adults) {
 
             foreach ($hotelInfo as $placement) {
 
-                if (!isset($placement['room_types'][0]['placements'][0]) || !isset($placement['room_types'][0]['placements'][0]['price_before_tax'])) {
+                if (!isset($placement['room_types'][0]['placements'][0])) {
                     continue;
                 }
 
@@ -28,15 +28,21 @@ function getPriceLoader($hotelIds, $startDate, $endDate, $adults) {
                 $price = $priceInfo['price_before_tax'];
                 $roomType = $placement['room_types'][0]['code'];
                 $capacity = $priceInfo['capacity'];
+/*
+                if ($roomType == '130435') {
+                    echo "<pre>";
+                    var_dump($priceInfo);
+                    echo "</pre>";
 
-
+                }*/
 
                 if (!isset($prices['hotels'][$hotelId][$roomType][$capacity]) || $price < $prices['hotels'][$hotelId][$roomType][$capacity]) {
-                    $prices['hotels'][$hotelId][$roomType][$capacity] = $price;
+                    $prices[$hotelId][$roomType][$capacity] = $price;
                 }
             }
         }
     }
+
 
     fillEmptyCapacities($prices);
 
@@ -46,7 +52,7 @@ function getPriceLoader($hotelIds, $startDate, $endDate, $adults) {
 
 function fillEmptyCapacities($prices)
 {
-    foreach ($prices['hotels'] as $hotelCode => $roomTypes) {
+    foreach ($prices as $hotelCode => $roomTypes) {
         foreach ($roomTypes as $roomType => $capacities) {
             $currentCapacity = 1;
             ksort($capacities);
@@ -61,7 +67,7 @@ function fillEmptyCapacities($prices)
                             $index < $capacity;
                             $index++
                         ) {
-                            $prices['hotels'][$hotelCode][$roomType][$index] = $price;
+                            $prices[$hotelCode][$roomType][$index] = $price;
                         }
                     }
 
@@ -69,7 +75,20 @@ function fillEmptyCapacities($prices)
                 }
             }
 
-            ksort($prices['hotels'][$hotelCode][$roomType]);
+            ksort($prices[$hotelCode][$roomType]);
+        }
+    }
+}
+
+function deleteExpiredCacheFiles() {
+    $CACHE_DIR = __DIR__ . '/../../cache/';
+
+    $files = glob($CACHE_DIR . '*');
+    foreach ($files as $file) {
+        if (basename($file) !== "hotel_list.json") {
+            if (is_file($file) && 3600 < time() - filemtime($file)) {
+                unlink($file);
+            }
         }
     }
 }

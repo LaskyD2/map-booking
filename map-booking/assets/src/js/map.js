@@ -1,5 +1,5 @@
 import {CENTER_MAP, ZOOM_MAP} from './const.js';
-import {placeMarks} from './model/placemarks.js';
+import {placeMarksHotel} from './model/placeMarks.js';
 import {handleButtonClick} from './module/module.js';
 import {changeURL, firstActiveTab} from './booking-form.js';
 import {getHotelsFromStorage} from "./model/hotel-load.js";
@@ -11,6 +11,8 @@ export let map;
 let isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 
 export let fillPoint = (placeMarksList) => {
+
+
     map.geoObjects.removeAll();
     geoObjects.length = 0;
     map.setZoom(ZOOM_MAP);
@@ -45,7 +47,7 @@ export let fillPoint = (placeMarksList) => {
                 firstActiveTab();
             }
 
-            let placeMarksRoster = placeMarks();
+            let placeMarksRoster = placeMarksHotel();
             placeMarksRoster.forEach((item, i) => {
                 let hotelId = geoObjects[i].properties.get('id');
                 if (hotelId === id) {
@@ -76,8 +78,10 @@ export let fillPoint = (placeMarksList) => {
         });
     })
 
+
+
     cluster = new ymaps.Clusterer({
-        gridSize: 10,
+        gridSize: 12,
         clusterIconColor: '#075BBA'
 
     });
@@ -100,7 +104,7 @@ export function init() {
 
     });
 
-    fillPoint(placeMarks());
+    fillPoint(placeMarksHotel());
 
 }
 

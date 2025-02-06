@@ -20,6 +20,7 @@ export const templateIconContent = (text, price, id, idActive) => {
 
 export const templateBalloonContent = (name, address, price, hotelId, idActive) => {
     const langMap = LANG_SETTING[MAP_BOOKING_LANG];
+
     const nameHotel = name[MAP_BOOKING_LANG];
     const addressHotel = address[MAP_BOOKING_LANG];
     const priceHotel = price ? langMap.From + ' ' + price + ' ₽' : langMap.NoPlaces;
@@ -36,30 +37,3 @@ export const templateBalloonContent = (name, address, price, hotelId, idActive) 
         </div`
     )
 };
-
-/*function templateBalloonContentRoom(rooms) {
-    return rooms.length ?
-        rooms.map((room) =>
-            ` <div class="map__balloon-room">
-                     <div class="map__balloon-room-name">${room.room[MAP_BOOKING_LANG]}</div>
-                     <div class="map__balloon-room-status ${!!room.price}">${room.price ? LANG_SETTING[MAP_BOOKING_LANG].From + ' ' + room.price + ' ₽' : LANG_SETTING[MAP_BOOKING_LANG].Busy}</div>
-                </div>`
-        ).join('') :
-        ` <div class="map__balloon-room">
-             <div class="map__balloon-room-name">${LANG_SETTING[MAP_BOOKING_LANG].NoPlaces}</div>
-        </div>`
-}*/
-
-
-/*
-
-export const templateClusterContent = (length) => {
-    return ymaps.templateLayoutFactory.createClass(
-        `  <div class="map__cluster">
-                <div class="map__cluster-in">${length}</div>
-            </div
-        `
-    )
-};
-
-*/

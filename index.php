@@ -28,48 +28,56 @@
 
 
 <div class="tl-container">
-    <div id="tl-block-select">
-        <select id="tl-hotel-select"> </select>
-    </div>
+ <!--   <ul class="bookmarks">
+        <li id="hotel-1" data-id="18115">
+            <p class="hotel-class">Kravt Nevsky Hotel&nbsp;&&nbsp;SPA&nbsp;4*</p>
+        </li>
+        <li id="hotel-2" data-id="5128" class="active">
+            <p class="hotel-class">Kravt Sadovaya Hotel&nbsp;3*</p>
+        </li>
 
-    <div class="map-booking">
-        <div class="map__wrapper ">
+        <li id="hotel-3" data-id="11535">
+            <p class="hotel-class">Albora Boutique Hotel&nbsp;5*</p>
+        </li>
+        <li id="hotel-4" data-id="21849">
+            <p class="hotel-class">Kravt Hotel Kazan Airport&nbsp;4*</p>
+        </li>
+        <li id="hotel-5" data-id="45902">
+            <p class="hotel-class">Kravt Hotel Innopolis</p>
+        </li>
+    </ul>-->
+    <div class="map-booking map-show">
+        <div class="map__wrapper">
             <div class="map__mobile-text">Чтобы переместить карту, проведите по ней двумя пальцами</div>
-            <div id="map-be" class="map map-show"></div>
+            <div id="map-be" class="map "></div>
         </div>
-        <button class="accordion-map active">
-                  <span class="accordion-text">
-                      Свернуть карту
-                  </span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="24" height="24" transform="matrix(1 0 0 -1 0 24)" fill="white"/>
-                <path d="M11.4143 7.05384L5.5 13.0321C5.18 13.3521 5.18 13.8641 5.5 14.2161L6.108 14.7601C6.428 15.0801 6.94 15.0801 7.26 14.7601L11.9903 9.96584L16.7206 14.7601C17.0406 15.0801 17.5526 15.0801 17.8726 14.7601L18.4486 14.1841C18.7686 13.8641 18.7686 13.3521 18.4486 13.0001L12.5663 7.02184C12.2463 6.73384 11.7343 6.73384 11.4143 7.05384Z" fill="#333333"/>
-            </svg>
+        <button class="accordion-map">
+              <span class="accordion-text"></span>
         </button>
     </div>
 
-    <div id="tl-booking-form"></div>
+    <div class="blocks ">
+        <div class="blocks__booking-form"><select id="tl-hotel-select"></select>
+            <div id="tl-booking-form"></div>
+        </div>
+    </div>
 </div>
 
 <script>
-    var select = document.getElementById("tl-hotel-select");
-    select.addEventListener('change', function () {
-        var hotel_id = "hotel_id";
-        var regex = new RegExp(/hotel_id=\d+/g);
-        var getParams = window.location.search;
-        var params_str = hotel_id + "=" + this.value;
-        var path = "";
-        if (getParams.indexOf(hotel_id) != -1) {
-            path = getParams.replace(regex, params_str);
-        } else {
-            if (getParams == "") {
-                path = getParams + '?' + params_str;
-            } else {
-                path = getParams + '&' + params_str;
-            }
+
+
+
+   /* function trackUserAction(data) {
+        let roomsFb;
+        if (data.action === 'search-rooms') {
+            roomsFb = data.rooms;
+            let arrival = data.arrival;
+            let departure = data.departure;
+
+            mapBookingApart(roomsFb, arrival, departure);
+
         }
-        window.history.pushState(false, false, path);
-    });
+    }*/
 
     let arrival;
     function searchRooms(data) {
@@ -80,19 +88,18 @@
             let adults = data.guests[0].adults;
             let idHotel = data.providerId;
 
-            mapBooking(arrival, nights, adults, idHotel);
+            mapBookingHotel(arrival, nights, adults, idHotel);
 
         }
     }
 
-
-
     (function (w) {
         var q = [
-            ['setContext', 'TL-INT-topapart', 'ru'],
+            ['setContext', 'TL-INT-variantapart', 'ru'],
             ['embed', 'booking-form', {
                 container: 'tl-booking-form',
                 autoScroll: 'none',
+                // onTrackUserAction: trackUserAction,
                 onSearchRooms: searchRooms
             }]
         ];
@@ -129,3 +136,90 @@
 
 </body>
 </html>
+
+<style>
+    .tl-city-select {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 400 !important;
+        font-size: 16px !important;
+        line-height: 20px !important;
+        color: #636261 !important;
+        background: #fff url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDAuNTk5OTc2TDYgNy43OTk5N0wxMiAwLjU5OTk3NkgwWiIgZmlsbD0iI0U1OEYzRCIvPgo8L3N2Zz4K") no-repeat right/45px 9px !important;
+        border: 1px solid #7F7165 !important;
+        -webkit-appearance: none !important;
+        appearance: none !important;
+        padding: 15px 55px 15px 30px !important;
+        width: 100% !important;
+        margin-bottom: 15px;
+    }
+    .tl-city-select::-ms-expand {
+        display: none;
+    }
+    .tl-container {
+        max-width: 1440px;
+        margin: 25px auto 0;
+        position: relative;
+        display: block;
+    }
+
+    .tl-container h4 {
+        margin-bottom: 18px;
+    }
+
+    .bookmarks {
+        width: 100%;
+        padding: 0!important;
+        margin: 0 0 10px 0!important;
+        list-style: none !important;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 15px;
+    }
+
+    .bookmarks li.active {
+        cursor: default;
+        background-color: #7F7165;
+        color: #FFFFFF;
+    }
+
+    .bookmarks li {
+        background-color: #F9F5F1;
+        cursor: pointer;
+        padding: 15px;
+        margin: 0;
+        min-height: 26px;
+        position: relative;
+        z-index: 99;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #7F7165;
+    }
+
+    .bookmarks li:hover {
+        background-color: #7F7165;
+        color: #FFFFFF;
+    }
+
+    .bookmarks li.hidden {
+        display: none;
+    }
+
+    /*#tl-hotel-select {*/
+    /*    display: none !important;*/
+    /*}*/
+
+    @media (max-width: 710px) {
+        .bookmarks {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+
+</style>
