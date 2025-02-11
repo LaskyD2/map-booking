@@ -8,11 +8,6 @@ export function tabsBookingForm() {
     let listElement = document.querySelectorAll('.bookmarks li[id ^="hotel-"]');
     let selector = document.getElementById('tl-hotel-select');
 
-    if (TYPE_SELECT === 'tabs') {
-        const bookmarksBlock = document.querySelector('.bookmarks');
-        bookmarksBlock.scrollIntoView({ block: "start", behavior: "smooth" });
-    }
-
     let placeMarksRoster = placeMarksHotel();
 
     if (TYPE_SELECT === 'select') {
@@ -38,6 +33,10 @@ export function tabsBookingForm() {
             changeURL(this.value);
         });
     }else if (TYPE_SELECT === 'tabs') {
+
+        const bookmarksBlock = document.querySelector('.bookmarks');
+        bookmarksBlock.scrollIntoView({ block: "start", behavior: "smooth" });
+
         listElement.forEach(function (elem, i) {
             elem.addEventListener("click", function () {
                 let data_id = document.getElementById(elem.getAttribute('id')).getAttribute('data-id');
