@@ -12,7 +12,6 @@ export class PriceLoad {
     }
 
     load() {
-
         return fetchPrices()
             .then((prices) => {
                 savePriceToStorage(JSON.stringify(prices));

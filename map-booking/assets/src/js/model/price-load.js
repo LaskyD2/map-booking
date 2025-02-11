@@ -1,14 +1,22 @@
 import dayjs from 'dayjs';
-import { LOCAL_STORAGE_EXPIRE_PRICE_ITEM, LOCAL_STORAGE_PRICES_ITEM, LOCAL_STORAGE_CACHE_MEASURE, LOCAL_STORAGE_CACHE_VALUE, LOCAL_STORAGE_EMPTY_CACHE} from '../const.js';
+import {
+    LOCAL_STORAGE_EXPIRE_PRICE_ITEM,
+    LOCAL_STORAGE_PRICES_ITEM,
+    LOCAL_STORAGE_CACHE_MEASURE,
+    LOCAL_STORAGE_CACHE_VALUE,
+    LOCAL_STORAGE_EMPTY_CACHE,
+    TYPE_SELECT,
+    LOCAL_STORAGE_EXPIRE_ITEM, LOCAL_STORAGE_ROOMS_ITEM
+} from '../const.js';
 import { minPrice } from "../module/min-price.js";
-import { placeMarks } from './placemarks.js';
-import {geoObjects, map} from "../map.js";
-import {templateBalloonContent, templateIconContent} from "../views/template.js";
+import { placeMarksHotel } from './placeMarks.js';
+import { geoObjects, map } from "../map.js";
+import {templateBalloonContent, templateIconContent} from "../views/template-hotel.js";
 
 export const changeDate = (date, nights, adults, providerIdActive) => {
     const url = `/map-booking/core/price-api.php?date=${date}&nights=${nights}&adults=${adults}`;
 
-    let  placeMarksRoster = placeMarks();
+    let  placeMarksRoster = placeMarksHotel();
 
     if (geoObjects.length !== 0) {
         placeMarksRoster.forEach((item, index) => {
@@ -31,14 +39,18 @@ export const setPricesStorage = (url, providerIdActive, adults) => {
         fetchPrices(url)
             .then((prices) => {
                 savePriceToStorage(JSON.stringify(prices));
-
                 let hotelsMinPrice = minPrice(prices, adults),
-                    placeMarksRoster = placeMarks(),
+                    placeMarksRoster = placeMarksHotel(),
                     listElement, activeHotelTab;
 
                 if (providerIdActive) {
-                    listElement = document.querySelector('.bookmarks li.active');
-                    activeHotelTab = listElement.getAttribute('data-id');
+                    if (TYPE_SELECT === 'select')
+                        activeHotelTab = document.querySelector('#tl-hotel-select').value;
+                    else {
+                        listElement = document.querySelector('.bookmarks li.active');
+                        activeHotelTab = listElement.getAttribute('data-id');
+                    }
+
                 }
 
                 placeMarksRoster.forEach((item, index) => {
@@ -49,6 +61,8 @@ export const setPricesStorage = (url, providerIdActive, adults) => {
 
                     geoObjects[index].properties.set('iconContent', templateIconContent('price', hotelIdMinPrice, hotelId, providerIdActive));
                     geoObjects[index].properties.set('balloonContent', templateBalloonContent(hotelName, hotelAddress, hotelIdMinPrice, hotelId, providerIdActive));
+                    geoObjects[index].properties.set('clusterCaption', templateBalloonContent(hotelName, hotelAddress, hotelIdMinPrice, hotelId, providerIdActive));
+
 
                     if (providerIdActive) {
                         if (hotelId === activeHotelTab) {
@@ -72,11 +86,11 @@ export const setPricesStorage = (url, providerIdActive, adults) => {
 }
 
 export const isStorageExpire = () => {
-    return localStorage.getItem(LOCAL_STORAGE_EXPIRE_PRICE_ITEM) <= getNowTimeStamp();
+    return localStorage.getItem(LOCAL_STORAGE_ROOMS_ITEM) <= getNowTimeStamp();
 };
 
 export const getPricesFromStorage = () => {
-    const storagePrices = localStorage.getItem(LOCAL_STORAGE_PRICES_ITEM);
+    const storagePrices = localStorage.getItem(LOCAL_STORAGE_ROOMS_ITEM);
     return storagePrices && !isStorageExpire() ? JSON.parse(storagePrices) : LOCAL_STORAGE_EMPTY_CACHE;
 };
 

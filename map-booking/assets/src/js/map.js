@@ -1,6 +1,5 @@
 import {CENTER_MAP, ZOOM_MAP} from './const.js';
-import {YM_COUNTER} from './settings.js';
-import {placeMarks} from './model/placemarks.js';
+import {placeMarksHotel} from './model/placeMarks.js';
 import {handleButtonClick} from './module/module.js';
 import {changeURL, firstActiveTab} from './booking-form.js';
 import {getHotelsFromStorage} from "./model/hotel-load.js";
@@ -12,6 +11,8 @@ export let map;
 let isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 
 export let fillPoint = (placeMarksList) => {
+
+
     map.geoObjects.removeAll();
     geoObjects.length = 0;
     map.setZoom(ZOOM_MAP);
@@ -38,7 +39,6 @@ export let fillPoint = (placeMarksList) => {
         geoObjects[i].events.add('click', function (e) {
             let placeMark = e.get('target');
             let id = placeMark.properties.get('id');
-            // ym(YM_COUNTER,'reachGoal','click_on_map')
 
             if (document.getElementById(id) == null) {
                 handleButtonClick();
@@ -47,7 +47,7 @@ export let fillPoint = (placeMarksList) => {
                 firstActiveTab();
             }
 
-            let placeMarksRoster = placeMarks();
+            let placeMarksRoster = placeMarksHotel();
             placeMarksRoster.forEach((item, i) => {
                 let hotelId = geoObjects[i].properties.get('id');
                 if (hotelId === id) {
@@ -59,9 +59,6 @@ export let fillPoint = (placeMarksList) => {
                 }
             })
 
-
-
-
             e.stopPropagation();
         });
 
@@ -71,7 +68,6 @@ export let fillPoint = (placeMarksList) => {
 
 
             let handleButtonClick = () => {
-                // ym(YM_COUNTER,'reachGoal','click_on_balloon');
                 bookingFormBlock.scrollIntoView({block: "end", behavior: "smooth"});
             }
 
@@ -80,25 +76,15 @@ export let fillPoint = (placeMarksList) => {
             })
 
         });
-
-       /* geoObjects[i].events.add('balloonclose', function (e) {
-            let placeMark = e.get('target');
-            let id = placeMark.properties.get('id');
-
-            if (document.getElementById(id)) {
-                // document.getElementById(id).classList.add('active-check')
-                // document.getElementById(id).classList.remove('active');
-            }
-
-        });*/
     })
 
+
+
     cluster = new ymaps.Clusterer({
-        gridSize: 10,
-        clusterIconColor: '#A40045',
+        gridSize: 12,
+        clusterIconColor: '#075BBA'
+
     });
-
-
 
     map.geoObjects.add(cluster);
     cluster.add(geoObjects);
@@ -106,20 +92,19 @@ export let fillPoint = (placeMarksList) => {
     map.setBounds(map.geoObjects.getBounds())
 
     hotelsList(getHotelsFromStorage());
-
 }
 
 export function init() {
 
     map = new ymaps.Map('map-be', {
         center: CENTER_MAP,
-        zoom: ZOOM_MAP,
+        zoom: ZOOM_MAP + 1,
         controls: ['zoomControl'],
         behaviors: isMobile ? ['dblClickZoom', 'multiTouch'] : ['drag', 'scrollZoom'],
 
     });
 
-    fillPoint(placeMarks());
+    fillPoint(placeMarksHotel());
 
 }
 

@@ -1,11 +1,12 @@
-import { templateIconContent, templateBalloonContent } from "../views/template.js";
-import { placeMarks } from '../model/placemarks.js';
-import { geoObjects, cluster, map } from '../map.js';
+import { templateIconContent } from "../views/template-hotel.js";
+import { placeMarksHotel } from '../model/placeMarks.js';
+import { changeColorClusters } from './color-clusters.js';
+import { geoObjects, map } from '../map.js';
 
 
 export const hotelsList = () => {
     let minPriceMarker;
-    let placeMarksRoster = placeMarks();
+    let placeMarksRoster = placeMarksHotel();
 
     placeMarksRoster.forEach((item, index) => {
         let roomPrice = []
@@ -13,23 +14,6 @@ export const hotelsList = () => {
         geoObjects[index].properties.set('iconContent', templateIconContent('loader', minPriceMarker));
     })
 
-
-    function changeColorClusters() {
-        const rootStyles = getComputedStyle(document.documentElement);
-        const mainColor = rootStyles.getPropertyValue('--basic').trim();
-
-        let clusters = cluster.getClusters();
-
-        clusters.forEach((cluster) => {
-            let checkPrice = false;
-            cluster.properties.get('geoObjects').forEach((item) => {
-                if (item.properties.get('price') && checkPrice === false) {
-                    checkPrice = true;
-                    cluster.options.set('clusterIconColor', mainColor);
-                }
-            })
-        });
-    }
     changeColorClusters();
     map.events.add('boundschange', function(event) {
         if (event.get('newZoom') !== event.get('oldZoom')) {

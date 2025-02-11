@@ -12,12 +12,13 @@ function isCacheTimeout($startDate, $endDate) {
 }
 
 function send($hotelIds, $startDate, $endDate, $adults) {
+
+    deleteExpiredCacheFiles();
+
     if (isCacheTimeout($startDate, $endDate)) {
-        //загружаю
         file_put_contents(createFileCache($startDate, $endDate), json_encode(getPriceLoader($hotelIds, $startDate, $endDate, $adults)));
         return file_get_contents(createFileCache($startDate, $endDate));
     } else {
-        //беру из кэша
         return file_get_contents(createFileCache($startDate, $endDate));
     }
 }
