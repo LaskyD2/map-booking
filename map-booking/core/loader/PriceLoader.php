@@ -28,13 +28,6 @@ function getPriceLoader($hotelIds, $startDate, $endDate, $adults) {
                 $price = $priceInfo['price_before_tax'];
                 $roomType = $placement['room_types'][0]['code'];
                 $capacity = $priceInfo['capacity'];
-/*
-                if ($roomType == '130435') {
-                    echo "<pre>";
-                    var_dump($priceInfo);
-                    echo "</pre>";
-
-                }*/
 
                 if (!isset($prices['hotels'][$hotelId][$roomType][$capacity]) || $price < $prices['hotels'][$hotelId][$roomType][$capacity]) {
                     $prices[$hotelId][$roomType][$capacity] = $price;

@@ -43,9 +43,9 @@ export const accordion = () => {
     });
 
     /* скроллинг к фб */
-    let btns = document.querySelectorAll(".map__balloon-room");
+    let balloonRoom = document.querySelectorAll(".map__balloon-room");
 
-    btns.forEach((btn) => {
+    balloonRoom.forEach((btn) => {
         btn.addEventListener("click", handleButtonClick);
     })
 
@@ -58,4 +58,20 @@ export const diffDates = (day_one, day_two) => {
 export const handleButtonClick = () => {
     let bookingForm = document.getElementById("tl-booking-form");
     bookingForm.scrollIntoView({ block: "start", behavior: "smooth" });
+}
+
+export function changeURLDate(param, regex, value) {
+    var getParams = window.location.search;
+    var params_str = param + "=" + value;
+    var path = "";
+    if (getParams.indexOf(param) != -1) {
+        path = getParams.replace(regex, params_str);
+    } else {
+        if (getParams == "") {
+            path = getParams + '?' + params_str;
+        } else {
+            path = getParams + '&' + params_str;
+        }
+    }
+    window.history.pushState(false, false, path);
 }

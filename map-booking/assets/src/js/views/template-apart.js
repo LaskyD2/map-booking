@@ -35,13 +35,3 @@ function templateBalloonContentRoom(rooms) {
              <div class="map__balloon-room-name">${LANG_SETTING[MAP_BOOKING_LANG].NoPlaces}</div>
         </div>`
 }
-
-export const templateClusterContent = (length) => {
-    length = length ? length : '';
-    return ymaps.templateLayoutFactory.createClass(
-        `  <div class="map__cluster">
-                <div class="map__cluster-in">${length}</div>
-            </div
-        `
-    )
-};

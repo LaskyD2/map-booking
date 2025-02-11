@@ -33,7 +33,7 @@ body {
 
 .accordion-map:hover,
 .accordion-map:focus {
-    background: rgba(0, 169, 172, 0.7) !important;
+   opacity: 0.8;
 }
 
 /*.accordion-map:hover svg {
@@ -256,7 +256,7 @@ body {
 }
 
 [class*="balloon__content"] ymaps{
-    width: 195px !important;
+    width: 250px !important;
     cursor: auto;
 }
 
@@ -277,9 +277,58 @@ body {
 }
 
 .map__balloon-room:hover .map__balloon-room-name {
-    color: #C87A31;
-    text-decoration-color: #ff7d00;
+    color: var(--titleBallunColor);
+    text-decoration-color: var(--titleBallunColor);
     cursor: pointer;
+}
+
+.map__balloon-address {
+    color: var(--titleBallunColor);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.map__balloon-room-name {
+    margin-right: 5px;
+    margin-bottom: 10px;
+    text-decoration-line: underline;
+    text-decoration-color: var(--titleBallunColor);
+    text-decoration-style: dotted;
+    text-underline-offset: 4px;
+}
+
+.map__balloon-room-status {
+    color: var(--titleBallunColor);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.map__balloon-room-status.false {
+    color: var(--titleBallunColor);
+}
+
+.map__cluster {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    border: 2px solid var(--titleBallunColor);
+    border-radius: 50%;
+
+}
+.map__cluster-in {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--titleBallunColor);
+    color: #FFF;
 }
 
 .balloon-hotel {

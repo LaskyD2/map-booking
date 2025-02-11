@@ -67,19 +67,17 @@
 
 
 
-   /* function trackUserAction(data) {
-        let roomsFb;
+    function trackUserAction(data) {
         if (data.action === 'search-rooms') {
-            roomsFb = data.rooms;
+            let roomsFb = data.rooms;
             let arrival = data.arrival;
             let departure = data.departure;
 
             mapBookingApart(roomsFb, arrival, departure);
-
         }
-    }*/
+    }
 
-    let arrival;
+/*    let arrival;
     function searchRooms(data) {
 
         if (arrival !== data.arrivalDate) {
@@ -91,7 +89,7 @@
             mapBookingHotel(arrival, nights, adults, idHotel);
 
         }
-    }
+    }*/
 
     (function (w) {
         var q = [
@@ -99,8 +97,8 @@
             ['embed', 'booking-form', {
                 container: 'tl-booking-form',
                 autoScroll: 'none',
-                // onTrackUserAction: trackUserAction,
-                onSearchRooms: searchRooms
+                onTrackUserAction: trackUserAction,
+                // onSearchRooms: searchRooms
             }]
         ];
         var h=["ru-ibe.tlintegration.ru","ibe.tlintegration.ru","ibe.tlintegration.com"];

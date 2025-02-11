@@ -1,8 +1,8 @@
 import {init, map} from './map.js';
-import {accordion, getParameterByName, diffDates} from './module/module.js';
+import {accordion, getParameterByName, diffDates, changeURLDate} from './module/module.js';
 import {setHotelsStorage} from './model/hotel-load.js';
 import {setModuleLanguage} from "./module/module-language.js";
-import {changeURLDate, tabsBookingForm} from './booking-form.js';
+import {tabsBookingForm} from './booking-form.js';
 import {changeDate} from "./model/price-load.js";
 import {roomsList} from "./module/rooms-list.js";
 
@@ -17,7 +17,7 @@ window.setTlHotel = () => {
             setModuleLanguage();
             accordion();
             setHotelsStorage();
-            tabsBookingForm();
+
             ymaps.ready(init);
             isCheck = true;
         });
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.mapBookingHotel = (arrival, nights, adults, idHotel) => {
+    tabsBookingForm();
     function checkFunctionStatus() {
         if (isCheck) {
             changeDate(arrival, nights, adults, idHotel);
@@ -52,9 +53,7 @@ window.mapBookingHotel = (arrival, nights, adults, idHotel) => {
 window.mapBookingApart = (roomsFb, arrival, departure) => {
     function checkFunctionStatus() {
         if (isCheck) {
-
             map.balloon.close();
-
             roomsList(roomsFb);
 
             if (getParameterByName('date')) {

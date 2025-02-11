@@ -11,6 +11,7 @@ export const roomsList = (roomsFb) => {
         roomList = getPricesFromStorage(),
         placeMarksRoster = placeMarksApart();
 
+    roomList = roomList["apart"]
 
     if (!roomsFb) {
         geoObjects.forEach((item) => {
@@ -21,7 +22,6 @@ export const roomsList = (roomsFb) => {
 
     roomsFb.forEach((roomfb) => {
         geoObjects.forEach((item) => {
-            console.log(item)
             if (item.properties.get('roomTypes').includes(roomfb.id)) {
                 item.properties._data.price = roomfb.price;
             }

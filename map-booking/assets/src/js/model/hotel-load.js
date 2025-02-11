@@ -13,9 +13,9 @@ export const fetchHotels = async () => {
 export const setHotelsStorage = () => {
     if (!localStorage.getItem(LOCAL_STORAGE_ROOMS_ITEM)) {
         fetchHotels()
-            .then((rooms) => {
-                saveHotelToStorage(JSON.stringify(rooms));
-                return rooms;
+            .then((hotels) => {
+                saveHotelToStorage(JSON.stringify(hotels));
+                return hotels;
             })
             .catch(() => {
                 console.log('not load');
@@ -32,8 +32,8 @@ export const getHotelsFromStorage = () => {
     return storagePrices && !isStorageExpire() ? JSON.parse(storagePrices) : LOCAL_STORAGE_EMPTY_CACHE;
 };
 
-export const saveHotelToStorage = (rooms) => {
-    localStorage.setItem(LOCAL_STORAGE_ROOMS_ITEM, rooms);
+export const saveHotelToStorage = (hotels) => {
+    localStorage.setItem(LOCAL_STORAGE_ROOMS_ITEM, hotels);
     localStorage.setItem(LOCAL_STORAGE_EXPIRE_ITEM, getExpireTime().toString());
 };
 

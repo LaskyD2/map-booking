@@ -2,17 +2,17 @@
     --basic: #00a9ac;
     --background: #FFFFFF;
     --border: rgba(119, 119, 119, 0.4667);
-    --text: #555555;
+    --text: #000000;
     --textActive: #FFFFFF;
-    --textMarker: #00a9ac;
+    --textMarker: var(--basic);
 
     --backgroundNotActive: #5C5550;
     --textNotActive: #FFFFFF;
 
-    --titleBallunColor: #00a9ac;
+    --titleBallunColor: var(--basic);
     --textBallun: #777777;
-    --priceBallun: #00a9ac;
+    --priceBallun: var(--basic);
 
-    --loader: #00a9ac;
+    --loader: var(--basic);
     --loaderTwo: #f3f3f3;
 }

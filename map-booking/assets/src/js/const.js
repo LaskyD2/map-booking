@@ -6,7 +6,9 @@ export const coordinatesCity = {
 
 export const TYPE_SELECT = 'select' // select или tabs
 
-export const CENTER_MAP = coordinatesCity['msk'];
+export const PROFILE_BOOKING =  Object.keys(JSON.parse(localStorage.getItem("tl:storage:puid")))[0];
+
+export const CENTER_MAP = coordinatesCity['spb'];
 export const ZOOM_MAP = 13;
 
 export const MODULE_NAME = 'hotels-list';
