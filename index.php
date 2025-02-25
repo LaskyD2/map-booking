@@ -57,7 +57,8 @@
     </div>
 
     <div class="blocks ">
-        <div class="blocks__booking-form"><select id="tl-hotel-select"></select>
+        <div class="blocks__booking-form">
+            <select id="tl-hotel-select"></select>
             <div id="tl-booking-form"></div>
         </div>
     </div>
@@ -77,28 +78,32 @@
         }
     }
 
-/*    let arrival;
+    let arrival, nights, adults, idHotel;
+
     function searchRooms(data) {
 
-        if (arrival !== data.arrivalDate) {
-            arrival = data.arrivalDate;
-            let nights = data.nights;
-            let adults = data.guests[0].adults;
-            let idHotel = data.providerId;
+        arrival = data.arrivalDate;
+        nights = data.nights;
+        adults = data.guests[0].adults;
+        idHotel = data.providerId;
 
-            mapBookingHotel(arrival, nights, adults, idHotel);
+        mapBookingHotel(arrival, nights, adults, idHotel);
 
-        }
-    }*/
+    }
+
+    function scenarioChanged(data) {
+        mapBookingHotel(arrival, nights, adults, data.scenario, 'inner');
+    }
 
     (function (w) {
         var q = [
-            ['setContext', 'TL-INT-variantapart', 'ru'],
+            ['setContext', 'TL-INT-hotels-consme', 'ru'],
             ['embed', 'booking-form', {
                 container: 'tl-booking-form',
                 autoScroll: 'none',
-                onTrackUserAction: trackUserAction,
-                // onSearchRooms: searchRooms
+                // onTrackUserAction: trackUserAction,
+                onSearchRooms: searchRooms,
+                onScenarioChanged: scenarioChanged
             }]
         ];
         var h=["ru-ibe.tlintegration.ru","ibe.tlintegration.ru","ibe.tlintegration.com"];

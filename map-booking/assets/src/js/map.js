@@ -1,4 +1,4 @@
-import {CENTER_MAP, ZOOM_MAP} from './const.js';
+import {CENTER_MAP, ZOOM_MAP, TYPE_SELECT} from './const.js';
 import {placeMarksApart, placeMarksHotel} from './model/placeMarks.js';
 import {handleButtonClick} from './module/module.js';
 import {changeURL, firstActiveTab, bookingForm} from './booking-form.js';
@@ -21,13 +21,12 @@ export function init() {
     });
 
     if ('hotels'.includes(Object.keys(getHotelsFromStorage())))
-        fillPoint(placeMarksHotel());
+        fillPointHotels(placeMarksHotel());
     if ('apart'.includes(Object.keys(getHotelsFromStorage())))
         fillPointApart(placeMarksApart());
-
 }
 
-export let fillPoint = (placeMarksList) => {
+export let fillPointHotels = (placeMarksList) => {
     map.geoObjects.removeAll();
     geoObjects.length = 0;
     map.setZoom(ZOOM_MAP);
@@ -61,6 +60,10 @@ export let fillPoint = (placeMarksList) => {
             } else if (!document.getElementById(id).classList.contains('active')) {
                 changeURL(id);
                 firstActiveTab();
+            }
+
+            if (TYPE_SELECT === "inner") {
+                bookingForm();
             }
 
             let placeMarksRoster = placeMarksHotel();

@@ -43,14 +43,16 @@ export const setPricesStorage = (url, providerIdActive, adults) => {
                     placeMarksRoster = placeMarksHotel(),
                     listElement, activeHotelTab;
 
+
                 if (providerIdActive) {
                     if (TYPE_SELECT === 'select')
                         activeHotelTab = document.querySelector('#tl-hotel-select').value;
-                    else {
+                    else if (TYPE_SELECT === 'tabs') {
                         listElement = document.querySelector('.bookmarks li.active');
                         activeHotelTab = listElement.getAttribute('data-id');
+                    } else if (TYPE_SELECT === 'inner') {
+                        activeHotelTab = providerIdActive;
                     }
-
                 }
 
                 placeMarksRoster.forEach((item, index) => {
@@ -65,7 +67,7 @@ export const setPricesStorage = (url, providerIdActive, adults) => {
 
 
                     if (providerIdActive) {
-                        if (hotelId === activeHotelTab) {
+                        if (hotelId == activeHotelTab) {
                             try {
                                 geoObjects[index].balloon.open();
                             } catch (err) {

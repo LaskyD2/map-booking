@@ -4,12 +4,12 @@ export const coordinatesCity = {
     "estosadok": [43.685014, 40.258632]
 }
 
-export const TYPE_SELECT = 'select' // select или tabs
+export const TYPE_SELECT = 'inner' // select или tabs
 
 export const PROFILE_BOOKING =  Object.keys(JSON.parse(localStorage.getItem("tl:storage:puid")))[0];
 
 export const CENTER_MAP = coordinatesCity['spb'];
-export const ZOOM_MAP = 13;
+export const ZOOM_MAP = 11;
 
 export const MODULE_NAME = 'hotels-list';
 export const LOCAL_STORAGE_EXPIRE_ITEM = `${MODULE_NAME}:expire`;

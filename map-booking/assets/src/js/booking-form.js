@@ -6,32 +6,15 @@ import {placeMarksHotel} from "./model/placeMarks.js";
 import {roomsList} from "./module/rooms-list.js";
 
 
-export function tabsBookingForm() {
+export function tabsBookingForm(idHotel) {
 
     let selector = document.getElementById('tl-hotel-select');
 
-    let placeMarksRoster = placeMarksHotel();
+
 
     if (TYPE_SELECT === 'select') {
         selector.addEventListener('change', function () {
-
-            map.balloon.close();
-
-            placeMarksRoster.forEach((item, i) => {
-                let hotelId = geoObjects[i].properties.get('id');
-                if (hotelId === this.value) {
-                    let iconContent = geoObjects[i].properties.get('iconContent').replace('class="map__hint', 'class="map__hint active')
-                    let coords = geoObjects[i].geometry.getCoordinates();
-                    map.setCenter(coords, ZOOM_MAP, {duration: 300})
-                    geoObjects[i].properties.set('iconContent', iconContent);
-                    setTimeout(() => geoObjects[i].balloon.open(), 350);
-
-                } else {
-                    let iconContentDisabled = geoObjects[i].properties.get('iconContent').replace('class="map__hint active', 'class="map__hint');
-                    geoObjects[i].properties.set('iconContent', iconContentDisabled);
-                }
-            })
-            changeURL(this.value);
+            onChangeMark(this.value)
         });
     }
     else if (TYPE_SELECT === 'tabs') {
@@ -43,39 +26,49 @@ export function tabsBookingForm() {
         listElement.forEach(function (elem, i) {
             elem.addEventListener("click", function () {
                 let data_id = document.getElementById(elem.getAttribute('id')).getAttribute('data-id');
-                map.balloon.close();
-                placeMarksRoster.forEach((item, i) => {
-                    let hotelId = geoObjects[i].properties.get('id');
-                    if (hotelId === data_id) {
-                        let iconContent = geoObjects[i].properties.get('iconContent').replace('class="map__hint', 'class="map__hint active')
-                        let coords = geoObjects[i].geometry.getCoordinates();
-
-                        map.setCenter(coords, ZOOM_MAP, {duration: 300})
-                        geoObjects[i].properties.set('iconContent', iconContent);
-                        setTimeout(() => {
-                                try {
-                                    geoObjects[i].balloon.open()
-                                } catch (err) {
-                                    map.setCenter(coords, ZOOM_MAP, {duration: 300})
-                                    geoObjects[i].balloon.open()
-                                }
-                            }
-                            , 350);
-
-
-                    } else {
-                        let iconContentDisabled = geoObjects[i].properties.get('iconContent').replace('class="map__hint active', 'class="map__hint');
-                        geoObjects[i].properties.set('iconContent', iconContentDisabled);
-                    }
-                })
-                changeURL(data_id);
+                onChangeMark(data_id);
                 selector.value = data_id;
                 fireEvent(selector[0], 'change')
             });
         });
     }
+    else if (TYPE_SELECT === 'inner') {
+        onChangeMark(idHotel);
+    }
 
 }
+
+export function onChangeMark(id) {
+    let placeMarksRoster = placeMarksHotel();
+    map.balloon.close();
+
+    placeMarksRoster.forEach((item, i) => {
+        let hotelId = geoObjects[i].properties.get('id');
+        if (hotelId == id) {
+            let iconContent = geoObjects[i].properties.get('iconContent').replace('class="map__hint', 'class="map__hint active')
+            let coords = geoObjects[i].geometry.getCoordinates();
+
+            map.setCenter(coords, ZOOM_MAP, {duration: 300})
+            geoObjects[i].properties.set('iconContent', iconContent);
+            setTimeout(() => {
+                    try {
+                        geoObjects[i].balloon.open()
+                    } catch (err) {
+                        map.setCenter(coords, ZOOM_MAP, {duration: 300})
+                        geoObjects[i].balloon.open()
+                    }
+                }
+                , 350);
+
+
+        } else {
+            let iconContentDisabled = geoObjects[i].properties.get('iconContent').replace('class="map__hint active', 'class="map__hint');
+            geoObjects[i].properties.set('iconContent', iconContentDisabled);
+        }
+    })
+    changeURL(id);
+}
+
 
 export function firstActiveTab() {
     let prov = getParameterByName('hotel_id');
@@ -166,18 +159,36 @@ function noAvailableRooms(data) {
     roomsList(roomsFb, roomList);
 }
 
+function scenarioChanged(data) {
+    onChangeMark(data.scenario);
+}
+
 export function bookingForm(roomTypes) {
+
     (function (w) {
-        var q = [
-            ['setContext', PROFILE_BOOKING, `${MAP_BOOKING_LANG}`],
-            ['embed', 'booking-form', {
-                container: 'tl-booking-form',
-                roomType: roomTypes,
-                autoScroll: 'none',
-                onTrackUserAction: trackUserAction,
-                onNoAvailableRooms: noAvailableRooms
-            }]
-        ];
+        var q;
+        if (TYPE_SELECT === "inner") {
+            q = [
+                ['setContext', PROFILE_BOOKING, `${MAP_BOOKING_LANG}`],
+                ['embed', 'booking-form', {
+                    container: 'tl-booking-form',
+                    autoScroll: 'none',
+                    onScenarioChanged: scenarioChanged,
+                }]
+            ];
+        } else {
+            q = [
+                ['setContext', PROFILE_BOOKING, `${MAP_BOOKING_LANG}`],
+                ['embed', 'booking-form', {
+                    container: 'tl-booking-form',
+                    roomType: roomTypes,
+                    autoScroll: 'none',
+                    onTrackUserAction: trackUserAction,
+                    onNoAvailableRooms: noAvailableRooms
+                }]
+            ];
+        }
+
         var h=["ru-ibe.tlintegration.ru","ibe.tlintegration.ru","ibe.tlintegration.com"];
         var t = w.travelline = (w.travelline || {}),
             ti = t.integration = (t.integration || {});
