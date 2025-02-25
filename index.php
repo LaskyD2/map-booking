@@ -81,7 +81,6 @@
     let arrival, nights, adults, idHotel;
 
     function searchRooms(data) {
-
         arrival = data.arrivalDate;
         nights = data.nights;
         adults = data.guests[0].adults;
@@ -97,7 +96,7 @@
 
     (function (w) {
         var q = [
-            ['setContext', 'TL-INT-hotels-consme', 'ru'],
+            ['setContext', 'TL-INT-wellion-hotels', 'ru'],
             ['embed', 'booking-form', {
                 container: 'tl-booking-form',
                 autoScroll: 'none',

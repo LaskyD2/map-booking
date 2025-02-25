@@ -2,7 +2,7 @@ import {init, map} from './map.js';
 import {accordion, getParameterByName, diffDates, changeURLDate} from './module/module.js';
 import {setHotelsStorage} from './model/hotel-load.js';
 import {setModuleLanguage} from "./module/module-language.js";
-import {changeURL, onChangeMark, tabsBookingForm} from './booking-form.js';
+import {onChangeMark, tabsBookingForm} from './booking-form.js';
 import {changeDate} from "./model/price-load.js";
 import {roomsList} from "./module/rooms-list.js";
 import {TYPE_SELECT} from "./const.js";
@@ -10,7 +10,9 @@ import {TYPE_SELECT} from "./const.js";
 import {HotelLoad as HotelLoadController} from './controller/hotel-load.js';
 
 
-let isCheck = false, isCheckInner = true;
+let isCheck = false,
+    isCheckInner = true,
+    arrivalForm, nightsForm, adultsForm;
 
 window.setTlHotel = () => {
     const hotelLoadController = new HotelLoadController();
@@ -32,15 +34,18 @@ document.addEventListener('DOMContentLoaded', () => {
 window.mapBookingHotel = (arrival, nights, adults, idHotel, type) => {
 
     if (TYPE_SELECT === 'inner') {
-        if (isCheckInner) {
+        if (isCheckInner || arrivalForm !== arrival || nightsForm !== nights || adultsForm !== adults) {
             checkFunctionStatus();
-            tabsBookingForm(idHotel);
             isCheckInner = false;
         } else {
             if (type === 'inner') {
                 onChangeMark(idHotel);
             }
         }
+        arrivalForm = arrival;
+        nightsForm = nights;
+        adultsForm = adults;
+
     } else {
         checkFunctionStatus();
         tabsBookingForm(idHotel);

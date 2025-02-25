@@ -4,7 +4,7 @@ export const coordinatesCity = {
     "estosadok": [43.685014, 40.258632]
 }
 
-export const TYPE_SELECT = 'inner' // select или tabs
+export const TYPE_SELECT = 'inner' // select, tabs, inner
 
 export const PROFILE_BOOKING =  Object.keys(JSON.parse(localStorage.getItem("tl:storage:puid")))[0];
 
