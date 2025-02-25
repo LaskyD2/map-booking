@@ -58,7 +58,6 @@
 
     <div class="blocks ">
         <div class="blocks__booking-form">
-            <select id="tl-hotel-select"></select>
             <div id="tl-booking-form"></div>
         </div>
     </div>
@@ -87,7 +86,6 @@
         idHotel = data.providerId;
 
         mapBookingHotel(arrival, nights, adults, idHotel);
-
     }
 
     function scenarioChanged(data) {

@@ -5,8 +5,7 @@ import {
     LOCAL_STORAGE_CACHE_MEASURE,
     LOCAL_STORAGE_CACHE_VALUE,
     LOCAL_STORAGE_EMPTY_CACHE,
-    TYPE_SELECT,
-    LOCAL_STORAGE_EXPIRE_ITEM, LOCAL_STORAGE_ROOMS_ITEM
+    TYPE_SELECT, LOCAL_STORAGE_ROOMS_ITEM
 } from '../const.js';
 import { minPrice } from "../module/min-price.js";
 import { placeMarksHotel } from './placeMarks.js';

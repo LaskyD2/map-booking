@@ -1,4 +1,4 @@
-import {ZOOM_MAP, TYPE_SELECT, PROFILE_BOOKING} from './const.js'
+import {ZOOM_MAP, PROFILE_BOOKING, TYPE_SELECT} from './const.js'
 import {changeURLDate, diffDates, getParameterByName} from './module/module.js'
 import {map, geoObjects} from './map.js'
 import { getPricesFromStorage } from './model/price-load.js';
@@ -159,9 +159,25 @@ function noAvailableRooms(data) {
     roomsList(roomsFb, roomList);
 }
 
-function scenarioChanged(data) {
-    onChangeMark(data.scenario);
+let arrival, nights, adults, idHotel;
+function searchRooms(data) {
+    arrival = data.arrivalDate;
+    nights = data.nights;
+    adults = data.guests[0].adults;
+    idHotel = data.providerId;
+
+    mapBookingHotel(arrival, nights, adults, idHotel);
+
 }
+
+function scenarioChanged(data) {
+    mapBookingHotel(arrival, nights, adults, data.scenario, 'inner');
+}
+
+//
+// function scenarioChanged(data) {
+//     onChangeMark(data.scenario);
+// }
 
 export function bookingForm(roomTypes) {
 
@@ -174,6 +190,7 @@ export function bookingForm(roomTypes) {
                     container: 'tl-booking-form',
                     autoScroll: 'none',
                     onScenarioChanged: scenarioChanged,
+                    onSearchRooms: searchRooms,
                 }]
             ];
         } else {
