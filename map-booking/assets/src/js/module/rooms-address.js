@@ -9,6 +9,9 @@ export const roomsAddress = () => {
         roomAddressItem = [],
         rooms = [],
         prov = getParameterByName('hotel_id');
+
+    roomList = roomList["apart"]
+
     if (prov) {
         roomList.forEach((room) => {
             if (scenariosListHotel[prov].toString().includes(room.id)) {

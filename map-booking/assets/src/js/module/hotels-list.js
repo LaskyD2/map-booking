@@ -1,5 +1,5 @@
 import { templateIconContent } from "../views/template-hotel.js";
-import { placeMarksHotel } from '../model/placeMarks.js';
+import { placeMarksHotel } from '../model/placemarks.js';
 import { changeColorClusters } from './color-clusters.js';
 import { geoObjects, map } from '../map.js';
 

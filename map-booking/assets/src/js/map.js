@@ -1,7 +1,7 @@
-import {CENTER_MAP, ZOOM_MAP} from './const.js';
-import {placeMarksHotel} from './model/placeMarks.js';
+import {CENTER_MAP, ZOOM_MAP, TYPE_SELECT} from './const.js';
+import {placeMarksApart, placeMarksHotel} from './model/placemarks.js';
 import {handleButtonClick} from './module/module.js';
-import {changeURL, firstActiveTab} from './booking-form.js';
+import {changeURL, firstActiveTab, bookingForm} from './booking-form.js';
 import {getHotelsFromStorage} from "./model/hotel-load.js";
 import {hotelsList} from "./module/hotels-list.js";
 
@@ -10,12 +10,27 @@ export let cluster;
 export let map;
 let isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 
-export let fillPoint = (placeMarksList) => {
+export function init() {
 
+    map = new ymaps.Map('map-be', {
+        center: CENTER_MAP,
+        zoom: ZOOM_MAP ,
+        controls: ['zoomControl'],
+        behaviors: isMobile ? ['dblClickZoom', 'multiTouch'] : ['drag', 'scrollZoom'],
 
+    });
+
+    if ('hotels'.includes(Object.keys(getHotelsFromStorage())))
+        fillPointHotels(placeMarksHotel());
+    if ('apart'.includes(Object.keys(getHotelsFromStorage())))
+        fillPointApart(placeMarksApart());
+}
+
+export let fillPointHotels = (placeMarksList) => {
     map.geoObjects.removeAll();
     geoObjects.length = 0;
     map.setZoom(ZOOM_MAP);
+
     placeMarksList.forEach((point, i) => {
         geoObjects[i] = new ymaps.Placemark([placeMarksList[i].latitude, placeMarksList[i].longitude],
             {
@@ -39,12 +54,15 @@ export let fillPoint = (placeMarksList) => {
         geoObjects[i].events.add('click', function (e) {
             let placeMark = e.get('target');
             let id = placeMark.properties.get('id');
-
             if (document.getElementById(id) == null) {
                 handleButtonClick();
             } else if (!document.getElementById(id).classList.contains('active')) {
                 changeURL(id);
                 firstActiveTab();
+            }
+
+            if (TYPE_SELECT === "inner") {
+                bookingForm();
             }
 
             let placeMarksRoster = placeMarksHotel();
@@ -82,7 +100,7 @@ export let fillPoint = (placeMarksList) => {
 
     cluster = new ymaps.Clusterer({
         gridSize: 12,
-        clusterIconColor: '#075BBA'
+        clusterIconColor: '#76689A'
 
     });
 
@@ -94,17 +112,106 @@ export let fillPoint = (placeMarksList) => {
     hotelsList(getHotelsFromStorage());
 }
 
-export function init() {
+export let fillPointApart = (placeMarksList) => {
+    map.geoObjects.removeAll();
+    geoObjects.length = 0;
+    map.setZoom(ZOOM_MAP);
+    placeMarksList.forEach((point, i) => {
+        geoObjects[i] = new ymaps.Placemark([placeMarksList[i].latitude, placeMarksList[i].longitude],
+            {
+                iconContent: placeMarksList[i].iconContent,
+                roomTypes: placeMarksList[i].roomTypes,
+                address: placeMarksList[i].address,
+                id: placeMarksList[i].id,
+                price: null
+            },
+            {
+                iconLayout: 'default#imageWithContent',
+                iconImageSize: [placeMarksList[i].width, 30],
+                iconImageOffset: [0, -15],
+                iconImageClipRect: [[415, 0], [461, 57]],
+                hideIconOnBalloonOpen: false,
+                balloonOffset:[20, -15]
+            }
+        );
 
-    map = new ymaps.Map('map-be', {
-        center: CENTER_MAP,
-        zoom: ZOOM_MAP + 1,
-        controls: ['zoomControl'],
-        behaviors: isMobile ? ['dblClickZoom', 'multiTouch'] : ['drag', 'scrollZoom'],
 
+
+        geoObjects[i].events.add('click', function (e) {
+            let placemark = e.get('target');
+            let rt = placemark.properties.get('roomTypes');
+            let id = placemark.properties.get('id');
+
+
+
+            if (document.getElementById(id) == null) {
+                handleButtonClick();
+            } else if (!document.getElementById(id).classList.contains('active')) {
+                bookingForm(rt);
+            }
+
+            document.querySelectorAll('.map__hint').forEach((item) => {
+                item.classList.remove('active');
+            });
+
+            if (document.getElementById(id)) {
+                document.getElementById(id).classList.add('active-check');
+                document.getElementById(id).classList.add('active');
+            }
+
+
+            e.stopPropagation();
+        });
+
+        geoObjects[i].events.add('balloonopen', function () {
+            let bookingFormBlock = document.getElementById("tl-booking-form");
+            let btns = document.querySelectorAll(".map__balloon-room");
+
+            let handleButtonClick = () => {
+                bookingFormBlock.scrollIntoView({block: "end", behavior: "smooth"});
+            }
+
+            btns.forEach((btn) => {
+                btn.addEventListener("click", handleButtonClick);
+            })
+
+        });
+
+        geoObjects[i].events.add('balloonclose', function (e) {
+            let placemark = e.get('target');
+            let id = placemark.properties.get('id');
+
+            if (document.getElementById(id)) {
+                document.getElementById(id).classList.add('active-check')
+                document.getElementById(id).classList.remove('active');
+            }
+
+        });
+    })
+
+    cluster = new ymaps.Clusterer({
+        gridSize: 115,
+        clusterIconColor: '#7F7165',
     });
 
-    fillPoint(placeMarksHotel());
 
+
+    cluster.events.add('click', (event) => {
+        const needZoom = ymaps.util.bounds.containsBounds(map.getBounds(), cluster.getBounds());
+        if (needZoom) {
+            cluster.options.set('clusterDisableClickZoom', true)
+            event.stopPropagation();
+            const center = ymaps.util.bounds.getCenter(cluster.getBounds());
+            map.setCenter(center, map.getZoom());
+
+        }
+        cluster.options.set('clusterDisableClickZoom', false)
+    });
+
+
+    map.geoObjects.add(cluster);
+    cluster.add(geoObjects);
+
+    map.setBounds(map.geoObjects.getBounds())
 }
 

@@ -6,9 +6,9 @@ export const placeMarksHotel = () => {
     const hotelList = getHotelsFromStorage(),
         placeMarksList = [];
 
-    const Hotels = Object.keys(hotelList);
+    const Hotels = Object.keys(hotelList["hotels"]);
     Hotels.forEach(id => {
-        let hotel = hotelList[id];
+        let hotel = hotelList["hotels"][id];
         let placeMark = {
             id: id,
             name: hotel.name,

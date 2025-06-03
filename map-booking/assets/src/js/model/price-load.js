@@ -5,11 +5,11 @@ import {
     LOCAL_STORAGE_CACHE_MEASURE,
     LOCAL_STORAGE_CACHE_VALUE,
     LOCAL_STORAGE_EMPTY_CACHE,
-    TYPE_SELECT,
-    LOCAL_STORAGE_EXPIRE_ITEM, LOCAL_STORAGE_ROOMS_ITEM
+    TYPE_SELECT, LOCAL_STORAGE_ROOMS_ITEM,
+    ZOOM_MAP
 } from '../const.js';
 import { minPrice } from "../module/min-price.js";
-import { placeMarksHotel } from './placeMarks.js';
+import { placeMarksHotel } from './placemarks.js';
 import { geoObjects, map } from "../map.js";
 import {templateBalloonContent, templateIconContent} from "../views/template-hotel.js";
 
@@ -43,41 +43,62 @@ export const setPricesStorage = (url, providerIdActive, adults) => {
                     placeMarksRoster = placeMarksHotel(),
                     listElement, activeHotelTab;
 
+
                 if (providerIdActive) {
                     if (TYPE_SELECT === 'select')
                         activeHotelTab = document.querySelector('#tl-hotel-select').value;
-                    else {
+                    else if (TYPE_SELECT === 'tabs') {
                         listElement = document.querySelector('.bookmarks li.active');
                         activeHotelTab = listElement.getAttribute('data-id');
+                    } else if (TYPE_SELECT === 'inner') {
+                        activeHotelTab = providerIdActive;
                     }
-
                 }
 
-                placeMarksRoster.forEach((item, index) => {
-                    let hotelName = geoObjects[index].properties.get('name');
-                    let hotelAddress = geoObjects[index].properties.get('address');
-                    let hotelId = geoObjects[index].properties.get('id');
-                    let hotelIdMinPrice = hotelsMinPrice[hotelId];
-
-                    geoObjects[index].properties.set('iconContent', templateIconContent('price', hotelIdMinPrice, hotelId, providerIdActive));
-                    geoObjects[index].properties.set('balloonContent', templateBalloonContent(hotelName, hotelAddress, hotelIdMinPrice, hotelId, providerIdActive));
-                    geoObjects[index].properties.set('clusterCaption', templateBalloonContent(hotelName, hotelAddress, hotelIdMinPrice, hotelId, providerIdActive));
+                function isGeoObjectsEmpty(geoObjects) {
+                    if (!geoObjects) return true;
+                    if (Array.isArray(geoObjects)) return geoObjects.length === 0;
+                    if (typeof geoObjects === 'object') return Object.keys(geoObjects).length === 0;
+                    return true;
+                }
 
 
-                    if (providerIdActive) {
-                        if (hotelId === activeHotelTab) {
-                            try {
-                                geoObjects[index].balloon.open();
-                            } catch (err) {
-                                let coords = geoObjects[index].geometry.getCoordinates();
-                                map.setCenter(coords, 13, {duration: 300});
-                                setTimeout(() => geoObjects[index].balloon.open(), 350);
+                async function waitForGeoObjects(geoObjectsGetter, interval = 100) {
+                    while (isGeoObjectsEmpty(geoObjectsGetter())) {
+                        await new Promise(resolve => setTimeout(resolve, interval));
+                    }
+                    return geoObjectsGetter();
+                }
+
+                waitForGeoObjects(() => geoObjects).then(loadedGeoObjects => {
+                    placeMarksRoster.forEach((item, index) => {
+                        let hotelName = geoObjects[index].properties.get('name');
+                        let hotelAddress = geoObjects[index].properties.get('address');
+                        let hotelId = geoObjects[index].properties.get('id');
+                        let hotelIdMinPrice = hotelsMinPrice[hotelId];
+
+                        geoObjects[index].properties.set('iconContent', templateIconContent('price', hotelIdMinPrice, hotelId, providerIdActive));
+                        geoObjects[index].properties.set('balloonContent', templateBalloonContent(hotelName, hotelAddress, hotelIdMinPrice, hotelId, providerIdActive));
+                        geoObjects[index].properties.set('clusterCaption', templateBalloonContent(hotelName, hotelAddress, hotelIdMinPrice, hotelId, providerIdActive));
+
+
+                        if (providerIdActive) {
+                            if (hotelId == activeHotelTab) {
+                                try {
+                                    geoObjects[index].balloon.open();
+                                } catch (err) {
+                                    let coords = geoObjects[index].geometry.getCoordinates();
+                                    map.setCenter(coords, ZOOM_MAP, {duration: 300});
+                                    setTimeout(() => geoObjects[index].balloon.open(), 350);
+                                }
                             }
                         }
-                    }
-                })
+                    })
 
-                return prices;
+                    return prices;
+                });
+
+
             })
             .catch((err) => {
                 console.log(err);

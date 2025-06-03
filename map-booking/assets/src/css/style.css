@@ -3,8 +3,8 @@
 
 
 :root {
-    --activeMarkMain: #FFFFFF;
-    --activeMarkInner: var(--basic);
+    --active-mark-main: #FFFFFF;
+    --active-mark-inner: var(--basic);
 }
 
 body {
@@ -18,7 +18,7 @@ body {
     align-items: center;
     position: relative;
     border: none;
-    background: var(--basic);
+    background: var(--button-background);
     color: #FFFFFF;
     float: right;
     cursor: pointer;
@@ -33,7 +33,7 @@ body {
 
 .accordion-map:hover,
 .accordion-map:focus {
-    background: rgba(0, 169, 172, 0.7) !important;
+    opacity: 0.8;
 }
 
 /*.accordion-map:hover svg {
@@ -191,15 +191,15 @@ body {
 }
 
 .map__hint.active .map__hint-icon {
-    background: var(--activeMarkMain);
+    background: var(--active-mark-main);
 }
 
 .map__hint.active .map__hint-icon::after {
-    border-color: var(--activeMarkInner);
+    border-color: var(--active-mark-inner);
 }
 
 .map__hint.no-rooms {
-    background: var(--backgroundNotActive) !important;
+    background: var(--background-not-active) !important;
 }
 
 .map__hint.no-rooms .map__hint-icon {
@@ -207,11 +207,11 @@ body {
 }
 
 .map__hint.no-rooms .map__hint-icon::after {
-    border-color: var(--backgroundNotActive);
+    border-color: var(--background-not-active);
 }
 
 .map__hint.no-rooms .map__hint-price {
-    color: var(--textNotActive);
+    color: var(--text-not-active);
 }
 
 .map__hint.no-rooms.active {
@@ -223,7 +223,7 @@ body {
 }
 
 .map__hint.active .map__hint-price {
-    color: var(--textActive);
+    color: var(--text-active);
 }
 
 .map__hint-data {
@@ -247,7 +247,7 @@ body {
 }
 
 .map__hint-price .loader {
-    border: 3px solid var(--loaderTwo);
+    border: 3px solid var(--loader-two);
     border-top: 3px solid var(--loader);
     border-radius: 50%;
     width: 15px;
@@ -256,8 +256,9 @@ body {
 }
 
 [class*="balloon__content"] ymaps{
-    width: 195px !important;
+    width: 270px !important;
     cursor: auto;
+    background: none !important;
 }
 
 .map__balloon {
@@ -269,6 +270,13 @@ body {
     line-height: normal;
 }
 
+.map__balloon ymaps {
+    padding: 0;
+    background: none !important;
+    border-top: 1px solid var(--basic);
+    margin-top: 10px;
+}
+
 .map__balloon-room {
     display: flex;
     justify-content: space-between;
@@ -277,20 +285,69 @@ body {
 }
 
 .map__balloon-room:hover .map__balloon-room-name {
-    color: #C87A31;
-    text-decoration-color: #ff7d00;
+    color: var(--title-ballun-color);
+    text-decoration-color: var(--title-ballun-color);
     cursor: pointer;
+}
+
+.map__balloon-address {
+    color: var(--title-ballun-color);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.map__balloon-room-name {
+    margin-right: 5px;
+    margin-bottom: 10px;
+    text-decoration-line: underline;
+    text-decoration-color: var(--title-ballun-color);
+    text-decoration-style: dotted;
+    text-underline-offset: 4px;
+}
+
+.map__balloon-room-status {
+    color: var(--title-ballun-color);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.map__balloon-room-status.false {
+    color: var(--title-ballun-color);
+}
+
+.map__cluster {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    border: 2px solid var(--title-ballun-color);
+    border-radius: 50%;
+
+}
+.map__cluster-in {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--title-ballun-color);
+    color: #FFF;
 }
 
 .balloon-hotel {
     cursor: pointer;
-    color: var(--titleBallunColor);
+    color: var(--title-ballun-color);
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 10px;
     margin-right: 5px;
     text-decoration-line: underline;
-    text-decoration-color: var(--titleBallunColor);
+    text-decoration-color: var(--title-ballun-color);
     text-decoration-style: dotted;
     text-underline-offset: 4px;
     /*border-bottom: 1px dashed var(--basic);*/
@@ -311,7 +368,7 @@ body {
 }
 
 .balloon-price {
-    color: var(--priceBallun);
+    color: var(--price-ballun);
     font-weight: 700;
 }
 
@@ -326,7 +383,7 @@ body {
 }
 
 .balloon-button__link {
-    color: var(--textMarker) !important;
+    color: var(--text-marker) !important;
     text-decoration: none;
 }
 

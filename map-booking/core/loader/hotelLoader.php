@@ -12,8 +12,8 @@ function getRoom($roomDate, $lang)
 {
     $room = [];
 
-    $room['name'][$lang] = $roomDate['name'];
     $room['id'] = $roomDate['code'];
+    $room['name'][$lang] = $roomDate['name'];
     $room['cityName'][$lang] = $roomDate['contact_info']['addresses'][0]['city_name'];
     $room['address'][$lang] = $roomDate['contact_info']['addresses'][0]['city_name'] . ', ' .  $roomDate['contact_info']['addresses'][0]['address_line'][0];
     $room['price'] = null;

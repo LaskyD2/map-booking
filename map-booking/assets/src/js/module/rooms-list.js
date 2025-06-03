@@ -1,5 +1,5 @@
 import { templateIconContent, templateBalloonContent } from "../views/template-apart.js";
-import {placeMarksApart} from '../model/placeMarks.js';
+import {placeMarksApart} from '../model/placemarks.js';
 import { getPricesFromStorage } from '../model/price-load.js';
 import { changeColorClusters } from './color-clusters.js';
 import { geoObjects, map } from '../map.js';
@@ -11,6 +11,7 @@ export const roomsList = (roomsFb) => {
         roomList = getPricesFromStorage(),
         placeMarksRoster = placeMarksApart();
 
+    roomList = roomList["apart"]
 
     if (!roomsFb) {
         geoObjects.forEach((item) => {
@@ -21,7 +22,6 @@ export const roomsList = (roomsFb) => {
 
     roomsFb.forEach((roomfb) => {
         geoObjects.forEach((item) => {
-            console.log(item)
             if (item.properties.get('roomTypes').includes(roomfb.id)) {
                 item.properties._data.price = roomfb.price;
             }

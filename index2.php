@@ -17,13 +17,15 @@
     <link rel="stylesheet" href="/map-booking/assets/src/css/style.css"
 </head>
 <body>
-    <div class="map__wrapper ">
+<div class="map-booking map-show">
+    <div class="map__wrapper">
         <div class="map__mobile-text">Чтобы переместить карту, проведите по ней двумя пальцами</div>
-        <div id="map-be" class="map map-show"></div>
+        <div id="map-be" class="map "></div>
     </div>
+</div>
 
-    <script type="module" src="/map-booking/assets/src/js/main-not-bf.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
-            type="text/javascript"></script>
+<script type="module" src="/map-booking/assets/src/js/main-not-bf.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+        type="text/javascript"></script>
 </body>
 </html>

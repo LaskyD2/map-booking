@@ -28,72 +28,62 @@
 
 
 <div class="tl-container">
-    <ul class="bookmarks clearfix">
-        <li id="hotel-1" data-id="101" class="active">
-            <p class="hotel-class">101</p>
+    <ul class="bookmarks">
+        <li id="hotel-1" data-id="18115">
+            <p class="hotel-class">Kravt Nevsky Hotel&nbsp;&&nbsp;SPA&nbsp;4*</p>
         </li>
-        <li id="hotel-2" data-id="102">
-            <p class="hotel-class">102</p>
+        <li id="hotel-2" data-id="5128" class="active">
+            <p class="hotel-class">Kravt Sadovaya Hotel&nbsp;3*</p>
         </li>
-        <li id="hotel-3" data-id="103">
-            <p class="hotel-class">103</p>
+
+        <li id="hotel-3" data-id="11535">
+            <p class="hotel-class">Albora Boutique Hotel&nbsp;5*</p>
         </li>
-        <li id="hotel-4" data-id="104">
-            <p class="hotel-class">104</p>
+        <li id="hotel-4" data-id="21849">
+            <p class="hotel-class">Kravt Hotel Kazan Airport&nbsp;4*</p>
         </li>
-        <li id="hotel-5" data-id="5230">
-            <p class="hotel-class">5230</p>
-        </li>
-        <li id="hotel-7" data-id="23171">
-            <p class="hotel-class">23171</p>
-        </li>
-        <li id="hotel-8" data-id="19692">
-            <p class="hotel-class">19692</p>
+        <li id="hotel-5" data-id="45902">
+            <p class="hotel-class">Kravt Hotel Innopolis</p>
         </li>
     </ul>
-
-    <div class="map-booking">
-        <div class="map__wrapper ">
+    <div class="map-booking map-show">
+        <div class="map__wrapper">
             <div class="map__mobile-text">Чтобы переместить карту, проведите по ней двумя пальцами</div>
-            <div id="map-be" class="map map-show"></div>
+            <div id="map-be" class="map "></div>
         </div>
-        <button class="accordion-map active">
-                  <span class="accordion-text">
-                      Свернуть карту
-                  </span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="24" height="24" transform="matrix(1 0 0 -1 0 24)" fill="white"/>
-                <path d="M11.4143 7.05384L5.5 13.0321C5.18 13.3521 5.18 13.8641 5.5 14.2161L6.108 14.7601C6.428 15.0801 6.94 15.0801 7.26 14.7601L11.9903 9.96584L16.7206 14.7601C17.0406 15.0801 17.5526 15.0801 17.8726 14.7601L18.4486 14.1841C18.7686 13.8641 18.7686 13.3521 18.4486 13.0001L12.5663 7.02184C12.2463 6.73384 11.7343 6.73384 11.4143 7.05384Z" fill="#333333"/>
-            </svg>
+        <button class="accordion-map">
+            <span class="accordion-text"></span>
         </button>
     </div>
 
     <div class="blocks ">
-        <div class="blocks__booking-form"><select id="tl-hotel-select"></select>
+        <div class="blocks__booking-form">
+            <!--            <select id="tl-hotel-select"></select>-->
             <div id="tl-booking-form"></div>
         </div>
     </div>
 </div>
 
 <script>
-    var select = document.getElementById("tl-hotel-select");
-    select.addEventListener('change', function () {
-        var hotel_id = "hotel_id";
-        var regex = new RegExp(/hotel_id=\d+/g);
-        var getParams = window.location.search;
-        var params_str = hotel_id + "=" + this.value;
-        var path = "";
-        if (getParams.indexOf(hotel_id) != -1) {
-            path = getParams.replace(regex, params_str);
-        } else {
-            if (getParams == "") {
-                path = getParams + '?' + params_str;
-            } else {
-                path = getParams + '&' + params_str;
-            }
-        }
-        window.history.pushState(false, false, path);
-    });
+
+    /* var select = document.getElementById("tl-hotel-select");
+     select.addEventListener('change', function () {
+         var hotel_id = "hotel_id";
+         var regex = new RegExp(/hotel_id=\d+/g);
+         var getParams = window.location.search;
+         var params_str = hotel_id + "=" + this.value;
+         var path = "";
+         if (getParams.indexOf(hotel_id) != -1) {
+             path = getParams.replace(regex, params_str);
+         } else {
+             if (getParams == "") {
+                 path = getParams + '?' + params_str;
+             } else {
+                 path = getParams + '&' + params_str;
+             }
+         }
+         window.history.pushState(false, false, path);
+     });*/
 
     document.addEventListener('DOMContentLoaded', function(){
         function getParameterByName(name, url) {
@@ -164,29 +154,42 @@
     });
 
 
-    let arrival;
-    function searchRooms(data) {
+    function trackUserAction(data) {
+        if (data.action === 'search-rooms') {
+            let roomsFb = data.rooms;
+            let arrival = data.arrival;
+            let departure = data.departure;
 
-        if (arrival !== data.arrivalDate) {
-            arrival = data.arrivalDate;
-            let nights = data.nights;
-            let adults = data.guests[0].adults;
-            let idHotel = data.providerId;
-
-            mapBooking(arrival, nights, adults, idHotel);
-
+            mapBookingApart(roomsFb, arrival, departure);
         }
     }
 
+    let arrival, nights, adults, idHotel;
 
+    function searchRooms(data) {
+        if (arrival !== data.arrivalDate) {
+            arrival = data.arrivalDate;
+            nights = data.nights;
+            adults = data.guests[0].adults;
+            idHotel = data.providerId;
+
+            mapBookingHotel(arrival, nights, adults, idHotel);
+        }
+    }
+
+    function scenarioChanged(data) {
+        mapBookingHotel(arrival, nights, adults, data.scenario, 'inner');
+    }
 
     (function (w) {
         var q = [
-            ['setContext', 'TL-INT-maksima-ru', 'ru'],
+            ['setContext', 'TL-INT-peresvethotel_2024-03-21', 'ru'],
             ['embed', 'booking-form', {
                 container: 'tl-booking-form',
                 autoScroll: 'none',
-                onSearchRooms: searchRooms
+                // onTrackUserAction: trackUserAction,
+                onSearchRooms: searchRooms,
+                // onScenarioChanged: scenarioChanged
             }]
         ];
         var h=["ru-ibe.tlintegration.ru","ibe.tlintegration.ru","ibe.tlintegration.com"];
@@ -212,6 +215,7 @@
         document.head.appendChild(css);
 
     })(window, document);
+
 </script>
 
 
@@ -297,9 +301,9 @@
         display: none;
     }
 
-    #tl-hotel-select {
-        display: none !important;
-    }
+    /*#tl-hotel-select {*/
+    /*    display: none !important;*/
+    /*}*/
 
     @media (max-width: 710px) {
         .bookmarks {

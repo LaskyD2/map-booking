@@ -1,14 +1,18 @@
 import {init, map} from './map.js';
-import {accordion, getParameterByName, diffDates} from './module/module.js';
+import {accordion, getParameterByName, diffDates, changeURLDate} from './module/module.js';
 import {setHotelsStorage} from './model/hotel-load.js';
 import {setModuleLanguage} from "./module/module-language.js";
-import {changeURLDate, tabsBookingForm} from './booking-form.js';
+import {onChangeMark, tabsBookingForm} from './booking-form.js';
 import {changeDate} from "./model/price-load.js";
 import {roomsList} from "./module/rooms-list.js";
+import {TYPE_SELECT} from "./const.js";
 
 import {HotelLoad as HotelLoadController} from './controller/hotel-load.js';
 
-let isCheck = false;
+
+let isCheck = false,
+    isCheckInner = true,
+    arrivalForm, nightsForm, adultsForm;
 
 window.setTlHotel = () => {
     const hotelLoadController = new HotelLoadController();
@@ -17,7 +21,7 @@ window.setTlHotel = () => {
             setModuleLanguage();
             accordion();
             setHotelsStorage();
-            tabsBookingForm();
+
             ymaps.ready(init);
             isCheck = true;
         });
@@ -27,11 +31,32 @@ document.addEventListener('DOMContentLoaded', () => {
     window.setTlHotel();
 });
 
-window.mapBookingHotel = (arrival, nights, adults, idHotel) => {
+window.mapBookingHotel = (arrival, nights, adults, idHotel, type) => {
+
+    if (TYPE_SELECT === 'inner') {
+        if (isCheckInner || arrivalForm !== arrival || nightsForm !== nights || adultsForm !== adults) {
+            checkFunctionStatus();
+            isCheckInner = false;
+        } else {
+            if (type === 'inner') {
+                onChangeMark(idHotel);
+            }
+        }
+        arrivalForm = arrival;
+        nightsForm = nights;
+        adultsForm = adults;
+
+    } else {
+        checkFunctionStatus();
+        tabsBookingForm(idHotel);
+    }
+
     function checkFunctionStatus() {
         if (isCheck) {
             changeDate(arrival, nights, adults, idHotel);
+
             map.balloon.close();
+
             if (getParameterByName('date')) {
                 let date = "date";
                 let regexDate = new RegExp(/date=[A-Za-z0-9_-]+/g);
@@ -46,15 +71,16 @@ window.mapBookingHotel = (arrival, nights, adults, idHotel) => {
             setTimeout(checkFunctionStatus, 300);
         }
     }
-    checkFunctionStatus();
+
 }
 
 window.mapBookingApart = (roomsFb, arrival, departure) => {
+    checkFunctionStatus();
+
+
     function checkFunctionStatus() {
         if (isCheck) {
-
             map.balloon.close();
-
             roomsList(roomsFb);
 
             if (getParameterByName('date')) {
@@ -72,7 +98,7 @@ window.mapBookingApart = (roomsFb, arrival, departure) => {
             setTimeout(checkFunctionStatus, 300);
         }
     }
-    checkFunctionStatus();
+
 }
 
 

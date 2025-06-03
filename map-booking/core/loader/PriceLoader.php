@@ -1,12 +1,14 @@
 <?php
 
+
 function getPriceLoader($hotelIds, $startDate, $endDate, $adults) {
     $prices = [];
+
     foreach ($hotelIds as $id) {
         $host = 'https://ibe.tlintegration.com/ibe/RegionMap/host?hotel_code=' . $id;
         $hostUrl = json_decode(requestHotel($host));
 
-        $url = "https://". $hostUrl->host  ."/ChannelDistributionApi/BookingForm/hotel_availability?include_rates=true&include_transfers=true&include_all_placements=true&include_promo_restricted=true&language=ru-ru&criterions[0].hotels[0].code="
+        $url = "https://". $hostUrl->host  ."/ChannelDistributionApi/BookingForm/hotel_availability?include_rates=true&include_transfers=false&include_all_placements=true&include_promo_restricted=false&language=ru-ru&criterions[0].hotels[0].code="
             . $id ."&criterions[0].dates="
             . $startDate ."%3B". $endDate
             ."&criterions[0].adults=" . $adults;
@@ -28,30 +30,22 @@ function getPriceLoader($hotelIds, $startDate, $endDate, $adults) {
                 $price = $priceInfo['price_before_tax'];
                 $roomType = $placement['room_types'][0]['code'];
                 $capacity = $priceInfo['capacity'];
-/*
-                if ($roomType == '130435') {
-                    echo "<pre>";
-                    var_dump($priceInfo);
-                    echo "</pre>";
 
-                }*/
-
-                if (!isset($prices['hotels'][$hotelId][$roomType][$capacity]) || $price < $prices['hotels'][$hotelId][$roomType][$capacity]) {
+                if (!isset($prices[$hotelId][$roomType][$capacity]) || $price < $prices[$hotelId][$roomType][$capacity]) {
                     $prices[$hotelId][$roomType][$capacity] = $price;
                 }
             }
         }
+
     }
 
-
-    fillEmptyCapacities($prices);
-
-    return $prices;
+    return fillEmptyCapacities($prices);
 }
 
 
 function fillEmptyCapacities($prices)
 {
+
     foreach ($prices as $hotelCode => $roomTypes) {
         foreach ($roomTypes as $roomType => $capacities) {
             $currentCapacity = 1;
@@ -78,6 +72,9 @@ function fillEmptyCapacities($prices)
             ksort($prices[$hotelCode][$roomType]);
         }
     }
+
+    return $prices;
+
 }
 
 function deleteExpiredCacheFiles() {
