@@ -86,7 +86,7 @@ export let fillPointHotels = (placeMarksList) => {
 
 
             let handleButtonClick = () => {
-                bookingFormBlock.scrollIntoView({block: "end", behavior: "smooth"});
+                bookingFormBlock.scrollIntoView({block: "start", behavior: "smooth"});
             }
 
             balloonHotel.forEach((balloon) => {
@@ -168,7 +168,7 @@ export let fillPointApart = (placeMarksList) => {
             let btns = document.querySelectorAll(".map__balloon-room");
 
             let handleButtonClick = () => {
-                bookingFormBlock.scrollIntoView({block: "end", behavior: "smooth"});
+                bookingFormBlock.scrollIntoView({block: "start", behavior: "smooth"});
             }
 
             btns.forEach((btn) => {

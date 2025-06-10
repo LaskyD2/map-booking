@@ -22,6 +22,12 @@ export const roomsAddress = () => {
     }
 
     for (let i = 0; i < roomList.length; i++) {
+
+        if ((roomList[i].longitude === null && roomList[i].longitude === null) ||
+            (roomList[i].longitude === "0.0000" && roomList[i].longitude === "0.0000")) {
+            continue;
+        }
+
         let check = true;
         roomAddressList.forEach((item) => {
             if (item.longitude === roomList[i].longitude && item.latitude === roomList[i].latitude) {

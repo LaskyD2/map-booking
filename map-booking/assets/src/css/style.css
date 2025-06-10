@@ -94,14 +94,15 @@ body {
 .map__wrapper .map {
     margin: 0 !important;
 
-    position: relative;
-    display: none;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
     overflow: hidden;
     transition: height 0.5s ease;
 
-    height: 0;
-    max-height: 500px;
+    height: 500px;
     width: 100%;
+    max-width: 1440px;
     cursor: grab;
     cursor: -moz-grab;
     cursor: -webkit-grab;
@@ -114,8 +115,10 @@ body {
 }
 
 .map-booking.map-show .map {
+    position: relative;
     height: 500px;
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 @media (min-width: 420px) {

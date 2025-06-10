@@ -90,13 +90,6 @@ if (strlen($settingsApartCode) > 0) {
     $result["apart"] = getApart($apartCode, $languages, $hotelSource);
 }
 
-
-/*if ($settings['type'] === 'apart') {
-    $result["apart"] = getApart($hotelsCode, $languages, $hotelSource);
-} else if ($settings['type'] === 'hotels') {
-    $result = getHotels($hotelsCode, $languages);
-}*/
-
 $fileCache = __DIR__ . '/../cache/hotel_list.json';
 file_put_contents($fileCache, json_encode($result));
 

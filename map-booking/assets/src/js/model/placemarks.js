@@ -32,10 +32,13 @@ export const placeMarksApart = () => {
 
     let roomsAddressList = roomsAddress();
 
+
     let placemarksList = [];
 
 
     roomsAddressList.forEach((mark, index) => {
+
+
 
         let rooms = [];
 

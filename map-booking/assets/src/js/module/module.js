@@ -1,4 +1,5 @@
 import {LANG_SETTING} from "../lang.js";
+import { map } from '../map.js';
 
 export const getParameterByName = (name, url) => {
     if (!url) {

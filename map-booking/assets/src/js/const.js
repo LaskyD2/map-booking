@@ -4,7 +4,7 @@ export const coordinatesCity = {
     "estosadok": [43.685014, 40.258632]
 }
 
-export const TYPE_SELECT = 'inner' // select, tabs, inner
+export const TYPE_SELECT = 'tabs' // select, tabs, inner
 
 export const CENTER_MAP = coordinatesCity['spb'];
 export const ZOOM_MAP = 12;

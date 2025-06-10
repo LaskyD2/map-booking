@@ -19,8 +19,8 @@ function getRoom($roomDate, $lang)
     $room['price'] = null;
 
 
-    $room['longitude'] = $roomDate['contact_info']['addresses'][0]['longitude'];
-    $room['latitude'] = $roomDate['contact_info']['addresses'][0]['latitude'];
+    $room['longitude'] = sprintf("%.4f", $roomDate['contact_info']['addresses'][0]['longitude']);
+    $room['latitude'] = sprintf("%.4f", $roomDate['contact_info']['addresses'][0]['latitude']);
 
     return $room;
 }
