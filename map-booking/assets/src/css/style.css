@@ -92,7 +92,7 @@ body {
 
 
 .map__wrapper .map {
-    margin: 0 !important;
+    margin: 0 auto !important;
 
     position: absolute;
     opacity: 0;

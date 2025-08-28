@@ -29,23 +29,28 @@
 
 <div class="tl-container">
     <ul class="bookmarks">
-        <li id="hotel-1" data-id="18115">
+        <li id="hotel-1" data-id="44557"  class="active">
             <p class="hotel-class">Kravt Nevsky Hotel&nbsp;&&nbsp;SPA&nbsp;4*</p>
         </li>
-        <li id="hotel-2" data-id="5128" class="active">
+        <li id="hotel-2" data-id="23132">
             <p class="hotel-class">Kravt Sadovaya Hotel&nbsp;3*</p>
         </li>
 
-        <li id="hotel-3" data-id="11535">
+        <li id="hotel-3" data-id="23301">
             <p class="hotel-class">Albora Boutique Hotel&nbsp;5*</p>
         </li>
-        <li id="hotel-4" data-id="21849">
+        <li id="hotel-4" data-id="39928">
             <p class="hotel-class">Kravt Hotel Kazan Airport&nbsp;4*</p>
         </li>
-        <li id="hotel-5" data-id="45902">
-            <p class="hotel-class">Kravt Hotel Innopolis</p>
-        </li>
     </ul>
+
+
+    <div class="blocks ">
+        <div class="blocks__booking-form">
+                        <select id="tl-hotel-select"></select>
+            <div id="tl-booking-form"></div>
+        </div>
+    </div>
     <div class="map-booking map-show">
         <div class="map__wrapper">
             <div class="map__mobile-text">Чтобы переместить карту, проведите по ней двумя пальцами</div>
@@ -54,13 +59,6 @@
         <button class="accordion-map">
             <span class="accordion-text"></span>
         </button>
-    </div>
-
-    <div class="blocks ">
-        <div class="blocks__booking-form">
-            <!--            <select id="tl-hotel-select"></select>-->
-            <div id="tl-booking-form"></div>
-        </div>
     </div>
 </div>
 
@@ -183,13 +181,13 @@
 
     (function (w) {
         var q = [
-            ['setContext', 'TL-INT-irent-tw1_2023-07-05', 'ru'],
+            ['setContext', 'TL-INT-wizard-ghroyallions-ru', 'ru'],
             ['embed', 'booking-form', {
                 container: 'tl-booking-form',
                 autoScroll: 'none',
                 // onTrackUserAction: trackUserAction,
                 onSearchRooms: searchRooms,
-                onScenarioChanged: scenarioChanged
+                // onScenarioChanged: scenarioChanged
             }]
         ];
         var h=["ru-ibe.tlintegration.ru","ibe.tlintegration.ru","ibe.tlintegration.com"];

@@ -55,7 +55,6 @@ function getApart($hotelsCode, $languages, $hotelSource) {
 
 function getHotels($hotelsCode, $languages) {
 
-    echo $hotelsCode;
     $result = [];
 
     foreach ($hotelsCode as $hotel) {

@@ -4,10 +4,10 @@ export const coordinatesCity = {
     "estosadok": [43.685014, 40.258632]
 }
 
-export const TYPE_SELECT = 'tabs' // select, tabs, inner
+export const TYPE_SELECT = 'select' // select, tabs, inner
 
 export const CENTER_MAP = coordinatesCity['spb'];
-export const ZOOM_MAP = 12;
+export const ZOOM_MAP = 15;
 
 export const MODULE_NAME = 'hotels-list';
 export const LOCAL_STORAGE_EXPIRE_ITEM = `${MODULE_NAME}:expire`;
