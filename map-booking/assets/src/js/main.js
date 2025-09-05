@@ -74,14 +74,14 @@ window.mapBookingHotel = (arrival, nights, adults, idHotel, type) => {
 
 }
 
-window.mapBookingApart = (roomsFb, arrival, departure) => {
+window.mapBookingApart = (roomsFb, arrival, departure, hotelId) => {
     checkFunctionStatus();
 
 
     function checkFunctionStatus() {
         if (isCheck) {
             map.balloon.close();
-            roomsList(roomsFb);
+            roomsList(roomsFb, hotelId);
 
             if (getParameterByName('date')) {
                 let date = "date";

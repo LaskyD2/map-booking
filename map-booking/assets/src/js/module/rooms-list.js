@@ -5,13 +5,13 @@ import { changeColorClusters } from './color-clusters.js';
 import { geoObjects, map } from '../map.js';
 
 
-export const roomsList = (roomsFb) => {
+export const roomsList = (roomsFb, hotelId) => {
 
     let minPriceMarker,
         roomList = getPricesFromStorage(),
-        placeMarksRoster = placeMarksApart();
+        placeMarksRoster = placeMarksApart(hotelId);
 
-    roomList = roomList["apart"]
+    roomList = roomList["apart"][hotelId];
 
     if (!roomsFb) {
         geoObjects.forEach((item) => {

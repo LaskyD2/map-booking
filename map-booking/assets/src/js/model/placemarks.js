@@ -28,17 +28,11 @@ export const placeMarksHotel = () => {
 }
 
 
-export const placeMarksApart = () => {
-
-    let roomsAddressList = roomsAddress();
-
-
-    let placemarksList = [];
-
+export const placeMarksApart = (hotelCode) => {
+    let roomsAddressList = roomsAddress(hotelCode);
+    let placeMarksList = [];
 
     roomsAddressList.forEach((mark, index) => {
-
-
 
         let rooms = [];
 
@@ -46,7 +40,7 @@ export const placeMarksApart = () => {
             rooms.push(room.id);
         });
 
-        let placemark = {
+        let placeMark = {
             id: 'marker-' + index,
             address: mark.address,
             latitude: mark.rooms[0].latitude,
@@ -55,9 +49,9 @@ export const placeMarksApart = () => {
             width: 90,
             roomTypes: rooms.join(',')
         };
-        placemarksList.push(placemark);
+        placeMarksList.push(placeMark);
     })
 
-    return placemarksList;
+    return placeMarksList;
 }
 

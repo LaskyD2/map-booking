@@ -18,6 +18,11 @@ function getPriceLoader($hotelIds, $startDate, $endDate, $adults) {
 
 
         foreach ($data as $hotelInfo) {
+            
+            if (!isset($hotelInfo[0]["hotel_ref"]["code"])) {
+                break;
+            }
+
             $hotelId = $hotelInfo[0]["hotel_ref"]["code"];
 
             foreach ($hotelInfo as $placement) {

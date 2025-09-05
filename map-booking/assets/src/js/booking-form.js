@@ -128,13 +128,11 @@ export function fireEvent(element, event) {
 
 
 function trackUserAction(data) {
-    let roomList = null;
     let roomsFb;
 
     if (data.action === 'search-rooms') {
         roomsFb = data.rooms;
-        roomList = getPricesFromStorage();
-
+        let hotelId = data.providerId;
         if (getParameterByName('date'))    {
             let arrival = data.arrival;
             let departure = data.departure;
@@ -146,10 +144,11 @@ function trackUserAction(data) {
 
             let nightsUrl = "nights";
             let regexNights = new RegExp(/nights=\d+/g);
-            changeURLDate(nightsUrl, regexNights, nights)
+            changeURLDate(nightsUrl, regexNights, nights);
+
         }
 
-        roomsList(roomsFb, roomList);
+        roomsList(roomsFb, hotelId);
 
     }
 
@@ -176,8 +175,7 @@ function scenarioChanged(data) {
 }
 
 export function bookingForm(roomTypes) {
-
-    let PROFILE_BOOKING =  Object.keys(JSON.parse(localStorage.getItem("tl:storage:puid")))[0];
+    const PROFILE_BOOKING = getHotelKeyFromSessionStorage();
     (function (w) {
         var q;
         if (TYPE_SELECT === "inner") {
@@ -218,5 +216,23 @@ export function bookingForm(roomTypes) {
             })(h);
         }
     })(window);
+
+    function getHotelKeyFromSessionStorage(substring = 'TL;profile;') {
+        for (let i = 0; i < sessionStorage.length; i++) {
+            const key = sessionStorage.key(i);
+            if (key.includes(substring)) {
+                const parts = key.split(';');
+                if (parts.length > 2) {
+                    try {
+                        const obj = JSON.parse(parts[2]);
+                        return obj.key || null;
+                    } catch {
+                        return null;
+                    }
+                }
+            }
+        }
+        return null;
+    }
 
 }

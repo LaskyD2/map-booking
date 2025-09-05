@@ -1,25 +1,15 @@
 import {getHotelsFromStorage} from '../model/hotel-load.js'
 import {getParameterByName} from "./module.js";
 
-export const roomsAddress = () => {
+export const roomsAddress = (hotelCode) => {
 
     let roomList = getHotelsFromStorage(),
-        roomListCache = [],
         roomAddressList = [],
         roomAddressItem = [],
-        rooms = [],
-        prov = getParameterByName('hotel_id');
+        rooms = [];
 
-    roomList = roomList["apart"]
 
-    if (prov) {
-        roomList.forEach((room) => {
-            if (scenariosListHotel[prov].toString().includes(room.id)) {
-                roomListCache.push(room)
-            }
-        });
-        roomList = roomListCache;
-    }
+    roomList = roomList["apart"][hotelCode];
 
     for (let i = 0; i < roomList.length; i++) {
 

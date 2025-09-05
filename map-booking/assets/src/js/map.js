@@ -22,9 +22,46 @@ export function init() {
 
     if ('hotels'.includes(Object.keys(getHotelsFromStorage())))
         fillPointHotels(placeMarksHotel());
-    if ('apart'.includes(Object.keys(getHotelsFromStorage())))
-        fillPointApart(placeMarksApart());
+    if ('apart'.includes(Object.keys(getHotelsFromStorage()))) {
+        function checkKey() {
+            const foundKey = findKeyInSessionStorage();
+            if (foundKey) {
+                const jsonPart = foundKey.slice('TL;host;'.length);
+                const data = JSON.parse(jsonPart);
+                const hotelCode = data.hotel_code;
+                fillPointApart(placeMarksApart(hotelCode));
+            } else {
+                setTimeout(checkKey, 1000);
+            }
+        }
+
+        checkKey();
+
+
+    }
+
 }
+
+
+function findKeyInSessionStorage() {
+    const keys = Object.keys(sessionStorage);
+    for (const key of keys) {
+        if (key.startsWith('TL;host;')) {
+            try {
+                const jsonPart = key.slice('TL;host;'.length);
+                const data = JSON.parse(jsonPart);
+                if (data.hotel_code) {
+                    return key;
+                }
+            } catch (e) {
+
+            }
+        }
+    }
+    return null;
+}
+
+
 
 export let fillPointHotels = (placeMarksList) => {
     map.geoObjects.removeAll();

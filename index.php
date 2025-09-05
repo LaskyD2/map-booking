@@ -45,12 +45,7 @@
     </ul>
 
 
-    <div class="blocks ">
-        <div class="blocks__booking-form">
-                        <select id="tl-hotel-select"></select>
-            <div id="tl-booking-form"></div>
-        </div>
-    </div>
+
     <div class="map-booking map-show">
         <div class="map__wrapper">
             <div class="map__mobile-text">Чтобы переместить карту, проведите по ней двумя пальцами</div>
@@ -59,6 +54,12 @@
         <button class="accordion-map">
             <span class="accordion-text"></span>
         </button>
+    </div>
+    <div class="blocks ">
+        <div class="blocks__booking-form">
+            <select id="tl-hotel-select"></select>
+            <div id="tl-booking-form"></div>
+        </div>
     </div>
 </div>
 
@@ -152,18 +153,37 @@
     });
 
 
+    const changeURL = (value) => {
+        var hotel = "hotel_id";
+        var regex = new RegExp(/hotel_id=[A-Za-z0-9_-]+/g);
+        var getParams = window.location.search;
+        var params_str = hotel + "=" + value;
+        var path = "";
+        if (getParams.indexOf(hotel) != -1) {
+            path = getParams.replace(regex, params_str);
+        } else {
+            if (getParams == "") {
+                path = getParams + '?' + params_str;
+            } else {
+                path = getParams + '&' + params_str;
+            }
+        }
+        window.history.pushState(false, false, path);
+    }
+
+
     function trackUserAction(data) {
         if (data.action === 'search-rooms') {
             let roomsFb = data.rooms;
             let arrival = data.arrival;
             let departure = data.departure;
+            let hotelId = data.providerId;
 
-            mapBookingApart(roomsFb, arrival, departure);
+            mapBookingApart(roomsFb, arrival, departure, hotelId);
         }
     }
 
     let arrival, nights, adults, idHotel;
-
     function searchRooms(data) {
         if (arrival !== data.arrivalDate) {
             arrival = data.arrivalDate;
@@ -179,14 +199,16 @@
         mapBookingHotel(arrival, nights, adults, data.scenario, 'inner');
     }
 
+    // changeURL('21243');
+
     (function (w) {
         var q = [
-            ['setContext', 'TL-INT-wizard-ghroyallions-ru', 'ru'],
+            ['setContext', 'TL-INT-reho24-ru_2023-12-19.21243', 'ru'],
             ['embed', 'booking-form', {
                 container: 'tl-booking-form',
                 autoScroll: 'none',
-                // onTrackUserAction: trackUserAction,
-                onSearchRooms: searchRooms,
+                onTrackUserAction: trackUserAction,
+                // onSearchRooms: searchRooms,
                 // onScenarioChanged: scenarioChanged
             }]
         ];
