@@ -175,7 +175,8 @@ function scenarioChanged(data) {
 }
 
 export function bookingForm(roomTypes) {
-    const PROFILE_BOOKING = getHotelKeyFromSessionStorage();
+    const PROFILE_BOOKING = getHotelKeyFromSessionStorage().split('.')[0];
+
     (function (w) {
         var q;
         if (TYPE_SELECT === "inner") {
@@ -189,8 +190,9 @@ export function bookingForm(roomTypes) {
                 }]
             ];
         } else {
+
             q = [
-                ['setContext', PROFILE_BOOKING, `${MAP_BOOKING_LANG}`],
+                ['setContext', PROFILE_BOOKING + '.' + getParameterByName('hotel_id'), `${MAP_BOOKING_LANG}`],
                 ['embed', 'booking-form', {
                     container: 'tl-booking-form',
                     roomType: roomTypes,

@@ -18,7 +18,7 @@ function getPriceLoader($hotelIds, $startDate, $endDate, $adults) {
 
 
         foreach ($data as $hotelInfo) {
-            
+
             if (!isset($hotelInfo[0]["hotel_ref"]["code"])) {
                 break;
             }
@@ -35,7 +35,6 @@ function getPriceLoader($hotelIds, $startDate, $endDate, $adults) {
                 $price = $priceInfo['price_before_tax'];
                 $roomType = $placement['room_types'][0]['code'];
                 $capacity = $priceInfo['capacity'];
-
                 if (!isset($prices[$hotelId][$roomType][$capacity]) || $price < $prices[$hotelId][$roomType][$capacity]) {
                     $prices[$hotelId][$roomType][$capacity] = $price;
                 }
@@ -43,7 +42,6 @@ function getPriceLoader($hotelIds, $startDate, $endDate, $adults) {
         }
 
     }
-
     return fillEmptyCapacities($prices);
 }
 

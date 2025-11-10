@@ -1,14 +1,22 @@
 import { LANG_SETTING } from '../lang.js';
+import { declensionKvartira } from '../module/module.js';
 
 export const templateIconContent = (text, price, id, count) => {
     let content = {
         "loader" : localStorage.getItem('tl-arrivalDate') ? '<div class="loader"></div>' : LANG_SETTING[MAP_BOOKING_LANG].SelectDate,
         "price" : price ? LANG_SETTING[MAP_BOOKING_LANG].From + ' ' + price + ' ₽' : LANG_SETTING[MAP_BOOKING_LANG].NoPlaces,
     }
+
+    let apartments = LANG_SETTING[MAP_BOOKING_LANG].Apartments;
+
+    if (MAP_BOOKING_LANG === 'ru') {
+        apartments = declensionKvartira(count);
+    }
+
     return (
         ` <div class="map__hint ${price ? '' : 'no-rooms'}" id="${id}">
             <div class="map__hint-icon"></div>
-            <div class="map__hint-price"> ${content[text]} ${count > 1 ? ' (' + count + ' ' + LANG_SETTING[MAP_BOOKING_LANG].Apartments + ')' : ''}</div>
+            <div class="map__hint-price"> ${content[text]} ${count > 1 ? ' (' + apartments + ')' : ''}</div>
           </div>`
     );
 };

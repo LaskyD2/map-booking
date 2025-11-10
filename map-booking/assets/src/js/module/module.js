@@ -76,3 +76,25 @@ export function changeURLDate(param, regex, value) {
     }
     window.history.pushState(false, false, path);
 }
+
+export function declensionKvartira(number) {
+
+    number = Math.abs(Math.floor(number));
+
+
+    const lastDigit = number % 10;
+
+    const lastTwoDigits = number % 100;
+
+    if (lastDigit === 1 && lastTwoDigits !== 11) {
+        return `${number} квартира`;
+    }
+
+    else if (lastDigit >= 2 && lastDigit <= 4 && !(lastTwoDigits >= 12 && lastTwoDigits <= 14)) {
+        return `${number} квартиры`;
+    }
+
+    else {
+        return `${number} квартир`;
+    }
+}

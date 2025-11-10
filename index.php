@@ -153,24 +153,6 @@
     });
 
 
-    const changeURL = (value) => {
-        var hotel = "hotel_id";
-        var regex = new RegExp(/hotel_id=[A-Za-z0-9_-]+/g);
-        var getParams = window.location.search;
-        var params_str = hotel + "=" + value;
-        var path = "";
-        if (getParams.indexOf(hotel) != -1) {
-            path = getParams.replace(regex, params_str);
-        } else {
-            if (getParams == "") {
-                path = getParams + '?' + params_str;
-            } else {
-                path = getParams + '&' + params_str;
-            }
-        }
-        window.history.pushState(false, false, path);
-    }
-
 
     function trackUserAction(data) {
         if (data.action === 'search-rooms') {
@@ -181,6 +163,14 @@
 
             mapBookingApart(roomsFb, arrival, departure, hotelId);
         }
+    }
+    function noAvailableRooms(data) {
+        console.log(data)
+        let arrival = data.arrival;
+        let departure = data.departure;
+        let hotelId = data.providerId;
+            mapBookingApart([], arrival, departure, hotelId);
+
     }
 
     let arrival, nights, adults, idHotel;
@@ -199,15 +189,15 @@
         mapBookingHotel(arrival, nights, adults, data.scenario, 'inner');
     }
 
-    // changeURL('21243');
 
     (function (w) {
         var q = [
-            ['setContext', 'TL-INT-reho24-ru_2023-12-19.21243', 'ru'],
+            ['setContext', 'TL-INT-arenda-vesta-ru_2025-09-08', 'ru'],
             ['embed', 'booking-form', {
                 container: 'tl-booking-form',
                 autoScroll: 'none',
                 onTrackUserAction: trackUserAction,
+                // onNoAvailableRooms: noAvailableRooms
                 // onSearchRooms: searchRooms,
                 // onScenarioChanged: scenarioChanged
             }]

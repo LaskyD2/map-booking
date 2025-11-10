@@ -1,13 +1,19 @@
 export const minPrice = (hotels, adults) => {
-    let minPrice = [];
-    let priceRoom = [];
+    const resultMinPrices = {};
 
-    Object.keys(hotels).map((hotel) => {
-        priceRoom = [];
-        Object.values(hotels[hotel]).map((room) => {
-            priceRoom.push(room[adults]);
-        })
-        minPrice[hotel] = Math.min.apply(null, priceRoom)
-    })
-    return minPrice;
-}
+    const ageKey = String(adults);
+    Object.keys(hotels).forEach((hotelId) => {
+        const pricesForCurrentHotelAndAdults = [];
+        Object.values(hotels[hotelId]).forEach((roomPrices) => {
+            const price = roomPrices[ageKey];
+            if (typeof price === 'number' && Number.isFinite(price)) {
+                pricesForCurrentHotelAndAdults.push(price);
+            }
+        });
+        if (pricesForCurrentHotelAndAdults.length > 0) {
+            resultMinPrices[hotelId] = Math.min(...pricesForCurrentHotelAndAdults);
+        }
+    });
+
+    return resultMinPrices;
+};

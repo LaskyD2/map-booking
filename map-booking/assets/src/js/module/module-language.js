@@ -1,10 +1,11 @@
 import { LANG_SETTING } from '../lang.js';
 
-const UNSUPPORTED_LANG = 'not-supported';
+const UNSUPPORTED_LANG = 'ru';
 const LANGUAGE_CODE_STANDARD_LENGTH = 2;
 
 const getModuleLanguage = () => {
     const pageLang = document.documentElement.lang;
+
     const settingLanguages = Object.keys(LANG_SETTING);
 
     const siteLang = pageLang.length === LANGUAGE_CODE_STANDARD_LENGTH

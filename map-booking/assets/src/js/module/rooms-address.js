@@ -1,15 +1,20 @@
 import {getHotelsFromStorage} from '../model/hotel-load.js'
 import {getParameterByName} from "./module.js";
 
-export const roomsAddress = (hotelCode) => {
+export const roomsAddress = () => {
 
     let roomList = getHotelsFromStorage(),
         roomAddressList = [],
         roomAddressItem = [],
         rooms = [];
 
+    if (!getParameterByName('hotel_id')) {
+        const topLevelKeys = Object.keys(roomList["apart"]);
+        roomList = roomList["apart"][topLevelKeys];
+    } else {
+        roomList = roomList["apart"][getParameterByName('hotel_id')];
+    }
 
-    roomList = roomList["apart"][hotelCode];
 
     for (let i = 0; i < roomList.length; i++) {
 

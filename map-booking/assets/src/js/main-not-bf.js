@@ -1,5 +1,5 @@
 import {init, map} from './map.js';
-import {changeURLDate, getParameterByName} from './module/module.js';
+import {accordion, getParameterByName} from './module/module.js';
 import {setHotelsStorage} from './model/hotel-load.js';
 import {setModuleLanguage} from "./module/module-language.js";
 import {changeDate} from "./model/price-load.js";
@@ -14,6 +14,7 @@ window.setTlHotel = () => {
     hotelLoadController.load()
         .then(() => {
             setModuleLanguage();
+            accordion();
             setHotelsStorage();
             ymaps.ready(init);
             isCheck = true;
