@@ -24,16 +24,13 @@ function getApart($hotelsCode, $languages, $hotelSource) {
         $hostUrl = json_decode(requestHotel($host));
         $hotelsList = [];
 
-        if (isset($hotelSource) && !empty($hotelSource)) {
-            $sources = $hotelSource[$hotel];
-        }
 
 
         foreach ($languages as $value => $language) {
             $longLanguages = correctLanguages($language)[0];
 
-            if ($hotelSource) {
-                foreach ($sources as $source) {
+            if (isset($hotelSource) && !empty($hotelSource)) {
+                foreach ($hotelSource as $source) {
                     $url = "https://" . $hostUrl->host . "/ChannelDistributionApi/BookingForm/hotel_info?language=" . $longLanguages . "&point_of_sale.source=" . $source . "&hotels[0].code=" . $hotel;
                     $response = requestHotel($url);
                     $responseMas = json_decode($response, true);

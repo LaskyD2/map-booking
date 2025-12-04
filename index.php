@@ -192,7 +192,7 @@
 
     (function (w) {
         var q = [
-            ['setContext', 'TL-INT-arenda-vesta-ru_2025-09-08', 'ru'],
+            ['setContext', 'TL-INT-yaltada-ru_2025-11-06', 'ru'],
             ['embed', 'booking-form', {
                 container: 'tl-booking-form',
                 autoScroll: 'none',

@@ -113,8 +113,9 @@
             let roomsFb = data.rooms;
             let arrival = data.arrival;
             let departure = data.departure;
-
-            mapBookingApart(roomsFb, arrival, departure);
+            let hotelId = data.providerId;
+            
+            mapBookingApart(roomsFb, arrival, departure, hotelId);
         }
     }
 ```

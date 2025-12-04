@@ -153,6 +153,7 @@ export let fillPointApart = (placeMarksList) => {
     map.geoObjects.removeAll();
     geoObjects.length = 0;
     map.setZoom(ZOOM_MAP);
+
     placeMarksList.forEach((point, i) => {
         geoObjects[i] = new ymaps.Placemark([placeMarksList[i].latitude, placeMarksList[i].longitude],
             {

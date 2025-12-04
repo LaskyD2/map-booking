@@ -20,6 +20,7 @@ export const roomsList = (roomsFb, hotelId) => {
         return;
     }
 
+
     roomsFb.forEach((roomfb) => {
         geoObjects.forEach((item) => {
             if (item.properties.get('roomTypes').includes(roomfb.id)) {
@@ -63,8 +64,6 @@ export const roomsList = (roomsFb, hotelId) => {
 
         let address = geoObjects[index].properties.get('address');
         let idElement = geoObjects[index].properties.get('id');
-
-
 
 
         geoObjects[index].properties.set('iconContent', templateIconContent('price', minPriceMarker, idElement, roomsObj.length));
